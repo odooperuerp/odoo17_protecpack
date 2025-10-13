@@ -1,0 +1,9 @@
+### Send POST request with body as parameters
+POST http://localhost:9013/es_PE/consulta_cpe
+Content-Type: application/x-www-form-urlencoded
+
+serie = F001 &
+correlativo = 17 &
+invoice_date = 2024-10-06 &
+vat = 20119873542 &
+total = 1180

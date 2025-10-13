@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ple_inventarios_balances_3_2,modelo ple_inventarios_balances_3_2,model_ple_inventarios_balances_3_2,,1,1,1,1
+access_ple_inventarios_balances_3_2_line,modelo ple_inventarios_balances_3_2_line,model_ple_inventarios_balances_3_2_line,,1,1,1,1
+access_wizard_printer_ple_inventarios_balances_3_2,modelo wizard_printer_ple_inventarios_balances_3_2,model_wizard_printer_ple_inventarios_balances_3_2,,1,1,1,1
+
+

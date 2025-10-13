@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="provider_sms" model="ir.config_parameter">
+        <field name="key">PROVIDER_SMS</field>
+        <field name="value">AWS_SNS</field>
+    </record>
+
+    <record id="access_key_id" model="ir.config_parameter">
+        <field name="key">ACCESS_KEY_ID</field>
+        <field name="value"></field>
+    </record>
+    <record id="secret_access_key" model="ir.config_parameter">
+        <field name="key">SECRET_ACCESS_KEY</field>
+        <field name="value"></field>
+    </record>
+    <record id="region_aws_sns" model="ir.config_parameter">
+        <field name="key">REGION_AWS_SNS</field>
+        <field name="value"></field>
+    </record>
+    <record id="arn_aws_sns" model="ir.config_parameter">
+        <field name="key">ARN_AWS_SNS</field>
+        <field name="value"></field>
+    </record>
+</odoo>

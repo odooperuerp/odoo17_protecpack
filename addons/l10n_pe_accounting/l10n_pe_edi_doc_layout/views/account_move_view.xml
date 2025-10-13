@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	<record id="view_move_form" model="ir.ui.view">
+            <field name="name">account.move.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/header" position="before">
+                    <field name="has_multi_code_detraccion" invisible="1"/>
+                    <div class="alert alert-warning" role="alert" style="margin-bottom:0px" invisible = "has_multi_code_detraccion not in [True]">
+                        <bold>Las líneas de la factura no tienen el mismo código de detracción !</bold> 
+                    </div>
+                </xpath>
+                <field name="narration" position="after">
+                    <field name="codigo_detraccion" invisible="l10n_pe_edi_operation_type not in ['1001', '1002', '1003', '1004'] or move_type != 'out_invoice'"/>
+                    <field name="porcentaje_detraccion" invisible="l10n_pe_edi_operation_type not in ['1001', '1002', '1003', '1004'] or move_type != 'out_invoice'"/>
+                    <field name="monto_detraccion" invisible="l10n_pe_edi_operation_type not in ['1001', '1002', '1003', '1004'] or move_type != 'out_invoice'"/>
+                    <field name="cuenta_detraccion" invisible="l10n_pe_edi_operation_type not in ['1001', '1002', '1003', '1004'] or move_type != 'out_invoice'"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

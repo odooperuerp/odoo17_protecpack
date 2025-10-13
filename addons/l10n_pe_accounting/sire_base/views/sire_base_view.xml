@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="sire_base_view_form" model="ir.ui.view">
+			<field name="name">sire.base.form</field>
+            <field name="model">sire.base</field>
+            <field name="arch" type="xml">
+            	
+                <form>
+
+                    <header>
+
+                        <field name="sire_type" invisible="1"/>
+
+                        <button name="action_token" 
+                            string="Generar Token"
+                            type="object"
+                            invisible="state != 'draft' or sire_type != 'with_connection_api_sunat'"
+                            icon="fa-arrow-right"
+                            />
+                        
+                        <button name="action_ticket" 
+                            string="Generar Ticket"
+                            type="object"
+                            invisible="state != 'token' or sire_type != 'with_connection_api_sunat'"
+                            icon="fa-arrow-right"
+                            />
+
+                        <button name="action_consultar_archivos" 
+                            string="Consultar Archivos"
+                            type="object"
+                            invisible="state != 'ticket' or sire_type != 'with_connection_api_sunat'"
+                            icon="fa-arrow-right"
+                            />
+
+
+                        <button name="action_open_sire_sunat"
+                            string="Generar Propuesta"
+                            invisible="state != 'name_archivos' or sire_type != 'with_connection_api_sunat'"
+                            type="object"
+                            icon="fa-arrow-right"
+                            />
+
+
+                        <button name="action_open"
+                            string="Generar Reemplazo"
+                            invisible="sire_type != 'without_connection_api_sunat' and state not in ['propuesta_generada','reemplazo_generado']"
+                            type="object"
+                            icon="fa-file-text-o"
+                            />
+                        
+
+                        <button name="generate_comparation"
+                            string="Generar Comparación"
+                            invisible="state != 'reemplazo_generado' or sire_type != 'with_connection_api_sunat'"
+                            type="object"
+                            icon="fa-check-square-o"
+                            />
+
+
+                        <button name="action_print" 
+                            string="Descargar txt Propuesta"
+                            type="object"
+                            invisible="state not in ['propuesta_generada','reemplazo_generado','send'] or sire_type != 'with_connection_api_sunat'"
+                            icon="fa-print"
+                            />
+
+                        <button name="action_print_zip_reemplazo" 
+                            string="Generar ZIP Reemplazo"
+                            type="object"
+                            invisible="(sire_type != 'without_connection_api_sunat' or state not in ['reemplazo_generado','send']) and (sire_type != 'with_connection_api_sunat' or state not in ['reemplazo_generado','send'])"
+                            icon="fa-arrow-circle-o-down"
+                            />
+
+                        <button name="action_draft"
+                            string="Borrador"
+                            invisible="state in ['draft','send']"
+                            type="object"
+                            />
+
+
+                        <button name="action_send"
+                            string="Declarar Libro"
+                            confirm="Una vez confirmado no volvera a generar y/o editar el SIRE"
+                            invisible="state not in ['reemplazo_generado']"
+                            type="object"
+                            />
+
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,reemplazo_generado,send" invisible="sire_type != 'without_connection_api_sunat'"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,token,ticket,name_archivos,propuesta_generada,reemplazo_generado,send" invisible="sire_type != 'with_connection_api_sunat'"/>
+
+                    </header>
+
+                    <group>
+
+                        <group name="grupo_base" string="Periodo Fiscal">
+
+                            <label for="fiscal_year"/>
+                            <div>
+                    		    <field name="fiscal_year" placeholder="Año" class="oe_inline"/>
+                        		<field name="fiscal_month" placeholder="Mes" class="oe_inline"/>
+                            </div>
+
+                            <field name="company_id" options="{'no_create': True, 'no_create_edit':True}" groups="base.group_multi_company"/>
+
+                        </group>
+
+                    </group>
+
+                </form>
+
+            </field>
+		</record>
+
+
+		<record id="sire_base_view_tree" model="ir.ui.view">
+			<field name="name">sire.base.tree</field>
+            <field name="model">sire.base</field>
+            <field name="arch" type="xml">
+            	<tree>
+                    <field name="fiscal_year"/>
+                    <field name="fiscal_month"/>
+                    <field name="company_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+		</record>
+
+
+        <record id="action_sire_base" model="ir.actions.act_window">
+            <field name="name">sire.base</field>
+   		    <field name="res_model">sire.base</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        
+        <menuitem id="menu_sire_root" name="SIRE-SUNAT" web_icon="sire_base,static/description/SUNAT.png"/>
+
+        <menuitem id="menu_registro" name="SIRE-SUNAT" parent="menu_sire_root" groups="sire_base.group_sire_base_manager"/>
+
+        <!--################################################################-->
+
+	</data>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+
+    <record id="economic_sector_sunat_01" model="economic.sector.sunat">
+        <field name="name">Sector Diversas</field>
+        <field name="code">01</field>
+    </record>
+    
+    <record id="economic_sector_sunat_02" model="economic.sector.sunat">
+        <field name="name">Sector Seguros</field>
+        <field name="code">02</field>
+    </record>
+
+    <record id="economic_sector_sunat_03" model="economic.sector.sunat">
+        <field name="name">Sector Bancos y Financieras</field>
+        <field name="code">03</field>
+    </record>
+
+    <record id="economic_sector_sunat_04" model="economic.sector.sunat">
+        <field name="name">Administradoras de Fondos de Pensiones (AFP)</field>
+        <field name="code">04</field>
+    </record>
+
+    <record id="economic_sector_sunat_05" model="economic.sector.sunat">
+        <field name="name">Agentes de Intermediación</field>
+        <field name="code">05</field>
+    </record>
+
+    <record id="economic_sector_sunat_06" model="economic.sector.sunat">
+        <field name="name">Fondos de Inversión</field>
+        <field name="code">06</field>
+    </record>
+
+    <record id="economic_sector_sunat_07" model="economic.sector.sunat">
+        <field name="name">Patrimonio de Fideicomisos</field>
+        <field name="code">07</field>
+    </record>
+
+    <record id="economic_sector_sunat_08" model="economic.sector.sunat">
+        <field name="name">ICLV</field>
+        <field name="code">08</field>
+    </record>
+
+    </data>
+
+</odoo>
+

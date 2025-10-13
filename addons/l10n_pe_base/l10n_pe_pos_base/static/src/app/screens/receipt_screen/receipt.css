@@ -1,0 +1,4 @@
+.codlan-table > :not(:first-child) {
+    border-top: none;
+  }
+  

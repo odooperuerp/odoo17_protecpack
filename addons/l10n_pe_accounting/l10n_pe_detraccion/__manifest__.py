@@ -1,0 +1,22 @@
+{
+    'name': 'Detracciones en Documentos-Tablas de Detracciones',
+    'version': '17.0.0.1',
+    'category': '',
+    'license': 'AGPL-3',
+    'summary': "Detracciones en Documentos-Tablas de Detracciones",
+    'author': "Franco Najarro",
+    'website': '',
+    'depends': ['base_setup','account','l10n_pe_account_document_extra_fields'],
+    'data': [
+        'data/journal_data.xml',
+        'security/ir.model.access.csv',
+        'views/detraccion_view.xml',
+        'views/tipo_detraccion_line_view.xml',
+        'views/res_partner_bank.xml',
+        'views/account_journal_view.xml',
+        'views/account_detraccion_view.xml',
+        'views/account_move_view.xml',
+        'data/tipo.detraccion.csv',
+        ],
+    'installable': True,
+}

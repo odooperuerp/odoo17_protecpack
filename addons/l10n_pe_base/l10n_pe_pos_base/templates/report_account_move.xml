@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document">
+        
+        <!--AGREGAR COLUMNA DE SERIES Y LOTES EN LÍNEAS-->
+        <xpath expr="//table[@name='invoice_line_table']" position="before">
+            <t t-set="lot_values" t-value="o._get_invoiced_lot_values()"/>
+        </xpath>
+        <xpath expr="//th[@name='th_description']" position="after">
+            <th class="text-center" groups="l10n_pe_pos_base.show_serial_numbers_in_invoice_lines" t-if="lot_values">S/N</th>
+        </xpath>
+        <xpath expr="//td[@name='account_invoice_line_name']" position="after">
+            <td class="text-center" groups="l10n_pe_pos_base.show_serial_numbers_in_invoice_lines" t-if="lot_values">
+                <t t-as="serie" t-foreach="lot_values">
+                    <t t-if="serie.get('product_id') == line.product_id.id">
+                        <span t-esc="serie.get('lot_name')"/>
+                        <br/>
+                    </t>
+                </t>
+            </td>
+        </xpath>
+
+    </template>
+
+
+    <template id="stock_account_report_invoice_document" inherit_id="stock_account.stock_account_report_invoice_document">
+        <xpath expr="//t[@groups='stock_account.group_lot_on_invoice']" position="attributes">
+            <attribute name="groups">stock_account.group_lot_on_invoice,!l10n_pe_pos_base.show_serial_numbers_in_invoice_lines</attribute>
+        </xpath>
+    </template>
+    
+</odoo>

@@ -1,0 +1,311 @@
+/* =======================================================
+[+] GLOBAL
+======================================================= */
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fff;
+}
+.btn:focus, .banner .btn:active, .btn:hover {
+	outline: none;
+	box-shadow: none;
+}
+pre > code {
+	font-size: 14px!important;
+	line-height: 1.4!important;
+	text-shadow: none!important;
+}
+pre > code.highlight {
+	display: inline-block;
+	outline: .4em solid red;
+	outline-offset: .4em;
+	margin: .8rem 0;
+	padding: 0 .2rem;
+}
+/* =======================================================
+[+] HEADER
+======================================================= */
+
+header {
+    background-color: #fff;
+    padding: 15px 0;
+}
+header .navbar {
+	padding: 0;
+}
+header .navbar-brand {
+	padding: 0;
+	margin-right: 50px;
+}
+header .navbar-brand img {
+	height: 65px;
+}
+header .nav-link {
+	padding: 1rem!important;
+	font-weight: 500;
+	color: #4d5156!important;
+}
+header .nav-item.active .nav-link {
+	font-weight: 700!important;
+}
+header .btn-support {
+	background-color: #4199ec;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    padding: 7px 18px;
+}
+/* =======================================================
+[+] FOOTER
+======================================================= */
+
+footer {
+    background-color: #fff;
+    color: #8c9094;
+    padding: 50px 10px;
+	text-align: center;
+}
+footer a {
+	display: inline-block;
+    color: #000;
+	font-weight: 500;
+}
+
+/* =======================================================
+[+] BANNER
+======================================================= */
+
+.banner {
+	padding: 80px;
+	background-color: #F2F4F7;
+	text-align: center;
+    border-bottom: 5px solid #fff;
+}
+.banner h1 {
+	font-size: 54px;
+	letter-spacing: -2px;
+	margin-bottom: 30px;
+}
+.banner h1 div:nth-child(2) {
+	font-weight: 700;
+}
+.banner h2 {
+	font-size: 28px;
+	font-weight: 500;
+	letter-spacing: -1px;
+	color: #596473;
+	margin-bottom: 30px;
+}
+.banner p {
+	font-size: 16px;
+	color: #768498;
+	margin-bottom: 40px;
+}
+.banner .icons {
+	margin-bottom: 25px;
+}
+.banner .icons i {
+	font-size: 32px;
+	color: #D3D9E1;
+	margin-right: 10px;
+}
+.banner .icons i:last-child {
+	margin-right: 0;
+}
+.banner .thanks div:nth-child(1) {
+	font-size: 40px;
+	font-weight: 600;
+	letter-spacing: -1px;
+	color: #2cd25f;
+	margin-bottom: 10px;
+}
+.banner .thanks div:nth-child(2) {
+	font-weight: 500;
+}
+
+/* =======================================================
+[+] EXAMPLES
+======================================================= */
+
+.examples {
+    padding: 50px 0;
+    border-bottom: 5px solid #fff;
+}
+.examples h1 {
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+	letter-spacing: -3px;
+    line-height: 1;
+    margin-bottom: -20px;
+    text-shadow: -1px -1px 0 rgba(0,0,0,.1);
+}
+.examples p {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+	color: rgba(0,0,0,.2);
+}
+.example {
+    display: block;
+    margin-bottom: 30px;
+    padding: 15px;
+    width: 100%;
+    background-color: #fff;
+	color: #000;
+	transition: .3s all;
+    border-radius: 9px;
+    box-shadow: 0px 0px 20px rgba(92,111,139,.12);
+	text-align: left;
+}
+.example .image {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+	border: 1px solid #ebedf3;
+	height: 250px;
+    padding: 5px 0;
+    border-radius: .85rem;
+    background-color: #EFF1F6;
+}
+.example .image-padding-1 {
+	padding: 30px 0 0 30px;
+}
+.example .image-padding-2 {
+	padding: 50px 10px 20px 50px;
+}
+.example .image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.example .text {
+    margin-bottom: 10px;
+}
+.example .text .title {
+	font-size: 16px;
+    font-weight: 600;
+	color: #212529;
+}
+.example .text .description {
+	font-size: 12px;
+	color: #999;
+}
+.example:hover {
+	text-decoration: none;
+	box-shadow: 0 0 25px 0 rgba(47, 50, 55, 0.2);
+	color: #000;
+}
+.examples .czm-chat-support {
+    margin: 10px 5px 10px 0;
+}
+
+.examples .button-text {
+	text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+}
+.examples .button-text > div {
+	color: rgba(0,0,0,.3);
+	font-weight: 500;
+}
+.examples .button-text a {
+	display: inline-block;
+	font-weight: 600;
+	color: rgba(0,0,0,.8);
+	cursor: pointer;
+}
+.examples .button-text a:hover {
+	text-decoration: underline;
+}
+.examples .button-content {
+    margin-top: 50px;
+}
+
+.whatsapp-examples {
+	background-color: #e1f7ee;
+}
+.whatsapp-examples h1 {
+    color: #d1efe2;
+}
+.telegram-examples {
+	background-color: #e6f7ff;
+}
+.telegram-examples h1 {
+    color: #d9edf7;
+}
+.messenger-examples {
+	background-color: #e5f1ff;
+}
+.messenger-examples h1 {
+    color: #d5e6f9;
+}
+.skype-examples {
+	background-color: #dbf5ff;
+}
+.skype-examples h1 {
+    color: #c6e9f7;
+}
+.different-examples {
+	background-color: #f9f8e7;
+}
+.different-examples h1 {
+    color: #f1efda;
+}
+.button-examples {
+	background-color: #F7F9FB;
+}
+.button-examples h1 {
+    color: #E6ECF1;
+}
+
+/* =======================================================
+[+] RESPONSIVE
+======================================================= */
+
+@media (min-width: 1600px) {
+    .container-xl {
+        max-width: 1340px;
+    }
+}
+@media (max-width: 767px) {
+	.banner {
+		padding: 40px 20px;
+	}
+	.banner h1 {
+		font-size: 44px;
+		letter-spacing: -1px;
+	}
+	.banner .thanks div:nth-child(1) {
+		font-size: 30px;
+		font-weight: 600;
+	}
+	.examples h1 {
+		font-size: 80px;
+		letter-spacing: -2px;
+		margin-bottom: -10px;
+	}
+}
+@media (max-width: 575px) {
+	.banner {
+		padding: 40px 10px;
+	}
+	.banner h1 {
+		font-size: 36px;
+	}
+	.banner .thanks div:nth-child(1) {
+		font-size: 22px;
+	}
+	.examples h1 {
+		font-size: 12vw;
+		letter-spacing: -1px;
+		margin-bottom: -5px;
+	}
+}

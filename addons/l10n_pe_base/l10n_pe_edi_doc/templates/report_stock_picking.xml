@@ -1,0 +1,38 @@
+<odoo>
+
+    <template id="report_delivery_document2_inherit" inherit_id="stock_delivery.report_delivery_document2">
+        <xpath expr="//div[@t-if='o.shipping_weight']" position="after">
+            <div class="col-auto col-2 mb-2" name="div_bultos">
+                <strong>Total bultos:</strong>
+                <p t-esc="o.bultos"/>
+            </div>
+        </xpath>
+        
+    </template>
+
+    <template id="l10n_pe_edi_guiaremision_report_delivery_document_inherit" inherit_id="l10n_pe_edi_stock.l10n_pe_edi_guiaremision_report_delivery_document">
+        <xpath expr="//div[@id='delivery_guide_20_qr']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+
+        <xpath expr="//div[@id='delivery_guide_details2']//div[@t-if='o.l10n_pe_edi_operator_id']" position="attributes">
+            <attribute name="class">col-5</attribute>
+        </xpath>
+
+        <xpath expr="//div[@id='delivery_guide_details2']//div[@t-if='o.l10n_pe_edi_vehicle_id.license_plate']" position="after">
+            <div class="col-3">
+                <t t-set="qr_url" t-value="o._l10n_pe_edi_get_qr()"/>
+                <div t-if="qr_url" class="barcode col-3">
+                    <img alt="Barcode" t-att-src="'/report/barcode/?barcode_type=QR&amp;value=%s&amp;width=120&amp;height=120' % quote_plus(qr_url)"/>
+                </div>
+                <div class="col-6" t-if="o.l10n_pe_edi_related_document_type">
+                    <strong>Related Documents:</strong>
+                    <p>
+                        <span t-field="o.l10n_pe_edi_related_document_type"/> -
+                        <span t-field="o.l10n_pe_edi_document_number"/>
+                    </p>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

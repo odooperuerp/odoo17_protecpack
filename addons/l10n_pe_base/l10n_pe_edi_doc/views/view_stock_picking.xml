@@ -1,0 +1,48 @@
+<odoo>
+    <record id="view_picking_withcarrier_out_form_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.withcarrier.out.form.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock_delivery.view_picking_withcarrier_out_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='weight']" position="before">
+                <field name="bultos"/>
+            </xpath>
+            <xpath expr="//field[@name='weight']" position="attributes">
+                <attribute name="readonly">l10n_pe_edi_status == 'sent'</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_picking_tree_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.tree.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="l10n_latam_document_number" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_picking_internal_search_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.internal.search.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_internal_search"/>
+        <field name="arch" type="xml">
+            <filter name="to_do_transfers" position="before">
+                <filter string="Con Guía de Remisión" name="con_guia_remision" domain="[('l10n_latam_document_number', '!=', False)]"/>
+            </filter>
+        </field>
+    </record>
+
+    <record id="view_picking_edi_form_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.edi.form.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="l10n_pe_edi_stock.view_picking_edi_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_send_delivery_guide']" position="attributes">
+                <attribute name="invisible">state != 'done' or country_code != 'PE' or l10n_pe_edi_status</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

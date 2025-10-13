@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+        <record id="account_registro_dua_view_form" model="ir.ui.view">
+            <field name="name">Registro de DUA</field>
+            <field name="model">account.registro.dua</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <header>
+
+                        <button name="generar_comprobante_DUA" class="oe_highlight" string="Generar Conmprobante DUA" icon="fa-book"  type="object" invisible="state != 'posted'"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,posted"/>
+
+                    </header>
+
+                        <div class="oe_button_box">
+                            <button name="button_view_move_id" class="oe_stat_button" icon="fa-file" type="object" string="Ver Asiento Contable" invisible = "state != 'posted'"/>
+                        </div>
+
+
+                            <group readonly = "state == 'posted'">
+
+                                <group>
+                                    <field name="partner_id" readonly = "state == 'posted'" options="{'no_create': True, 'no_create_edit':True}"/>
+                                    <field name="name" readonly = "state == 'posted'"/>
+                                </group>
+
+                                <group string="Montos Totales">
+                                    <field name="currency_id" options="{'no_create': True, 'no_create_edit':True}" readonly="state == 'posted'"/>
+                                    <field name="amount_aduana_currency" readonly = "state == 'posted'"/>
+                                    <field name="amount_total" readonly = "state == 'posted'"/>
+                                    <field name="dua_date" readonly = "state == 'posted'"/>
+                                    <field name="amount_total_company_currency" readonly="1"/>
+                                </group>
+
+                            </group>
+
+                            <group>
+
+                                <group  string="Parámetros de Asiento de DUA">
+                                    
+                                    <!--<field name="return_diferencial" readonly = "state == 'posted'"/>
+                                    <field name="devolucion_reintegro_account_id" readonly = "state == 'posted'" invisible = "return_diferencial != True" required = "return_diferencial == True"/>
+
+                                    <field name="rendicion_date" readonly = "state == 'posted'"/>
+                                    <field name="journal_id" options="{'no_create': True, 'no_create_edit':True}" readonly = "state == 'posted'"/>
+                                    <field name="ref" readonly = "state == 'posted'"/>-->
+
+                                </group>
+
+                            </group>
+
+                            <notebook>
+
+                                <page string="INFORMACIÓN REFERENCIAL"  readonly = "state == 'posted'">
+
+                                    <group>
+                                        <field name="template_dua_referencial_id" readonly = "state == 'posted'" options="{'no_create': True, 'no_create_edit':True}"/>
+                                    </group>
+
+                                    <field name="referencial_dua_line_ids" readonly = "state == 'posted'">        
+                                        <tree editable="1">
+                                            <field name="name"/>
+                                            <field name="amount" sum="suma_amount_aduana"/>
+                                        </tree>
+                                    </field>
+
+                                </page>
+
+                                <page string="INFORMACIÓN ANOTABLE"  readonly = "state == 'posted'">
+
+                                    <group>
+                                        <field name="template_dua_anotable_id" readonly = "state == 'posted'" options="{'no_create': True, 'no_create_edit':True}"/>
+                                    </group>
+
+                                    <field name="anotable_dua_line_ids" readonly = "state == 'posted'">
+                                        <tree editable="1">
+                                            <field name="product_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                            <field name="account_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                            <field name="tax_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                            <field name="type_concepto"/>
+                                            <field name="amount" sum="suma_amount_total_dua_pagar"/>
+                                        </tree>
+                                    </field>
+
+                                </page>
+
+                            </notebook>
+
+                    <!-- </sheet>-->
+
+                </form>             
+
+            </field>
+
+        </record>
+
+        <!--###########################################################-->
+        <record id="account_registro_dua_view_tree" model="ir.ui.view">
+            <field name="name">Registros de DUA</field>
+            <field name="model">account.registro.dua</field>
+            <field name="arch" type="xml">
+                
+                <tree>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="currency_id"/>
+                    <field name="dua_date"/>
+                    <field name="transient_expense_account_id"/>
+                    <field name="dua_journal_id"/>
+                    <field name="dua_move_id"/>
+                    <field name="amount_aduana_currency"/>
+                    <field name="amount_total"/>
+                    <field name="amount_total_company_currency"/>
+                    <field name="company_id"/>
+                    <field name="state"/>
+                </tree>
+                
+            </field>
+        </record>
+
+
+        <record id="action_account_registro_dua" model="ir.actions.act_window">
+            <field name="name">Registro de DUA</field>
+   		    <field name="res_model">account.registro.dua</field>
+            <field name="view_mode">tree,form</field>
+            <field eval="False" name="view_id"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Crear Registro de DUA
+              </p><p>
+                Permite Crear Formularios de Registro de DUA
+               :)
+              </p>
+            </field>
+        </record>
+
+        <record id="action_account_registro_dua_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="account_registro_dua_view_tree"/>
+            <field name="act_window_id" ref="action_account_registro_dua"/>
+        </record>
+
+       <record id="action_account_registro_dua_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account_registro_dua_view_form"/>
+            <field name="act_window_id" ref="action_account_registro_dua"/>
+        </record>
+
+        <menuitem id="menu_account_registro_dua" name="Registro de DUA" parent="account.menu_finance_entries_actions"  groups="account.group_account_invoice" action="action_account_registro_dua"/>
+
+
+	</data>
+</odoo>

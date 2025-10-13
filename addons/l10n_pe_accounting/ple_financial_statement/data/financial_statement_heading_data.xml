@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+
+
+    <record id="financial_statement_heading_01" model="financial.statement.heading">
+        <field name="name">Estado de Situación Financiera</field>
+        <field name="code_report_ple">3.1</field>
+        <field name="economic_sector_sunat_id" ref="economic_sector_sunat_01"/>
+        <field name="type_format_report">1</field>
+    </record>
+
+    <record id="financial_statement_heading_02" model="financial.statement.heading">
+        <field name="name">Estado de Flujos de Efectivo-Método Directo</field>
+        <field name="code_report_ple">3.18</field>
+        <field name="economic_sector_sunat_id" ref="economic_sector_sunat_01"/>
+        <field name="type_format_report">1</field>
+    </record>
+
+    <record id="financial_statement_heading_03" model="financial.statement.heading">
+        <field name="name">Estado de Cambios en el Patrimonio Neto</field>
+        <field name="code_report_ple">3.19</field>
+        <field name="economic_sector_sunat_id" ref="economic_sector_sunat_01"/>
+        <field name="type_format_report">1</field>
+    </record>
+
+    <record id="financial_statement_heading_04" model="financial.statement.heading">
+        <field name="name">Estado de Resultados</field>
+        <field name="code_report_ple">3.20</field>
+        <field name="economic_sector_sunat_id" ref="economic_sector_sunat_01"/>
+        <field name="type_format_report">1</field>
+    </record>
+
+    <record id="financial_statement_heading_05" model="financial.statement.heading">
+        <field name="name">Estado de Resultados Integrales</field>
+        <field name="code_report_ple">3.24</field>
+        <field name="economic_sector_sunat_id" ref="economic_sector_sunat_01"/>
+        <field name="type_format_report">1</field>
+    </record>
+
+    <record id="financial_statement_heading_06" model="financial.statement.heading">
+        <field name="name">Estado de Flujos de Efectivo-Método Indirecto</field>
+        <field name="code_report_ple">3.25</field>
+        <field name="economic_sector_sunat_id" ref="economic_sector_sunat_01"/>
+        <field name="type_format_report">1</field>
+    </record>
+
+    </data>
+
+</odoo>

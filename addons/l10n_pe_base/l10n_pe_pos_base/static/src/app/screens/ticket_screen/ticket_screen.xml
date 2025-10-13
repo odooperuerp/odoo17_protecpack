@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="l10n_pe_pos.TicketScreen" t-inherit="point_of_sale.TicketScreen" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('header-row')]/div[1]" position="after">
+            <t t-if="pos.config.pos_l10n_pe_invoice">
+                <div class="col wide p-2">Tipo de comprobante</div>
+                <div class="col wide p-2"># de comprobante</div>
+            </t>
+        </xpath>
+        <xpath expr="//t[@t-if='!ui.isSmall']/div[hasclass('order-row')]/div[1]" position="after">
+            <t t-if="pos.config.pos_l10n_pe_invoice">
+                <div class="col wide p-2">
+                    <div t-if="order.document_invoice_type == 1">FACTURA</div>
+                    <div t-elif="order.document_invoice_type == 3">BOLETA</div>
+                    <div t-else="">NOTA DE VENTA</div>
+                </div>
+                <div class="col wide p-2">
+                    <div><t t-esc="order.invoice_number" /></div>
+                </div>
+            </t>
+        </xpath>
+        <!--
+        <xpath expr="//ReprintReceiptButton" position="after">
+            <t t-if="pos.config.pos_l10n_pe_invoice">
+                <NoteReasonButton order="_selectedSyncedOrder" />
+            </t>
+        </xpath>-->
+        <xpath expr="//OrderWidget" position="after">
+            <t t-if="pos.config.pos_l10n_pe_invoice">
+                <div class="row text-bg-view py-2 px-2 border-top border-bottom" style="--gutter-x: 0px;">
+                    <div class="col-4">
+                        <input class="form-check-input" type="radio" name="nc_type" id="nc_type_01" value="1" t-on-click="() => this.setRefundReason('01')"/>
+                        <label for="nc_type_01">Anulación</label>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-check-input" type="radio" name="nc_type" id="nc_type_02" value="2" t-on-click="() => this.setRefundReason('02')"/>
+                        <label for="nc_type_02">Error en el RUC</label>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-check-input" type="radio" name="nc_type" id="nc_type_04" value="4" t-on-click="() => this.setRefundReason('04')"/>
+                        <label for="nc_type_04">Descuento global</label>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-check-input" type="radio" name="nc_type" id="nc_type_05" value="5" t-on-click="() => this.setRefundReason('05')"/>
+                        <label for="nc_type_05">Descuento por item</label>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-check-input" type="radio" name="nc_type" id="nc_type_06" value="6" t-on-click="() => this.setRefundReason('06')"/>
+                        <label for="nc_type_06">Devolución total</label>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-check-input" type="radio" name="nc_type" id="nc_type_07" value="7" t-on-click="() => this.setRefundReason('07')"/>
+                        <label for="nc_type_07">Devolución por item</label>
+                    </div>
+                    <div class="col-4">
+                        <input class="form-check-input" type="radio" name="nc_type" id="nc_type_10" value="10" t-on-click="() => this.setRefundReason('10')"/>
+                        <label for="nc_type_10">Otros conceptos</label>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </t>
+</templates>

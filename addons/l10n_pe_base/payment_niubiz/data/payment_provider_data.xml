@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="payment_provider_niubiz" model="payment.provider">
+        <field name="name">Niubiz</field>
+        <field name="code">niubiz</field>
+        <field name="sequence">0</field>
+        <field name="inline_form_view_id" ref="inline_form"/>
+        <field name="allow_tokenization">True</field>
+        <field name="niubiz_module_sale_subscription">True</field>
+        <field name="image_128" 
+               type="base64" 
+               file="payment_niubiz/static/img/niubiz.png"/>
+        <field name="module_id" ref="base.module_payment_niubiz"/>
+        <field name="pre_msg">
+            <![CDATA[<p>Se abrirá una ventana emergente para realizar sú pago.</p>]]>
+        </field>
+        <field name="auth_msg">
+            <![CDATA[<p>¡LISTO! ¡Tu operación se realizo con éxito!</p>]]>
+        </field>
+        <field name="done_msg">
+            <![CDATA[<p>¡LISTO! ¡Tu operación se realizo con éxito!</p>]]>
+        </field>
+        <field name="payment_method_ids"
+               eval="[Command.set([
+                         ref('payment.payment_method_card'),
+                         ref('payment_niubiz.payment_method_pagoefectivo'),
+                     ])]"
+        />
+        <!-- Datos de acceso de prueba -->
+        <!-- https://desarrolladores.niubiz.com.pe/docs/bot%C3%B3n-de-pago-1#data-de-prueba -->
+        <field name="niubiz_user">integraciones.visanet@necomplus.com</field>
+        <field name="niubiz_password">d5e7nk$M</field>
+        <field name="niubiz_pw_merchant_id_pen">341198214</field>
+        <field name="niubiz_pw_merchant_id_usd">456879853</field>
+        <field name="niubiz_tk_merchant_id_pen">342062522</field>
+        <field name="niubiz_tk_merchant_id_usd">342062522</field>
+        <field name="niubiz_merchant_id_recurrent">342062522</field>
+        <field name="niubiz_confirmation_auto">False</field>
+        <field name="niubiz_liquidation_auto">True</field>
+    </record>
+    
+</odoo>

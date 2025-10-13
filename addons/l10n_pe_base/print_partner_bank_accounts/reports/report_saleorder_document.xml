@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document_inherit" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@name='total']" position="replace">
+            <div id="total" class="row" name="total">
+                <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'}" style="font-size:10px;">
+                    <t t-foreach="doc.company_id.partner_id.bank_ids" t-as="bank">
+                        <t t-if="bank.print_in_report">
+                            <span t-out="bank.acc_number" /><br/>
+                        </t>
+                        <t t-else="">
+                        </t>
+                    </t>
+                </div>
+                <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'}">
+                    <table class="table table-sm table-borderless">
+                        <!-- Tax totals -->
+                        <t t-set="tax_totals" t-value="doc.tax_totals"/>
+                        <t t-call="sale.document_tax_totals"/>
+                    </table>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,34 @@
+{
+    "errorCode": 400,
+    "errorMessage": "Not Authorized",
+    "header": {
+        "ecoreTransactionUUID": "6fa26c75-cd3f-4396-b427-41490f67a769",
+        "ecoreTransactionDate": 1715118030354,
+        "millis": 1309
+    },
+    "data": {
+        "CURRENCY": "0604",
+        "TERMINAL": "00000001",
+        "TRANSACTION_DATE": "240507164029",
+        "ACTION_CODE": "754",
+        "TRACE_NUMBER": "200343",
+        "CARD_TOKEN": "7000010039524974",
+        "CARD_TYPE": "C",
+        "ECI_DESCRIPTION": "Transaccion no autenticada pero enviada en canal seguro",
+        "ECI": "07",
+        "SIGNATURE": "6fa26c75-cd3f-4396-b427-41490f67a769",
+        "CARD": "455170**8059",
+        "MERCHANT": "456879856",
+        "BRAND": "visa",
+        "STATUS": "Not Authorized",
+        "INSTALLMENTS_INFO": "01000000000",
+        "ACTION_DESCRIPTION": "Comercio o terminal no valido",
+        "ADQUIRENTE": "570002",
+        "QUOTA_AMOUNT": "0.00",
+        "AMOUNT": "179.91",
+        "PROCESS_CODE": "000000",
+        "VAULT_BLOCK": "369f6166-367c-44cd-93ac-a67301385f9c",
+        "QUOTA_NUMBER": "01",
+        "QUOTA_DEFERRED": "0"
+    }
+}

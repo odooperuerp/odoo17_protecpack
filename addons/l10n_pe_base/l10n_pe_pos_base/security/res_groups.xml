@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="show_serial_numbers_in_invoice_lines" model="res.groups">
+        <field name="name">Mostrar series y lotes en líneas de facturación de impresión</field>
+    </record>
+
+</odoo>

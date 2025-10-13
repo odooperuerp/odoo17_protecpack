@@ -1,0 +1,78 @@
+<odoo>
+    <record id="view_tree_aws_iam" model="ir.ui.view">
+        <field name="name">view.tree.aws.iam</field>
+        <field name="model">aws.iam</field>
+        <field name="arch" type="xml">
+            <tree string="AWS IAM">
+                <field name="name"/>
+                <field name="description" optional="show"/>
+                <field name="access_key_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_aws_iam" model="ir.ui.view">
+        <field name="name">view.form.aws.iam</field>
+        <field name="model">aws.iam</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="access_key_id"/>
+                        <field name="secret_access_key" password="True"/>
+                        <field name="aws_arn_ids">
+                            <tree string="AWS ARN">
+                                <field name="name"/>
+                                <field name="region"/>
+                            </tree>
+                            <form>
+                                <sheet>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="description"/>
+                                        <field name="value"/>
+                                        <field name="region" readonly="1" force_save="1"/>
+                                        <field name="aws_iam_id" invisible="1"/>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_aws_arn" model="ir.ui.view">
+        <field name="name">view.tree.aws.arn</field>
+        <field name="model">aws.arn</field>
+        <field name="arch" type="xml">
+            <tree string="AWS ARN" editable="top">
+                <field name="aws_iam_id"/>
+                <field name="name"/>
+                <field name="value"/>
+                <field name="description" optional="show"/>
+                <field name="region"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_view_aws_iam" model="ir.actions.act_window">
+        <field name="name">AWS IAM</field>
+        <field name="res_model">aws.iam</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_view_aws_arn" model="ir.actions.act_window">
+        <field name="name">AWS ARN</field>
+        <field name="res_model">aws.arn</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_aws_main" name="AWS" sequence="50" parent="base.menu_custom">
+        <menuitem id="menu_aws_iam" name="AWS IAM" sequence="1" action="aws_base.action_view_aws_iam"/>
+        <menuitem id="menu_aws_arn" name="AWS ARN" sequence="2" action="aws_base.action_view_aws_arn"/>
+    </menuitem>
+</odoo>

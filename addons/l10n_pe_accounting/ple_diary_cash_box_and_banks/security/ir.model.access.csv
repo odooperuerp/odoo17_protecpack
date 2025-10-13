@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_wizard_printer_ple_diary_cash_box_and_banks,modelo wizard_printer_ple_diary_cash_box_and_banks,model_wizard_printer_ple_diary_cash_box_and_banks,,1,1,1,1
+access_ple_diary_cash_box_and_banks,modelo ple_diary_cash_box_and_banks,model_ple_diary_cash_box_and_banks,,1,1,1,1
+access_ple_diary_cash_box_and_banks_line,modelo ple_diary_cash_box_and_banks_line,model_ple_diary_cash_box_and_banks_line,,1,1,1,1

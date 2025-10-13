@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="l10n_pe_pos_base.Navbar" t-inherit="point_of_sale.Navbar" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('pos-branding')]/img" position="replace">
+            <img class="pos-logo h-75 ms-3 me-auto align-self-center" t-on-click="() => debug.toggleWidget()" t-att-src="'/web/image?model=res.company&amp;id='+pos.company.id+'&amp;field=logo'" alt="Logo" />
+        </xpath>
+    </t>
+</templates>

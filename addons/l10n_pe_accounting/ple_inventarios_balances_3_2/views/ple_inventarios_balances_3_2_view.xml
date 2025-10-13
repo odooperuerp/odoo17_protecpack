@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="ple_inventarios_balances_3_2_view_form" model="ir.ui.view">
+            <field name="name">ple.inventarios.balances.3.2.form</field>
+            <field name="model">ple.inventarios.balances.3.2</field>
+            <field name="inherit_id" ref="ple_base.ple_base_view_form"/>
+            <field name="arch" type="xml">
+
+                <group name="grupo_base" position="replace">
+
+                        <group name="grupo_base" string="Fecha - Periodo Fiscal" invisible="state != 'draft'">
+                            <field name="company_id" options="{'no_create': True, 'no_create_edit':True}" groups="base.group_multi_company"/>
+                            <field name="fecha_inicio"/>
+                            <field name="fecha_final"/>
+                        </group>
+
+
+                        <group name="Filtros_dinamicos" string='Filtros dinámicos' invisible="state != 'draft'">
+
+                            <label for="account_ids"/>
+                            <div>
+                                <field name="account_option" placeholder="" class="oe_inline"/>
+                                <field name="account_ids" placeholder="" class="oe_inline" widget="many2many_tags" options="{'no_create': True}"/>
+                            </div>                           
+
+                            <label for="partner_ids"/>
+                            <div>
+                                <field name="partner_option" placeholder="" class="oe_inline"/>
+                                <field name="partner_ids" placeholder="" class="oe_inline" widget="many2many_tags" options="{'no_create': True}"/>
+                            </div>
+
+                           
+
+                            <label for="journal_ids"/>
+                            <div>
+                                <field name="journal_option" placeholder="" class="oe_inline"/>
+                                <field name="journal_ids" placeholder="" class="oe_inline" widget="many2many_tags" options="{'no_create': True}"/>
+                            </div>
+
+                            <label for="move_ids"/>
+                            <div>
+                                <field name="move_option" placeholder="" class="oe_inline"/>
+                                <field name="move_ids" placeholder="" class="oe_inline" widget="many2many_tags" options="{'no_create': True}"/>
+                            </div>
+
+                        </group>
+                    </group>
+
+
+                    <xpath expr="//form" position="inside">
+
+                        <notebook invisible="state == 'draft'">
+
+                            <page name="PLE_Inventarios_Balances_detalle_saldo_cuenta_10" string="PLE Inventarios y Balances-Detalle Saldo Cuenta 10">
+                        
+                                <field name='ple_inventarios_balances_3_2_line_ids' widget="one2many_search">
+
+                                    <tree limit="500"> 
+
+                                        <field name="periodo"/>
+                                        <field name="account_id"/>
+                                        <field name="codigo_cuenta_desagregado"/>
+                                        <field name="codigo_entidad_financiera"/>
+                                        <field name="numero_cuenta_entidad"/>
+                                        <field name="currency_id"/>
+                                        <field name="tipo_moneda_de_cuenta"/>
+                                        <field name="saldo_deudor_cuenta"/>
+                                        <field name="saldo_acreedor_cuenta"/>
+                                        <field name="indicador_estado_operacion"/>
+
+                                    </tree>      
+
+                                </field>
+                            </page>
+
+                            <!-- ##################################################### -->
+
+                            <page name="PLE-Parametros" string="Parámetros de Reporte">
+                            
+                                <group>
+                                    
+                                    <group name="grupo_base" string="Fecha - Periodo Fiscal">
+                                        <field name="company_id" options="{'no_create': True, 'no_create_edit':True}" groups="base.group_multi_company" readonly="True"/>
+                                        <field name="fecha_inicio" readonly="True"/>
+                                        <field name="fecha_final" readonly="True"/>
+                                    </group>
+
+
+                                    <group name="Filtros_dinamicos" string='Filtros dinámicos'>
+
+                                        <label for="account_ids"/>
+                                        <div>
+                                            <field name="account_option" placeholder="" class="oe_inline" readonly="True"/>
+                                            <field name="account_ids" placeholder="" class="oe_inline" widget="many2many_tags" options="{'no_create': True}" readonly="True"/>
+                                        </div>                           
+
+                                        <label for="partner_ids"/>
+                                        <div>
+                                            <field name="partner_option" placeholder="" class="oe_inline" readonly="True"/>
+                                            <field name="partner_ids" placeholder="" class="oe_inline" widget="many2many_tags" options="{'no_create': True}" readonly="True"/>
+                                        </div>
+
+                                       
+
+                                        <label for="journal_ids"/>
+                                        <div>
+                                            <field name="journal_option" placeholder="" class="oe_inline" readonly="True"/>
+                                            <field name="journal_ids" placeholder="" class="oe_inline" widget="many2many_tags" options="{'no_create': True}" readonly="True"/>
+                                        </div>
+
+                                        <label for="move_ids"/>
+                                        <div>
+                                            <field name="move_option" placeholder="" class="oe_inline" readonly="True"/>
+                                            <field name="move_ids" placeholder="" class="oe_inline" widget="many2many_tags" options="{'no_create': True}" readonly="True"/>
+                                        </div>
+
+                                    </group>
+
+                                </group>
+
+                            </page>
+
+
+                        </notebook>
+
+                    </xpath>
+
+            </field>
+
+        </record>
+
+
+        <record id="ple_inventarios_balances_3_2_view_tree" model="ir.ui.view">
+            <field name="name">ple.inventarios.balances.3.2.tree</field>
+            <field name="model">ple.inventarios.balances.3.2</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="fecha_inicio"/>
+                    <field name="fecha_final"/>
+                    <field name="company_id"/>
+                    
+                    <field name="state"
+                        widget="badge"
+                        decoration-info="state == 'draft'"
+                        decoration-success="state == 'open'"
+                        decoration-muted="state == 'send'"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_ple_inventarios_balances_3_2" model="ir.actions.act_window">
+            <field name="name">Inventarios y Balances - Detalle Saldo Cuenta 10</field>
+            <field name="res_model">ple.inventarios.balances.3.2</field>
+            <field name="view_mode">tree,form</field>
+            <field eval="False" name="view_id"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Crear Inventarios y Balances - Detalle Saldo Cuenta 10
+              </p><p>
+                El Inventarios y Balances-Detalle Saldo Cuenta 10 es un documento tributario
+                y su representacion es en los siguientes formatos: txt, excel, etc...
+              </p>
+            </field>
+        </record>
+
+        <record id="action_ple_inventarios_balances_3_2_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="ple_inventarios_balances_3_2_view_tree"/>
+            <field name="act_window_id" ref="action_ple_inventarios_balances_3_2"/>
+        </record>
+
+        <record id="action_ple_inventarios_balances_3_2_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="ple_inventarios_balances_3_2_view_form"/>
+            <field name="act_window_id" ref="action_ple_inventarios_balances_3_2"/>
+        </record>
+
+         <menuitem id="menu_ple_inventarios_balances_3_2" parent="ple_base.menu_inventario_balance" sequence="2" action="action_ple_inventarios_balances_3_2"/>
+    </data>
+</odoo>

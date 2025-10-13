@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="ple_diary_cash_box_and_banks_view_form" model="ir.ui.view">
+            <field name="name">ple.diary.cash.box.and.banks.form</field>
+            <field name="model">ple.diary.cash.box.and.banks</field>
+            <field name="inherit_id" ref="ple_base.ple_base_view_form"/>
+            <field name="arch" type="xml">
+
+
+                <xpath expr="//form/header" position="before">
+                    <field name="exist_diario_anterior_cash" invisible="1"/>
+                        <div class="alert alert-info" role="alert" style="margin-bottom:0px" invisible="cash_journal_id in [False,None,''] or exist_diario_anterior_cash == True">
+                            <bold>ESTE DIARIO DE CAJA NO POSEE UN LIBRO EN EL PERIODO ANTERIOR !</bold>
+                        </div>
+                    <!--################################################-->
+                    <field name="exist_diario_anterior_bank" invisible="1"/>
+                        <div class="alert alert-info" role="alert" style="margin-bottom:0px" invisible="bank_journal_id in [False,None,''] or exist_diario_anterior_bank == True">
+                            <bold>ESTE DIARIO DE BANCO NO POSEE UN LIBRO EN EL PERIODO ANTERIOR !</bold>
+                        </div>
+                    <br/>
+                </xpath>
+                <!--#####################################################-->
+
+                <xpath expr="//form/header" position="inside">
+                    
+                    <button name="button_view_tree_cta_cte"
+                            string="Movimientos Cta.Cte."
+                            invisible="state not in ['open','send']"
+                            type="object"
+                            icon="fa-square"
+                    />
+
+                    <button name="button_view_tree_efectivo"
+                            string="Movimientos del Efectivo"
+                            invisible="state not in ['open','send']"
+                            type="object"
+                            icon="fa-square"
+                    />
+
+                </xpath>
+                <!--##########################################################-->
+
+                <group name="grupo_base" position="replace">
+
+                    <group name="grupo_base" string="Fecha - Periodo Fiscal" invisible="state != 'draft'">
+                            
+                        <field name="company_id" options="{'no_create': True, 'no_create_edit':True}" groups="base.group_multi_company"/>
+
+                        <field name="periodo" invisible="1"/>
+
+                        <label for="fiscal_year" invisible="periodo == False"/>
+
+                        <div invisible="periodo == False">
+
+                            <field name="fiscal_year" placeholder="Año" class="oe_inline" invisible="periodo == False" required="periodo == True"/>
+                            <field name="fiscal_month" placeholder="Mes" class="oe_inline" invisible="periodo == False" required="periodo == True"/>
+
+                        </div>
+
+                        <field name="fecha" invisible="1"/>
+                        <field name="date_from" invisible="fecha == False" required="fecha == True"/>
+                        <field name="date_to" invisible="fecha == False" required="fecha == True"/>
+
+                        <field name="incluir_anteriores_no_declarados"/>
+
+                    </group>
+
+                    <group invisible="state != 'draft'">
+                        <separator string="Diarios Caja/Bancos"/>
+                            
+                        <field name="cash_journal_id" options="{'no_create': True}"/>
+                        <field name="initial_balance_cash"/>
+                        <field name="end_balance_cash"/>
+
+                        <field name="bank_journal_id" options="{'no_create': True}"/>
+                        <field name="initial_balance_bank"/>
+                        <field name="end_balance_bank"/>
+                    </group>
+
+                </group>
+
+
+                <xpath expr="//form" position="inside">
+
+                    <notebook invisible="state == 'draft'">
+                       
+                        <page name="PLE_Libro_diary" string="PLE Libro Caja Bancos - Detalle Cuenta Corriente">
+                        
+                            <field name='ple_diary_cash_box_and_banks_bank_line_ids' widget="one2many_search">
+                                
+                                <tree> 
+                                    <field name="diario"/>
+                                    <field name ="move_id" />
+                                    <field name ="move_line_id" />
+                                    <field name ="codigo_cuenta_desagregado_id" />
+                                    <field name ="m_correlativo_asiento_contable" />
+                                    <field name="codigo_entidad_financiera" />
+                                    <field name="codigo_cuenta_bancaria_contribuyente"/>
+                                    <field name ="fecha_operacion" />
+                                    <field name="medio_pago_utilizado"/>
+                                    <field name="descripcion_operacion_bancaria"/>
+                                    <field name ="tipo_doc_iden_emisor" string="tipo doc.identidad girador o beneficiario" />
+                                    <field name ="num_doc_iden_emisor" string="nro doc.identidad girador o beneficiario" />
+                                    <field name="apellidos_nombre_o_razon_social_girador_o_beneficiario"/>
+                                    <field name="numero_transaccion_bancaria"/>
+                                    <field name ="movimientos_debe" string="Parte deudora saldos movimientos" sum="total_debe"/>
+                                    <field name ="movimientos_haber" string="Parte acreedora saldos movimientos" sum="total_haber"/>
+                                    <field name="balance" invisible="1"/>
+                                    <field name ="indicador_estado_operacion" />
+                               
+                                </tree>      
+
+                            </field>
+                        
+                        </page>
+
+
+                        <page name="PLE_Libro_diary" string="PLE Libro Caja Bancos - Detalle Efectivo">
+                        
+                            <field name='ple_diary_cash_box_and_banks_cash_line_ids' widget="one2many_search">
+
+                                <tree> 
+
+                                    <field name="diario"/>
+                                    <field name ="move_id" />
+                                    <field name ="move_line_id" />
+                                    <field name ="asiento_contable" />
+                                    <field name ="m_correlativo_asiento_contable" />
+                                    <field name ="codigo_cuenta_desagregado_id" />
+                                    <field name ="codigo_cuenta_desagregado" />
+                                    <field name ="codigo_unidad_operacion" />
+                                    <field name ="codigo_centro_costos" />
+                                    <field name ="tipo_moneda_origen" />
+                                    <field name ="tipo_comprobante_pago" />
+                                    <field name ="num_serie_comprobante_pago" />
+                                    <field name ="num_comprobante_pago" />
+                                    <field name ="fecha_contable" />
+                                    <field name ="fecha_vencimiento" />
+                                    <field name ="fecha_operacion" />
+                                    <field name ="glosa" />
+                                    <field name ="glosa_referencial" />
+                                    <field name ="movimientos_debe" sum="total_debe"/>
+                                    <field name ="movimientos_haber" sum="total_haber"/>
+                                    <field name ="dato_estructurado" />
+                                    <field name ="indicador_estado_operacion" />
+                                   
+                                </tree>      
+
+
+                            </field>
+                        
+                        </page>
+
+
+                        <!-- ##################### PAGE DE PARÁMETROS #################### -->
+                        <page name="PLE-Parametros" string="Parámetros PLE-Libro Caja-Bancos">
+
+                            <group>
+                                        
+                                <group name="grupo_base" string="Fecha - Periodo Fiscal">
+                                
+                                    <field name="company_id" options="{'no_create': True, 'no_create_edit':True}" groups="base.group_multi_company" readonly="True"/>
+
+                                    <field name="periodo" invisible="1"/>
+
+                                    <label for="fiscal_year" invisible="periodo == False"/>
+
+                                    <div invisible="periodo == False">
+
+                                        <field name="fiscal_year" placeholder="Año" class="oe_inline" invisible="periodo == False" required="periodo == True" readonly="True"/>
+                                        <field name="fiscal_month" placeholder="Mes" class="oe_inline" invisible="periodo == False" required="periodo == True" readonly="True"/>
+
+                                    </div>
+
+                                    <field name="fecha" invisible="1"/>
+                                    <field name="date_from" invisible="fecha == False" required="fecha == True"/>
+                                    <field name="date_to" invisible="fecha == False" required="fecha == True"/>
+
+                                    <field name="incluir_anteriores_no_declarados" readonly="True"/>
+
+                                </group>
+
+                                <group>
+                                    <separator string="Diarios Caja/Bancos"/>
+                                        
+                                    <field name="cash_journal_id" options="{'no_create': True}" readonly="True"/>
+                                    <field name="initial_balance_cash" readonly="True"/>
+                                    <field name="end_balance_cash" readonly="True"/>
+
+                                    <field name="bank_journal_id" options="{'no_create': True}" readonly="True"/>
+                                    <field name="initial_balance_bank" readonly="True"/>
+                                    <field name="end_balance_bank" readonly="True"/>
+                                </group>
+
+                            </group>
+
+                        </page>
+
+                    </notebook>
+
+                </xpath>
+
+            </field>
+        </record>
+
+
+        <record id="ple_diary_cash_box_and_banks_view_tree" model="ir.ui.view">
+            <field name="name">ple.diary.cash.box.and.banks.tree</field>
+            <field name="model">ple.diary.cash.box.and.banks</field>
+            <field name="arch" type="xml">
+                <tree>
+
+                    <field name="company_id"/>
+                    <field name="fiscal_year"/>
+                    <field name="fiscal_month"/>
+                    <field name="cash_journal_id"/>
+                    <field name="initial_balance_cash"/>
+                    <field name="end_balance_cash"/>
+                    <field name="bank_journal_id"/>
+                    <field name="initial_balance_bank"/>
+                    <field name="end_balance_bank"/>
+                    <field name="state"
+                        widget="badge"
+                        decoration-info="state == 'draft'"
+                        decoration-success="state == 'open'"
+                        decoration-muted="state == 'send'"/>
+
+                </tree>
+
+            </field>
+        </record>
+
+
+        <record id="action_ple_diary_cash_box_and_banks" model="ir.actions.act_window">
+            <field name="name">PLE-Libro Caja y Bancos</field>
+            <field name="res_model">ple.diary.cash.box.and.banks</field>
+            <field name="view_mode">tree,form</field>
+            <field eval="False" name="view_id"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Crear libro Caja y Bancos
+              </p><p>
+                El libro Caja y Bancos es un documento tributario
+                y su representacion es en los siguientes formatos: txt, excel.
+              </p>
+            </field>
+        </record>
+
+
+        <record id="action_pe_diary_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="ple_diary_cash_box_and_banks_view_tree"/>
+            <field name="act_window_id" ref="action_ple_diary_cash_box_and_banks"/>
+        </record>
+
+
+        <record id="action_pe_diary_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="ple_diary_cash_box_and_banks_view_form"/>
+            <field name="act_window_id" ref="action_ple_diary_cash_box_and_banks"/>
+        </record>
+
+
+        <menuitem id="menu_ple_diary_cash_box_and_banks" parent="ple_base.menu_diario" sequence="0" action="action_ple_diary_cash_box_and_banks"/>
+
+    </data>
+</odoo>

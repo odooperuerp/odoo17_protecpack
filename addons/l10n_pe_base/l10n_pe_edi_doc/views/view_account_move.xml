@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="l10n_pe_edi_doc.view_account_invoice_form_desglose_venta" model="ir.ui.view">
+        <field name="name">Totales de venta</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='tax_totals']" position="attributes">
+                <attribute name="invisible">move_type not in ['out_invoice','out_refund']</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='tax_totals']" position="before">
+
+                <field name="total_sale_taxed" string="Monto Gravado" invisible="move_type in ['out_invoice','out_refund']"/>
+
+                <field name="total_sale_unaffected" string="Monto Inafecto"
+                    invisible="total_sale_unaffected == 0 or move_type in ['out_invoice','out_refund']"/>
+
+                <field name="total_sale_exonerated" string="Monto Exonerado"
+                    invisible="total_sale_exonerated == 0 or move_type in ['out_invoice','out_refund']"/>
+
+                <field name="total_sale_free" string="Monto Gratuito"
+                    invisible="total_sale_free == 0 or move_type in ['out_invoice','out_refund']"/>
+
+                <field name="total_sale_export" string="Monto Exportación"
+                    invisible="total_sale_export == 0 or move_type in ['out_invoice','out_refund']"/>
+
+                <field name="subtotal_venta" invisible="move_type in ['out_invoice','out_refund']"/>
+
+                <field name="total_sale_igv" invisible="move_type in ['out_invoice','out_refund']"/>
+
+                <field name="total_selective_tax" string="Impuesto Selectivo"
+                    invisible="total_selective_tax == 0 or move_type in ['out_invoice','out_refund']"/>
+
+                <field name="total_sale_icbper" invisible="total_sale_icbper == 0 or move_type in ['out_invoice','out_refund']"/>
+
+                <field name="total_venta" invisible="move_type in ['out_invoice','out_refund']"/>
+
+            </xpath>
+
+            <xpath expr="//form/sheet/notebook/page[@id='aml_tab']" position="after">
+                <page id="subtotal_ple_sire" string="Sub Totales por Tipos de Afectación">
+
+                    <group>
+                        <group>
+                            <field name="global_discount_subtotal"/>
+
+                            <field name="global_discount_total"/>
+
+                            <field name="total_sale_taxed" string="Monto Gravado"/>
+
+                            <field name="total_sale_unaffected" string="Monto Inafecto"/>
+
+                            <field name="total_sale_exonerated" string="Monto Exonerado"/>
+
+                            <field name="total_sale_free" string="Monto Gratuito"/>
+
+                            <field name="total_sale_export" string="Monto Exportación"/>
+
+                            <field name="subtotal_venta"/>
+
+                            <field name="total_sale_igv"/>
+
+                            <field name="total_selective_tax" string="ISC"/>
+
+                            <field name="total_sale_icbper"/>
+
+                            <field name="total_venta"/>
+
+                        </group>
+                    </group>
+
+                </page>
+
+            </xpath>
+
+            <xpath expr="//tree//field[@name='account_id']" position="attributes">
+                <attribute name="optional">show</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='invoice_tab']//tree//field[@name='price_unit']" position="after">
+                <field name="flag_discount_global" column_invisible="1"/>
+                <field name="flag_free_line" column_invisible="1" />
+            </xpath>
+
+            <xpath expr="//page[@name='invoice_tab']//form//field[@name='price_unit']" position="after">
+                <field name="flag_discount_global" invisible="1"/>
+                <field name="flag_free_line" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//tree//field[@name='discount']" position="attributes">
+                <attribute name="readonly">flag_discount_global == True or flag_free_line == True</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>
+            <xpath expr="//tree//field[@name='product_uom_id']" position="attributes">
+                <attribute name="readonly">flag_discount_global == True</attribute>
+            </xpath>
+
+            <xpath expr="//tree//field[@name='discount']" position="after">
+                <field name="discount_amount"  readonly="flag_discount_global == True or flag_free_line == True" optional="hide" force_save="1" groups="product.group_discount_per_so_line"/>
+            </xpath>
+
+            <xpath expr="//page[@id='other_tab']//label[@for='ref']" position="attributes">
+                <attribute name="string">Orden de compra</attribute>
+            </xpath>
+            <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                <xpath expr="//page[@id='other_tab']//label[@for='ref']" position="move"/>
+                <xpath expr="//page[@id='other_tab']//field[@name='ref']" position="move"/>
+            </xpath>
+
+            <field name="l10n_pe_edi_allowance_charge_reason_code" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </field>
+
+            <field name="tax_totals" position="before">
+                <field name="total_discounts" />
+            </field>
+            <!--
+            <xpath expr="//form/header" position="inside">
+                <button name="search_and_set_stock_picking" string="Calcular Guias" class="oe_highlight" type="object" groups="account.group_account_invoice" invisible="auto_post == True or move_type not in ['out_invoice','out_refund']"/>
+            </xpath>
+            
+            <field name="l10n_pe_edi_operation_type" position="after">
+                <field name="remission_guide_ids" widget="many2many_tags" options="{'no_create': True}" invisible="auto_post == True or move_type not in ['out_invoice','out_refund']"/>
+                <field name="correlative_remission_guides" invisible="auto_post == True or move_type not in ['out_invoice','out_refund']"/>
+            </field>-->
+        </field>
+    </record>
+
+    <record id="l10n_pe_edi_view_move_form_inherit" model="ir.ui.view">
+        <field name="name">l10n_pe_edi.account.move.form.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="l10n_pe_edi.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='l10n_pe_edi']" position="inside">
+
+                <group string="Documentos Relacionados">
+                    <group class="d-flex flex-wrap flex-direction-column">
+                        <button name="search_and_set_stock_picking" string="GRE Relacionadas" class="oe_highlight" type="object" groups="account.group_account_invoice" invisible="auto_post == True or move_type not in ['out_invoice','out_refund']"/>
+                        <field name="remission_guide_ids" widget="many2many_tags" options="{'no_create': True}" invisible="auto_post == True or move_type not in ['out_invoice','out_refund']"/>
+                        <label for="despatch_document_reference_ids"/>
+                        <field name="despatch_document_reference_ids" readonly="state != 'draft'" nolabel="1">
+                            <tree editable="bottom">
+                                <field name="move_id" column_invisible="1"/>
+                                <field name="l10n_pe_document_code" string="Tipo Doc."/>
+                                <field name="l10n_pe_document_number" string="Número"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <group>
+                        <field name="document_reference_ids" readonly="state != 'draft'">
+                            <tree editable="bottom">
+                                <field name="move_id" column_invisible="1"/>
+                                <field name="l10n_pe_document_code" string="Tipo Doc."/>
+                                <field name="l10n_pe_document_number" string="Número"/>
+                            </tree>
+                        </field>
+                    </group>
+                </group>
+                <group string="Nota de Crédito">
+                    <group name="l10n_pe_electronic_info">
+                        <field name="l10n_pe_edi_refund_reason"
+                            readonly="state != 'draft'"/>
+                        <field name="l10n_pe_reason"
+                            readonly="state != 'draft'"/>
+                    </group>
+                    <group>
+                        <field name="reversed_entry_id" />
+                        <field name="l10n_pe_reversed_date" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="view_invoice_tree_inherit" model="ir.ui.view">
+        <field name="name">account.view_invoice_tree.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='amount_total_signed']" position="after">
+                <field name="total_sale_igv" sum="Total" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

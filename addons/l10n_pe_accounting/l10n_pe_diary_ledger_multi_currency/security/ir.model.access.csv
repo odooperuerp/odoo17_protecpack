@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_diary_ledger_multi_currency,modelo diary_ledger_multi_currency,model_diary_ledger_multi_currency,,1,1,1,1
+access_diary_ledger_multi_currency_line,modelo diary_ledger_multi_currency_line,model_diary_ledger_multi_currency_line,,1,1,1,1

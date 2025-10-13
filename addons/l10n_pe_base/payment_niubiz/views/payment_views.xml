@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="view_form_payment_provider_niubiz" model="ir.ui.view">
+		<field name="name">view.form.payment.provider.niubiz</field>
+        <field name="model">payment.provider</field>
+		<field name="inherit_id" ref="payment.payment_provider_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//group[@name='payment_state']/field[@name='state']" position="after">
+				<field name="niubiz_state_js" widget="radio" invisible="not (state == 'test' and code == 'niubiz')" colspan="2"/>
+			</xpath>
+			<group name="provider_credentials" position="inside">
+				<group name="user" string="Usuario" invisible="code != 'niubiz'" colspan="2">
+					<field name="sequence" invisible="True"/>
+					<field name="module_id" invisible="True"/>
+					<field name="niubiz_user" />
+					<field name="niubiz_password" password="True"/>
+				</group>
+				<group name="pw" string="Pago Web" invisible="code != 'niubiz'">
+					<field name="niubiz_show_pen" invisible="True"/>
+					<field name="niubiz_show_usd" invisible="True"/>
+					<field name="niubiz_pw_merchant_id_pen" invisible="not niubiz_show_pen" required="niubiz_show_pen"/>
+					<field name="niubiz_pw_merchant_id_usd" invisible="not niubiz_show_usd" required="niubiz_show_usd"/>
+				</group>
+				<group name="tk" string="Tokenización" invisible="code != 'niubiz'">
+					<field name="niubiz_tk_merchant_id_pen" invisible="not niubiz_show_pen" required="niubiz_show_pen"/>
+					<field name="niubiz_tk_merchant_id_usd" invisible="not niubiz_show_usd" required="niubiz_show_usd"/>
+					<field name="niubiz_merchant_id_recurrent" invisible="not allow_tokenization" required="allow_tokenization"/>
+				</group>
+			</group>
+			<group name="provider_config" position="inside">
+				<group name="web_config" string="Web" invisible="code != 'niubiz'">
+					<field name="niubiz_merchantname" />
+					<field name="niubiz_url_TyC" />
+					<field name="niubiz_confirmation_auto" widget="boolean_toggle"/>
+					<field name="niubiz_liquidation_auto" widget="boolean_toggle"/>
+					<field name="niubiz_module_sale_subscription" force_save="1" invisible="True" />
+				</group>
+				<group name="modal_config" string="Modal" invisible="code != 'niubiz'">
+					<field name="niubiz_hidexbutton" widget="boolean_toggle" />
+					<field name="niubiz_formbackgroundcolor" />
+					<field name="niubiz_formbuttontextcolor" />
+					<field name="niubiz_merchantlogo_show" widget="boolean_toggle" />
+					<field name="niubiz_merchantlogo" invisible="not niubiz_merchantlogo_show" />
+					<field name="niubiz_formbuttontext" />
+					<field name="niubiz_formbuttoncolor" />
+					<field name="niubiz_showamount" widget="boolean_toggle" />
+					<field name="niubiz_expirationminutes" widget="integer" min="5" max="20" />
+				</group>
+			</group>
+		</field>
+	</record>
+	<record id="payment_transaction_form_inherit_payment_niubiz" model="ir.ui.view">
+		<field name="name">payment.transaction.view.form.inherit</field>
+		<field name="model">payment.transaction</field>
+		<field name="inherit_id" ref="payment.payment_transaction_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//header/button[@name='action_capture']" position="after">
+				<button name="action_refund" type="object" string="Refund" 
+					groups="account.group_account_invoice" 
+					invisible="state not in ['authorized', 'done']" class="btn-secondary" />
+				<button name="action_refund" type="object" string="Reverse or Extorno" 
+					groups="account.group_account_invoice" 
+					invisible="state not in ['authorized', 'done']" class="btn-secondary" />
+			</xpath>
+			<group name="transaction_details" position="attributes">
+				<attribute name="string">
+					Detalle de transacción
+				</attribute>
+			</group>
+			<group name="transaction_partner" position="attributes">
+				<attribute name="string">
+					Cliente
+				</attribute>
+			</group>
+			<group name="transaction_partner" position="after">
+				<group name="niubiz" string="Response Authorization" invisible="provider_code != 'niubiz'">
+					<field name="niubiz_response_auth_json" nolabel="1" colspan="2" />
+				</group>
+				<group name="niubiz" string="Response Confirmation" invisible="provider_code != 'niubiz'">
+					<field name="niubiz_response_cap_json" nolabel="1" colspan="2" />
+				</group>
+				<group name="niubiz" string="Response Void" invisible="provider_code != 'niubiz'">
+					<field name="niubiz_response_void_json" nolabel="1" colspan="2" />
+				</group>
+				<group name="niubiz" string="Response Error" invisible="provider_code != 'niubiz'">
+					<field name="niubiz_response_error_json" nolabel="1" colspan="2" />
+				</group>
+			</group>
+			<field name="provider_id" position="after">
+				<field name="niubiz_reference" invisible="provider_code != 'niubiz'" />
+				<field name="niubiz_channel" invisible="provider_code != 'niubiz'" />
+				<field name="niubiz_signature" invisible="provider_code != 'niubiz'" />
+			</field>
+		</field>
+	</record>
+	<record id="payment_token_form_inherit_payment_niubiz" model="ir.ui.view">
+		<field name="name">payment.token.view.form.inherit</field>
+		<field name="model">payment.token</field>
+		<field name="inherit_id" ref="payment.payment_token_form" />
+		<field name="arch" type="xml">
+			<field name="provider_id" position="after">
+				<field name="niubiz_transaction_token" />
+				<field name="niubiz_expire_on" />
+			</field>
+		</field>
+	</record>
+</odoo>
