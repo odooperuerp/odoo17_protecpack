@@ -1,6 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_sire_purchase,modelo sire_purchase,model_sire_purchase,,1,1,1,1
-access_sire_purchase_line,modelo sire_purchase_line,model_sire_purchase_line,,1,1,1,1
-access_sire_purchase_no_domiciliado_line,modelo sire_purchase_no_domiciliado_line,model_sire_purchase_no_domiciliado_line,,1,1,1,1
-access_sunat_sire_purchase_line,modelo sunat_sire_purchase_line,model_sunat_sire_purchase_line,,1,1,1,1
-access_sire_purchase_compare_line,modelo sire_purchase_compare_line,model_sire_purchase_compare_line,,1,1,1,1

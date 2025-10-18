@@ -1,7 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_financial_statement_heading,modelo financial_statement_heading,model_financial_statement_heading,,1,1,1,1
-access_financial_statement_heading_line,modelo financial_statement_heading_line,model_financial_statement_heading_line,,1,1,1,1
-access_economic_sector_sunat,modelo economic_sector_sunat,model_economic_sector_sunat,,1,1,1,1
-access_group_heading_financial_statement,modelo group_heading_financial_statement,model_group_heading_financial_statement,,1,1,1,1
-
-
