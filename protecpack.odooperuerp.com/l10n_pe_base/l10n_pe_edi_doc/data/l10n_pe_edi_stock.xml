@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="sunat_guiaremision_inherit" inherit_id="l10n_pe_edi_stock.sunat_guiaremision">
+    <!--
+        <xpath expr="//*[local-name()='DespatchSupplierParty']" position="attributes">
+            <attribute name="t-if">record.l10n_pe_edi_reason_for_transfer  in ("01","03","17")</attribute>
+        </xpath>
+        <xpath expr="//*[local-name()='DespatchSupplierParty']" position="after">
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cac:DespatchSupplierParty t-if='record.l10n_pe_edi_reason_for_transfer == "04"'>
+                    <cac:Party>
+                        <cac:PartyIdentification>
+                            <cbc:ID t-att-schemeID="record.company_id.partner_id.l10n_latam_identification_type_id.l10n_pe_vat_code"
+                                schemeName="Documento de Identidad"
+                                schemeAgencyName="PE:SUNAT"
+                                schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06"><t t-out='record.company_id.vat'/></cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyLegalEntity>
+                            <cbc:RegistrationName><t t-out='record.company_id.name'/></cbc:RegistrationName>
+                        </cac:PartyLegalEntity>
+                    </cac:Party>
+                </cac:DespatchSupplierParty>
+            </t>
+        </xpath>-->
+
+        <xpath expr="//*[local-name()='DeliveryCustomerParty']" position="attributes">
+            <!-- Destinatario es diferente del remitente 
+                01 - venta
+                03 - devolución
+                05 - Envío
+                06 - Devolución
+                09 - Exportación
+                17 - Transferencia de bienes para transformación
+                -->
+            <attribute name="t-if">record.l10n_pe_edi_reason_for_transfer  in ("01","03", "05", "06", "09","17")</attribute>
+        </xpath>
+
+        <xpath expr="//*[local-name()='DeliveryCustomerParty']" position="after">
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <!--Destinatario es igual al remitente 02-Compras 04- Transferencia entre establecimientos de la misma empresa 07- Recojo de bienes transformados-->
+                <cac:DeliveryCustomerParty t-if='record.l10n_pe_edi_reason_for_transfer in ("02","04","07")'>
+                    <cac:Party>
+                        <cac:PartyIdentification>
+                            <cbc:ID t-att-schemeID="record.company_id.partner_id.l10n_latam_identification_type_id.l10n_pe_vat_code"
+                                schemeName="Documento de Identidad"
+                                schemeAgencyName="PE:SUNAT"
+                                schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06"><t t-out='record.company_id.partner_id.vat'/></cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyLegalEntity>
+                            <cbc:RegistrationName><t t-out='record.company_id.partner_id.commercial_partner_id.name'/></cbc:RegistrationName>
+                        </cac:PartyLegalEntity>
+                    </cac:Party>
+                </cac:DeliveryCustomerParty>
+            </t>
+        </xpath>
+
+        <xpath expr="//*[local-name()='BuyerCustomerParty']" position="before">
+            <!--Datos del Comprador-->
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cac:SellerSupplierParty t-if="record.l10n_pe_edi_reason_for_transfer in ('02', '07','13')">
+                    <cac:Party>
+                        <cac:PartyIdentification>
+                            <cbc:ID t-att-schemeID="record.partner_id.l10n_latam_identification_type_id.l10n_pe_vat_code"
+                                schemeName="Documento de Identidad"
+                                schemeAgencyName="PE:SUNAT"
+                                schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06"><t t-out='record.partner_id.vat'/></cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyLegalEntity>
+                            <cbc:RegistrationName><t t-out='record.partner_id.name'/></cbc:RegistrationName>
+                        </cac:PartyLegalEntity>
+                    </cac:Party>
+                </cac:SellerSupplierParty>
+            </t>
+        </xpath>
+
+        <xpath expr="//*[local-name()='Delivery']" position="attributes">
+            <attribute name="t-if">record.l10n_pe_edi_reason_for_transfer in ("01","03","17")</attribute>
+        </xpath>
+
+        <xpath expr="//*[local-name()='Delivery']" position="after">
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cac:Delivery t-if='record.l10n_pe_edi_reason_for_transfer == "04"'>
+                    <cac:DeliveryAddress>
+                        <cbc:ID schemeName="Ubigeos"
+                            schemeAgencyName="PE:INEI"><t t-out="record.location_dest_id.warehouse_id.partner_id.l10n_pe_district.code"/></cbc:ID>
+                        <t t-if="record.location_dest_id.warehouse_id.partner_id.l10n_latam_identification_type_id.l10n_pe_vat_code == '6'">
+                            <cbc:AddressTypeCode
+                                t-att-listID="record.location_dest_id.warehouse_id.partner_id.vat"
+                                listAgencyName="PE:SUNAT"
+                                listName="Establecimientos anexos"><t t-out="record.location_dest_id.warehouse_id.partner_id.l10n_pe_edi_address_type_code"/></cbc:AddressTypeCode>
+                        </t>
+                        <cac:AddressLine>
+                            <cbc:Line><t t-out="'%s %s %s %s' % (record.location_dest_id.warehouse_id.partner_id.street or '', record.location_dest_id.warehouse_id.partner_id.l10n_pe_district.name or '', record.location_dest_id.warehouse_id.partner_id.city or '', record.location_dest_id.warehouse_id.partner_id.state_id.name or '')"/></cbc:Line>
+                        </cac:AddressLine>
+                    </cac:DeliveryAddress>
+                    <cac:Despatch>
+                        <cac:DespatchAddress>
+                            <cbc:ID schemeName="Ubigeos"
+                                schemeAgencyName="PE:INEI"><t t-out="record.location_id.warehouse_id.partner_id.l10n_pe_district.code"/></cbc:ID>
+                            <cbc:AddressTypeCode t-att-listID="record.location_id.warehouse_id.partner_id.vat"
+                                listAgencyName="PE:SUNAT"
+                                listName="Establecimientos anexos"><t t-out="record.location_id.warehouse_id.partner_id.l10n_pe_edi_address_type_code"/></cbc:AddressTypeCode>
+                            <cac:AddressLine>
+                                <cbc:Line><t t-out="'%s %s %s %s' % (record.location_id.warehouse_id.partner_id.street or '', record.location_id.warehouse_id.partner_id.l10n_pe_district.name or '', record.location_id.warehouse_id.partner_id.city or '', record.location_id.warehouse_id.partner_id.state_id.name or '')"/></cbc:Line>
+                            </cac:AddressLine>
+                        </cac:DespatchAddress>
+                    </cac:Despatch>
+                </cac:Delivery>
+                <cac:Delivery t-if='record.l10n_pe_edi_reason_for_transfer in ("02","06","07","08")'>
+                    <!--Dirección de Llegada-->
+                    <cac:DeliveryAddress>
+                        <cbc:ID schemeName="Ubigeos"
+                            schemeAgencyName="PE:INEI"><t t-out="record.location_dest_id.warehouse_id.partner_id.l10n_pe_district.code"/></cbc:ID>
+                            <cbc:AddressTypeCode t-att-listID="record.location_dest_id.warehouse_id.partner_id.vat"
+                                listAgencyName="PE:SUNAT"
+                                listName="Establecimientos anexos"><t t-out="record.location_dest_id.warehouse_id.partner_id.l10n_pe_edi_address_type_code"/></cbc:AddressTypeCode>
+                        
+                        <cac:AddressLine>
+                            <cbc:Line><t t-out="'%s %s %s %s' % (record.location_dest_id.warehouse_id.partner_id.street or '', record.location_dest_id.warehouse_id.partner_id.l10n_pe_district.name or '', record.location_dest_id.warehouse_id.partner_id.city or '', record.location_dest_id.warehouse_id.partner_id.state_id.name or '')"/></cbc:Line>
+                        </cac:AddressLine>
+                    </cac:DeliveryAddress>
+                    <!--Dirección de partida-->
+                    <cac:Despatch>
+                        <cac:DespatchAddress>
+                            <cbc:ID schemeName="Ubigeos"
+                                schemeAgencyName="PE:INEI"><t t-out="record.partner_id.l10n_pe_district.code"/></cbc:ID>
+                            <t t-if="record.partner_id.l10n_latam_identification_type_id.l10n_pe_vat_code == '6'">
+                                <cbc:AddressTypeCode
+                                    t-att-listID="record.partner_id.vat"
+                                    listAgencyName="PE:SUNAT"
+                                    listName="Establecimientos anexos">0</cbc:AddressTypeCode>
+                            </t>
+                            <cac:AddressLine>
+                                <cbc:Line><t t-out="'%s %s %s %s' % (record.partner_id.street or '', record.partner_id.l10n_pe_district.name or '', record.partner_id.city or '', record.partner_id.state_id.name or '')"/></cbc:Line>
+                            </cac:AddressLine>
+                        </cac:DespatchAddress>
+                    </cac:Despatch>
+                </cac:Delivery>
+            </t>
+        </xpath>
+    </template>
+
+
+</odoo>

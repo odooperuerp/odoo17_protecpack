@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="inline_form">
+        <t t-set="sdk_assets_value" t-value="provider_sudo._niubiz_get_sdk_assets(sale_order_id)"/>
+
+        <script type="text/javascript" t-att-src="sdk_assets_value"></script>
+
+        <t t-set="inline_form_values"
+           t-value="provider_sudo._niubiz_get_inline_form_values(
+                        amount,
+                        currency,
+                        partner_id,
+                        mode == 'validation',
+                        payment_method_sudo=pm_sudo,
+                        sale_order_id=sale_order_id,
+                    )"
+        />
+        <div name="o_niubiz_element_container"
+             t-att-data-niubiz-inline-form-values="inline_form_values"
+        />
+    </template>
+
+</odoo>

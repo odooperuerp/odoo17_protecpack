@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="checkout_layout" inherit_id="website_sale.checkout_layout">
+        <xpath expr="//div[hasclass('accordion-header')]" position="before">
+            <t t-set="navClass" t-valuef="primary"/>
+            <t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)" />
+            <t t-set="hasPricelistDropdown" t-value="website_sale_pricelists and len(website_sale_pricelists)&gt;1"/>
+            <div class="d-flex flex-row-reverse">
+                <t t-call="website_sale.pricelist_list" t-cache="pricelist">
+                    <t t-set="_classes" t-valuef="d-none d-lg-inline"/>
+                </t>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

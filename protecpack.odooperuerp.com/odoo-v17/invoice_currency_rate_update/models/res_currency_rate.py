@@ -1,0 +1,20 @@
+from odoo import fields, models
+
+
+class ResCurrencyRate(models.Model):
+    _name = "res.currency.rate"
+    _inherit = ["res.currency.rate", "mail.thread"]
+
+    rate = fields.Float(tracking=True)
+    provider_id = fields.Many2one(
+        string="Provider",
+        comodel_name="res.currency.rate.provider",
+        ondelete="restrict",
+        tracking=True,
+    )
+
+    def write(self, values):
+        """Unset link to provider in case 'rate' or 'name' are manually changed"""
+        if ("rate" in values or "name" in values) and "provider_id" not in values:
+            values["provider_id"] = False
+        return super().write(values)

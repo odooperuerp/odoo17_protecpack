@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    	<record id="view_company_form" model="ir.ui.view">
+            <field name="name">res.company.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+
+
+                <xpath expr="//notebook" position="inside">
+
+                    <page name="credentials_send_ftp" string="Credenciales API-SUNAT SIRE">
+
+                        <group>
+
+                            <field name="client_id_portal_sunat"/>
+                            <field name="client_secret_portal_sunat"/>
+                            <field name="usuario_portal_sunat"/>
+                            <field name="clavesol_portal_sunat"/>
+
+                        </group>
+
+                    </page>
+
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

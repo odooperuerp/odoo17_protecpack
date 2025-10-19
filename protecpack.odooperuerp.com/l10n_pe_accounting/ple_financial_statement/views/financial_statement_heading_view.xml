@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+        <record id="financial_statement_heading_view_form" model="ir.ui.view">
+            <field name="name">Rubros-Informes Financieros</field>
+            <field name="model">financial.statement.heading</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="company_id"/>
+                                <field name="economic_sector_sunat_id"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code_report_ple"/>
+                                <field name="type_format_report"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="Rubros_Informe_Financiero" string="Rubros del Informe Financiero">
+                                <field name="financial_statement_heading_line_ids">
+
+                                    <tree limit="500" editable="bottom">
+
+                                        <field name="nro_rubro"/>
+                                        <field name="name"/>
+                                        <field name="is_total"/>
+                                        <field name="is_title"/>
+                                        <field name="title" readonly="is_title != True"/>
+                                        <field name="code_sunat"/>
+                                        <field name="group_heading_financial_statement_id"/>
+                                        <field name="calculation_type"/>
+                                        <field name="account_ids" readonly="calculation_type != 'accounts'" widget="many2many_tags" options="{'no_create': True}"/>
+                                        <field name="movements_period" readonly="calculation_type != 'manual'"/>
+
+                                    </tree>
+
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    </form>
+                </field>
+        </record>
+
+        <record id="financial_statement_heading_view_tree" model="ir.ui.view">
+            <field name="name">Rubros-Informes Financieros</field>
+            <field name="model">financial.statement.heading</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code_report_ple"/>
+                    <field name="economic_sector_sunat_id"/>
+                    <field name="financial_statement_heading_line_ids"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_financial_statement_heading" model="ir.actions.act_window">
+            <field name="name">Rubros-Informes Financieros</field>
+   		    <field name="res_model">financial.statement.heading</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="financial_statement_heading_view_tree"/>
+        </record>
+
+
+        <menuitem id="menu_financial_statement_heading" name="Rubros de Estados Financieros" parent="ple_base.menu_inventario_balance" sequence="0" groups="account.group_account_invoice" action="action_financial_statement_heading"/>
+             
+	</data>
+</odoo>

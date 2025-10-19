@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="payment.payment_method_card" model="payment.method">
+        <field name="name">Tarjeta de crédito/débito y más</field>
+        <field name="support_refund">partial</field>
+    </record>
+
+    <record id="payment_method_pagoefectivo" model="payment.method">
+        <field name="name">Pago Efectivo</field>
+        <field name="code">pagoefectivo</field>
+        <field name="sequence">11</field>
+        <field name="active">False</field>
+        <field name="image" type="base64" file="payment_niubiz/static/img/pagoefectivo.png"/>
+        <field name="support_tokenization">False</field>
+        <field name="support_express_checkout">False</field>
+        <field name="support_refund">partial</field>
+    </record>
+
+    <record id="payment_method_pagoefectivo_brand" model="payment.method">
+        <field name="name">Pago Efectivo</field>
+        <field name="code">pagoefectivo_brand</field>
+        <!-- <field name="primary_payment_method_id" eval="ref('payment_niubiz.payment_method_pagoefectivo')"/> -->
+        <field name="primary_payment_method_id" eval="ref('payment.payment_method_card')"/>
+        <field name="sequence">4</field>
+        <field name="active">False</field>
+        <field name="image" type="base64" file="payment_niubiz/static/img/pagoefectivo.png"/>
+        <field name="support_refund">partial</field>
+    </record>
+
+    <record id="payment_method_yape" model="payment.method">
+        <field name="name">YAPE</field>
+        <field name="code">yape</field>
+        <field name="primary_payment_method_id" eval="ref('payment.payment_method_card')"/>
+        <field name="sequence">3</field>
+        <field name="active">True</field>
+        <field name="image" type="base64" file="payment_niubiz/static/img/yape.jpg"/>
+        <field name="support_refund">partial</field>
+    </record>
+
+    <record id="payment_method_tunki" model="payment.method">
+        <field name="name">Tunki</field>
+        <field name="code">tunki</field>
+        <field name="primary_payment_method_id" eval="ref('payment.payment_method_card')"/>
+        <field name="sequence">5</field>
+        <field name="active">False</field>
+        <field name="image" type="base64" file="payment_niubiz/static/img/tunki.png"/>
+        <field name="support_refund">partial</field>
+    </record>
+
+    <!-- Ordenar Marcas -->
+    <record id="payment.payment_method_visa" model="payment.method">
+        <field name="sequence">1</field>
+        <field name="support_refund">partial</field>
+    </record>
+
+    <record id="payment.payment_method_mastercard" model="payment.method">
+        <field name="sequence">2</field>
+        <field name="support_refund">partial</field>
+    </record>
+
+    <record id="payment.payment_method_amex" model="payment.method">
+        <field name="sequence">5</field>
+        <field name="support_refund">partial</field>
+    </record>
+
+    <record id="payment.payment_method_diners" model="payment.method">
+        <field name="sequence">6</field>
+        <field name="support_refund">partial</field>
+    </record>
+
+</odoo>

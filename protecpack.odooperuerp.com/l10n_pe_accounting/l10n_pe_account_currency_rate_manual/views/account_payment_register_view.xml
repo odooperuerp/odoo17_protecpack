@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="view_account_payment_register_form_inherit" model="ir.ui.view">
+            <field name="name">account.payment.register.form.inherit</field>
+            <field name="model">account.payment.register</field>
+            <field name="inherit_id" ref="account.view_account_payment_register_form"/>
+            <field name="arch" type="xml">
+
+                <field name="payment_date" position="before">
+                    
+                    <field name="is_payment_in_me" invisible="1"/>
+
+                    <field name="is_special_tc" invisible="is_payment_in_me != True"/>
+
+                    <field name="currency_tc" readonly="is_special_tc == False or is_manual_amount_in_company_currency == True" invisible="is_payment_in_me != True" force_save="1"/>
+
+                    <field name="amount_in_company_currency" readonly="1" invisible="is_payment_in_me != True"/>
+
+                    <field name="is_manual_amount_in_company_currency" invisible="is_payment_in_me != True or is_special_tc != True"/>
+
+                    <field name="manual_amount_in_company_currency" invisible="is_payment_in_me != True or is_special_tc != True or is_manual_amount_in_company_currency != True"/>
+
+                    <field name="is_tc_same_account_invoice" invisible="is_payment_in_me != True or is_special_tc != True"/>
+
+                </field>
+
+
+                <field name="partner_bank_id" position="after">
+
+                    <field name="operation_number"/>
+                    <field name="sunat_table_01_id" options="{'no_create': True}"/>
+                    
+                </field>
+
+
+                <field name="writeoff_label" position="after">
+
+                    <label for="analytic_distribution"
+                        class="oe_edit_only"
+                        string="Distribución Analítica"
+                        invisible="writeoff_is_exchange_account"/>
+
+                    <field name="analytic_distribution"
+                        widget="analytic_distribution" 
+                        groups="analytic.group_analytic_accounting"
+                        required="payment_difference_handling == 'reconcile'"
+                        invisible="writeoff_is_exchange_account"/>
+
+
+                </field>
+
+            </field>
+        </record>
+    </data>
+
+</odoo>

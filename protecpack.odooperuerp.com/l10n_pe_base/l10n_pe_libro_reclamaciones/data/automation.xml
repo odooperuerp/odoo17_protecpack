@@ -1,0 +1,22 @@
+<odoo>
+
+    <record id="action_server_send_mail" model="ir.actions.server">
+        <field name="name">Enviar correo electrónica: Plantilla de Constancia de reclamo</field>
+        <field name="model_id" ref="l10n_pe_libro_reclamaciones.model_libro_reclamaciones"/>
+        <field name="state">mail_post</field>
+        <field name="template_id" ref="l10n_pe_libro_reclamaciones.mail_template_libro_reclamaciones"/>
+        <field name="mail_post_method">email</field>
+    </record>
+
+    <record id="automation_send_email_claim_template" model="base.automation">
+        <field name="name">Envío de correo de Constancia de Reclamo</field>
+        <field name="model_id" ref="l10n_pe_libro_reclamaciones.model_libro_reclamaciones"/>
+        <field name="trigger">on_time_created</field>
+        <field name="trg_date_range" eval="2"/>
+        <field name="trg_date_range_type">minutes</field>
+        <field name="filter_pre_domain" eval="[]"/>
+        <field name="filter_domain" eval="[]"/>
+        <field name="action_server_ids" eval="[(6,0,ref('l10n_pe_libro_reclamaciones.action_server_send_mail'))]"/>
+    </record>
+
+</odoo>

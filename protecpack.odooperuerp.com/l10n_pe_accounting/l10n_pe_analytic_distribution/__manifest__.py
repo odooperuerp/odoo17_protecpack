@@ -1,0 +1,20 @@
+{
+    'name': 'Distribucion de Cuenta - Contabilidad de Costos',
+    'version': '17.0.0.1',
+    'category': '',
+    'license': 'AGPL-3',
+    'summary': "Modulo de distribucion de cuenta con contabilidad analitica",
+    'author': "Franco Najarro",
+    'website': '',
+    'depends': ['account','analytic'],
+    'data': [
+        #'security/ir.model.access.csv',
+        "data/action_server_analytic_distribution_massive.xml",
+        'views/account_analytic_account_view.xml',
+        'views/res_config_settings_view.xml',
+        'views/account_account_view.xml',
+        'views/account_move_view.xml',
+        #'views/wizard_account_analytic_distribution_view.xml',
+        ],
+    'installable': True,
+}

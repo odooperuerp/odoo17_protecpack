@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="view_tree_social_chat_support_button" model="ir.ui.view">
+        <field name="name">Botones</field>
+        <field name="model">social.chat.support.button</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="style"/>
+                <field name="position"/>
+                <field name="social_avatar_icon"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="view_form_social_chat_support_button" model="ir.ui.view">
+        <field name="name">Botones</field>
+        <field name="model">social.chat.support.button</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="social_avatar_image" invisible="avatar_type != 'image'" widget="image" class="oe_avatar"/>
+                    <label for="name"/>
+                    <h1>
+                        <field name="name" placeholder="Ej. Botón multiagente whatsapp"/>
+                    </h1>
+                    <label for="avatar_type"/>
+                    <field name="avatar_type" widget="radio"/>
+                    <field name="json_for_csmChatSupport" widget="button_preview"/>
+                    <group string="Configuración de Burbuja">
+                        <group>
+                            <field name="style"/>
+                            <field name="position" widget="radio"/>
+                            <field name="pulse_effect"/>
+                            <field name="speech_bubble"/>
+                            <field name="notification_number" widget="boolean_toggle"/>
+                            <field name="effect"/>
+                            <field name="cookie" string="Frecuencia (h)"/>
+                        </group>
+                        <group>
+                            
+                            <field name="social_avatar_icon" widget="radio"/>
+                            
+                            <field name="src"/>
+                            <field name="background_color" widget="color"/>
+                        </group>
+                    </group>
+                    <group string="Burbuja - Textos y enlaces">
+                        <group>
+                            <field name="text_title"/>
+                            <field name="text_description"/>
+                            <field name="text_online"/>
+                            <field name="text_offline"/>
+                            
+                        </group>
+                        <group>
+                            <field name="link_desktop" widget="url"/>
+                            <field name="link_mobile" widget="url"/>
+                        </group>
+                    </group>
+                    <group string="Configuración de Popup">
+                        <group>
+                            <field name="popup_automatic_open"/>
+                            <field name="popup_outside_click_close_popup"/>
+                            <field name="popup_effect"/>
+                        </group>
+                        <group>
+                            <field name="popup_header_background_color" widget="color"/>
+                            <field name="popup_header_title" />
+                            <field name="popup_header_description" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="social_chat_support_button_agent_ids">
+                            <tree>
+                                <field name="text_title"/>
+                                <field name="text_description"/>
+                                <field name="social_avatar"/>
+                                <field name="is_person" />
+                                <field name="avatar_background_color" widget="color"/>
+                            </tree>
+                            <form>
+                                <field name="avatar_image" invisible="is_person == False" widget="image" class="oe_avatar"/>
+                                <label for="text_title"/>
+                                <h1>
+                                    <field name="text_title"/>
+                                </h1>
+                                <label for="is_person"/>
+                                <field name="is_person" widget="boolean_toggle"/>
+                                <group>
+                                    <group>
+                                        <field name="text_description"/>
+                                        <field name="text_online"/>
+                                        <field name="text_offline"/>
+
+                                        <field name="text_message"/>
+                                        <field name="text_textbox"/>
+                                        <field name="text_button"/>
+                                    </group>
+                                    <group>
+                                        <field name="link_desktop" widget="url"/>
+                                        <field name="link_mobile" widget="url"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <group>
+                                        <field name="social_avatar"  widget="radio"/>
+                                        <field name="avatar_src"/>
+                                    </group>
+                                    <group>
+                                        <field name="avatar_background_color" widget="color"/>
+                                        <field name="avatar_online_circle"/>
+                                    </group>
+                                </group>
+                                
+                            </form>
+                        </field>
+                        
+                    </group>
+                    
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_view_social_chat_support_button" model="ir.actions.act_window">
+        <field name="name">Botones de Chat Social</field>
+        <field name="res_model">social.chat.support.button</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+    
+    <menuitem id="menu_social_chat_support_button" 
+            name="Botones de Chat social" 
+            parent="website_sale.menu_ecommerce_settings" 
+            sequence="200" 
+            action="social_chat_support_button.action_view_social_chat_support_button"/>
+            
+</odoo>

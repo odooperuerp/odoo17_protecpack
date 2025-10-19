@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_inherit_retentions" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.retentions</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="11"/>
+        <field name="inherit_id" ref="account.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+
+            <!-- #################################################################### -->
+
+            <xpath expr="//block[@name='default_taxes_setting_container']" position="after">
+
+                <block title="Retenciones y Percepciones" name="retentions_and_perceptions_setting_container">
+                
+                    <setting id="retentions_and_perceptions" string="Retenciones" company_dependent="1" help="Establece el monto mínimo de los comprobantes de Venta sujetos a Retencion y el porcentaje respectivo según norma.">
+
+                                <label for="retention_percentaje"/>
+                                <div class="text-muted">
+                                    Establesca el porcentaje de Retención actual impuesto por la SUNAT.
+                                </div>
+                                <field name="retention_percentaje"/>
+
+
+                                <br/>
+                                
+                                <label for="amount_min_retention"/>
+                                <div class="text-muted">
+                                    Establesca el monto mínimo actual impuesto por la SUNAT a partir del cual se aplicará la Retención.
+                                </div>
+                                <field name="amount_min_retention"/>
+
+                    </setting>
+                </block>
+
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

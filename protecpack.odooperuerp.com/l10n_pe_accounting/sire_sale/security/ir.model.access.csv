@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sire_sale,modelo sire_sale,model_sire_sale,,1,1,1,1
+access_sire_sale_line,modelo sire_sale_line,model_sire_sale_line,,1,1,1,1
+access_sunat_sire_sale_line,modelo sunat_sire_sale_line,model_sunat_sire_sale_line,,1,1,1,1
+access_sire_sale_compare_line,modelo sire_sale_compare_line,model_sire_sale_compare_line,,1,1,1,1
+

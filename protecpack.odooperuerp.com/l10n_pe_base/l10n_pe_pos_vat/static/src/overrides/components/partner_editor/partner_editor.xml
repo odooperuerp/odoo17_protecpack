@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="PartnerDetailsEdit" t-inherit="point_of_sale.PartnerDetailsEdit" t-inherit-mode="extension">
+
+        <xpath expr="//section//input[hasclass('image-uploader')]" position="attributes">
+            <attribute name="t-att-disabled">changes.anonymous_customer == true</attribute>
+        </xpath>
+
+        <xpath expr="//section//input[@name='name']" position="attributes">
+            <attribute name="t-att-disabled">changes.anonymous_customer == true</attribute>
+        </xpath>
+
+        <xpath expr="//section//div[hasclass('partner-details-box')]" position="attributes">
+            <attribute name="t-if">changes.anonymous_customer == false</attribute>
+        </xpath>
+
+        <xpath expr="//div[hasclass('partner-details-header')]" position="after">
+                <div id="formulario-container" class="d-flex flex-wrap pe-2 gap-3 justify-content-center align-items-center pt-3" t-if="pos.isPeruvianCompany()">
+                    <t t-foreach="pos.l10n_latam_identification_types" t-as="l10n_latam_identification_type" t-key="l10n_latam_identification_type.id">
+                        <label class="form-check-label">
+                            <input type="radio"
+                                    name="l10n_latam_identification_type_id"
+                                    t-att-disabled="changes.anonymous_customer == true"
+                                    t-model="changes.l10n_latam_identification_type_id"
+                                    t-on-change="change_identification_type"
+                                    t-att-value="l10n_latam_identification_type.id"
+                                    class="form-check-input"/> <t t-esc="l10n_latam_identification_type.name"/>
+                        </label>
+                    </t>
+                    <input type="text" name="vat" placeholder="Número de documento"
+                            class="form-control mt-2 mt-md-0"
+                            t-att-disabled="changes.anonymous_customer == true"
+                            t-model="changes.vat" style="max-width: 250px;"/>
+                    <button class="btn btn-primary mt-2 mt-md-0" t-on-click="autocomplete_client" t-att-disabled="changes.anonymous_customer == true"> <i class="fa fa-search"/>Buscar</button>
+                </div>
+        </xpath>
+        <xpath expr="//t[@t-as='item']" position="replace">
+            <t t-set="values" t-value="{'Street':'Dirección','Email':'Correo Electrónico', 'Phone':'Teléfono', 'Mobile':'Celular'}"/>
+
+            <t t-foreach="['Street', 'Email','Phone','Mobile']" t-as="item" t-key="item">
+                <div class="partner-detail col">
+                    <label class="form-label label" t-attf-for="{{item}}" t-esc="values[item]"/>
+                    <input class="detail form-control" t-attf-id="{{item}}" t-attf-name="{{item}}" t-model="changes[item.toLowerCase()]" t-attf-placeholder="{{values[item]}}" t-att-class="{'border-danger': missingFields.includes(item.toLowerCase())}" />
+                </div>
+            </t>
+        </xpath>
+
+        <xpath expr="//div[hasclass('partner-details-box')]//div[3]" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+
+        <xpath expr="//div[hasclass('partner-details-box')]//div[5]" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+
+        <xpath expr="//div[hasclass('partner-details-box')]/div[1]/label" position="replace">
+            <label class="form-label label" for="state">Departamento</label>
+        </xpath>
+
+        <xpath expr="//div[hasclass('partner-details-box')]/div[1]" position="after">
+            <div class="partner-detail col"  t-if="pos.isPeruvianCompany()">
+                <label class="form-label label" for="city">Provincia</label>
+                <select class="detail form-select" id="city_id" name="city_id" t-model="changes.city_id">
+                    <option value="">None</option>
+                    <t t-foreach="pos.cities" t-as="city" t-key="city.id">
+                        <option t-att-value="city.id">
+                            <t t-esc="city.name" />
+                        </option>
+                    </t>
+                </select>
+            </div>
+            <div class="partner-detail col" t-if="pos.isPeruvianCompany()">
+                <label class="form-label label" for="city">Distrito</label>
+                <select class="detail form-select" id="l10n_pe_district" name="l10n_pe_district" t-model="changes.l10n_pe_district">
+                    <option value="">None</option>
+                    <t t-foreach="pos.districts" t-as="district" t-key="district.id">
+                        <option t-if="changes.city_id == district.city_id[0]" t-att-value="district.id">
+                            <t t-esc="district.name" />
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

@@ -1,0 +1,24 @@
+<odoo>
+    <record id="res_config_settings_view_form_inherit_aws" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.aws</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='integration']" position="after">
+                <block title="AWS Services" name="aws_services">
+                    <setting id="aws_iam_ids" title="IAM Disponibles" string="" help="">
+                        <field name="group_use_aws"/>
+                        <button name="%(aws_base.action_view_aws_iam)d" string="Configurar Cuentas AWS IAM" type="action" class="oe_link" icon="oi-arrow-right"/>
+                        <button name="%(aws_base.action_view_aws_arn)d" string="Configurar AWS ARN" type="action" class="oe_link" icon="oi-arrow-right"/>
+                        <div invisible="not group_use_aws">
+                            <div class="text-muted">
+                                Seleccione los usuarios de AWS IAM que desea utilizar en Odoo.
+                            </div>
+                            <field name="aws_iam_ids" widget="many2many_tags" options="{'no_create':1,'no_edit':1,'no_quick_create_edit':1}" required="group_use_aws"/>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

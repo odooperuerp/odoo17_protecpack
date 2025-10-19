@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+l10n_pe_sunat_table_admin_security_id,Access l10n_pe_sunat_table,model_l10n_pe_sunat_table,base.group_erp_manager,1,1,1,1
+l10n_pe_catalogs_sunat_admin_security_id,Access l10n_pe_catalogs_sunat,model_l10n_pe_catalogs_sunat,base.group_erp_manager,1,1,1,1
+l10n_pe_sunat_table_user_security_id,Access l10n_pe_sunat_table,model_l10n_pe_sunat_table,base.group_user,1,0,0,0
+l10n_pe_catalogs_sunat_user_security_id,Access l10n_pe_catalogs_sunat,model_l10n_pe_catalogs_sunat,base.group_user,1,0,0,0

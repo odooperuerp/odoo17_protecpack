@@ -1,0 +1,73 @@
+<odoo>
+    <record id="res_config_settings_view_form_inherit" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.point_of_sale</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="95"/>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='pos_accounting_section']" position="after">
+                <block title="Localización peruana" id="pos_l10n_pe_localization">
+                    <setting help="Permite selección de factura/boleta en la venta">
+                        <field name="pos_l10n_pe_invoice" />
+                        <div class="content-group" invisible="not pos_l10n_pe_invoice" id="pos_l10n_pe_sequence">
+                            <div class="content-group mt16">
+                                <label for="pos_l10n_pe_seq_factura" class="o_light_label mr8"/>F
+                                <field name="pos_l10n_pe_seq_factura"/>
+                            </div>
+                            <div class="content-group">
+                                <label for="pos_l10n_pe_seq_boleta" class="o_light_label mr8"/>B
+                                <field name="pos_l10n_pe_seq_boleta"/>
+                            </div>
+                            <div class="content-group mt16">
+                                <label for="pos_l10n_pe_seq_nota_factura" class="o_light_label mr8"/>F
+                                <field name="pos_l10n_pe_seq_nota_factura"/>
+                            </div>
+                            <div class="content-group">
+                                <label for="pos_l10n_pe_seq_nota_boleta" class="o_light_label mr8"/>B
+                                <field name="pos_l10n_pe_seq_nota_boleta"/>
+                            </div>
+                        </div>
+                    </setting>
+                    <setting>
+                        <div class="content-group" invisible="not pos_l10n_pe_invoice" id="pos_l10n_pe_sequence_number">
+                            <div class="content-group mt16">
+                                <label for="pos_l10n_pe_seqnum_factura" class="o_light_label mr8"/>
+                                <field name="pos_l10n_pe_seqnum_factura"/>
+                            </div>
+                            <div class="content-group">
+                                <label for="pos_l10n_pe_seqnum_boleta" class="o_light_label mr8"/>
+                                <field name="pos_l10n_pe_seqnum_boleta"/>
+                            </div>
+                            <div class="content-group mt16">
+                                <label for="pos_l10n_pe_seqnum_nota_factura" class="o_light_label mr8"/>
+                                <field name="pos_l10n_pe_seqnum_nota_factura"/>
+                            </div>
+                            <div class="content-group">
+                                <label for="pos_l10n_pe_seqnum_nota_boleta" class="o_light_label mr8"/>
+                                <field name="pos_l10n_pe_seqnum_nota_boleta"/>
+                            </div>
+                        </div>
+                    </setting>
+                    <setting help="Diario para notas de venta">
+                        <div class="content-group" invisible="not pos_l10n_pe_invoice" id="pos_l10n_pe_nv_journal">
+                            <div class="row">
+                                <div class="content-group mt16">
+                                    <label for="nv_journal_id" class="o_light_label mr8"/>
+                                    <field name="nv_journal_id"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label for="pos_l10n_pe_display_option" class="o_light_label mr8"/>
+                                <field name="pos_l10n_pe_display_option"/>
+                            </div>
+                            <!-- <div class="row">
+                                <label string="Invoices" for="pos_invoice_journal_id" class="col-lg-3 o_light_label"/>
+                                <field name="pos_invoice_journal_id" domain="[('company_id', '=', company_id), ('type', '=', 'sale')]" required="pos_company_has_template" context="{'default_company_id': company_id, 'default_type': 'sale'}"/>
+                            </div> -->
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

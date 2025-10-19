@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_inherit_receipt_fees" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.receipt.fees</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="11"/>
+        <field name="inherit_id" ref="account.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+
+            <!-- #################################################################### -->
+            <xpath expr="//block[@name='main_receipt_fees_setting_container']" position="inside">
+
+                <!--<block title="Contabilidad de Recibos por Honorarios" name="main_receipt_fees_setting_container">-->
+                
+
+                    <setting id="receipt_fees" string="Retención de 4ta Categoría" company_dependent="1">
+
+                        <label for="receipt_of_fees_account_id"/>
+                        <div class="text-muted">
+                            Establezca la Cuenta de Retención de 4ta Categoría para Recibos por Honorarios.
+                        </div>
+                        <field name="receipt_of_fees_account_id" string=""/>
+
+                        <br/>
+
+                    </setting>
+
+                <!--</block>-->
+
+                
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

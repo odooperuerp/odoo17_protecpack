@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@t-if='not show_qr']" position="before">
+            <t t-foreach="o.company_id.partner_id.bank_ids" t-as="bank">
+                <t t-if="bank.print_in_report">
+                    <span t-out="bank.acc_number" style="font-size:10px;" /><br/>
+                </t>
+                <t t-else="">
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo>

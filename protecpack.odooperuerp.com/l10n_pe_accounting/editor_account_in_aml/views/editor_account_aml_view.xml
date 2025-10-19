@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+        <record id="editor_account_aml_view_form" model="ir.ui.view">
+            <field name="name">Editor de Cuentas en Apuntes Contables</field>
+            <field name="model">editor.account.aml</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <div class="alert alert-info" role="alert" style="margin-bottom:0px">
+                        <bold>Tenga mucho cuidado al editar movimientos donde se utilizen cuentas conciliables por cobrar/pagar por ejemplo, este tipo de movimientos suelen tener conciliaciones con otros movimientos que tienen la misma cuenta y podrían producirse inconsistencias y descuadres al aplicar un cambio de cuenta contable.</bold>
+                    </div>
+
+                    <header>
+                        
+                        <button name="update_account_move_line_massive"
+                            string="Ejecutar Actualización"
+                            confirm="Una vez confirmado este proceso no hay marcha atras !"
+                            invisible="state != 'draft'"
+                            type="object"
+                            icon="fa-play"
+                            class="oe_highlight"
+                            />
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                    </header>
+               
+                    <sheet>
+
+                        <header>
+                        
+                            <button name="add_lines" 
+                                string="Agregar a Tabla"
+                                class="oe_highlight"
+                                type="object"
+                                invisible="state != 'draft'"
+                                icon="fa-plus"
+                            />
+
+                            <button name="limpiar_buffer" 
+                                string="Limpiar Selección"
+                                type="object"
+                                invisible="state != 'draft'"
+                            />
+
+                        </header>
+
+                        <group>
+
+                            <group>
+                                <field name="buffer_account_move_line_ids" widget="many2many_tags" options="{'no_create': True}" readonly="state == 'done'"/>
+                            </group>
+
+                            <group>
+                                <field name="buffer_account_move_ids" widget="many2many_tags" options="{'no_create': True}" readonly="state == 'done'"/>
+                            </group>                            
+
+                        </group>
+
+                        <group string="Operaciones Masivas">
+
+                            <group>
+                                <field name="massive_account_id" options="{'no_create': True}" readonly="state == 'done'"/>
+                            </group>
+
+                            <div>
+                                <button name="aplication_massive"
+                                    string="Aplicar"
+                                    class="oe_highlight"
+                                    type="object"
+                                    icon="fa-plus"
+                                    invisible="state != 'draft'"
+                                />
+                            </div>
+
+                        </group>
+
+
+                        <notebook>
+                            <page name="editor_account_aml_page" string="APUNTES CONTABLES A ACTUALIZAR">
+                            
+                                <field name='editor_account_aml_line_ids' readonly="state == 'done'">
+                                        
+                                    <tree editable="1"> 
+
+                                        <field name="move_line_id"/>
+                                        <field name="name"/>
+                                        <field name="move_id"/>
+                                        <field name="journal_id"/>
+                                        <field name="date"/>
+                                        <field name="old_account_id"/>
+                                        <field name="new_account_id"/>
+
+                                    </tree> 
+
+                                </field>
+                            </page>
+
+                        </notebook>
+
+                    </sheet>
+                </form>             
+            </field>
+        </record>
+
+
+        <record id="action_editor_account_aml" model="ir.actions.act_window">
+            <field name="name">Editor de Cuentas en Apuntes Contables</field>
+   		    <field name="res_model">editor.account.aml</field>
+            <field name="view_mode">tree,form</field>
+            <field eval="False" name="view_id"/>
+            <field name="view_id" ref="editor_account_aml_view_form"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Editor de Cuentas en Apuntes Contables
+              </p><p>
+                Permite Editar las Cuentas Contables de un conjunto de Apuntes de su elección.
+              </p>
+            </field>
+        </record>
+
+        <record id="action_editor_account_aml_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="editor_account_aml_view_form"/>
+            <field name="act_window_id" ref="action_editor_account_aml"/>
+        </record>
+
+        <!--<menuitem name="Invoicing"
+        id="menu_finance"
+        groups="account.group_account_readonly,account.group_account_invoice"
+        web_icon="account,static/description/icon.png"
+        sequence="55">-->
+
+        <menuitem id="menu_tools_account_codlan" name="Herramientas de Reparación" parent="account.menu_finance_entries" groups="account.group_account_invoice" sequence="34">
+
+            <menuitem id="menu_editor_account_aml" name="Editor de Cuentas en Apuntes Contables" groups="account.group_account_invoice" action="action_editor_account_aml" sequence="1"/>
+
+        </menuitem>
+             
+	</data>
+</odoo>

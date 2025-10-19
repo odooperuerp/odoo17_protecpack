@@ -1,0 +1,7 @@
+<odoo>
+    <template id="external_layout" inherit_id="web.external_layout">
+        <xpath expr="//t[@t-if='company.external_report_layout_id']" position="attributes">
+            <attribute name="t-if">company.external_report_layout_id and o._name != 'sale.order'</attribute>
+        </xpath>
+    </template>
+</odoo>

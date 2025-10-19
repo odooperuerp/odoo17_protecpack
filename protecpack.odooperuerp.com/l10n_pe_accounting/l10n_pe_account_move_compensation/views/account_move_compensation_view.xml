@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+        <record id="account_move_compensation_view_form" model="ir.ui.view">
+            <field name="name">Compensación de Cuentas por Cobrar y Pagar</field>
+            <field name="model">account.move.compensation</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+
+                        <button name="compensar_cuentas_cobrar_pagar" class="oe_highlight" string="Compensar Documentos" icon="fa-dollar"  type="object" invisible="state not in ['open']"/>
+
+
+                        <button name="button_view_aml_receivable_ids" class="oe_stat_button" icon="fa-bars" type="object" string="Ver Movimientos por Cobrar" invisible = "state != 'send'"/>
+
+                            
+                        <button name="button_view_aml_payable_ids" class="oe_stat_button" icon="fa-bars" type="object" string="Ver Movimientos por Pagar" invisible = "state != 'send'"/>
+
+                            
+                        <button name="button_view_move_id" class="oe_stat_button" icon="fa-file" type="object" string="Asiento Contable Compensación" invisible = "state != 'send'"/>
+
+                        <field name="state" widget="statusbar" statusbar_visible="open,send" />
+                        
+                    </header>
+                    <sheet>
+
+                        <!--<div class="oe_button_box">
+                            
+                            <button name="button_view_aml_receivable_ids" class="oe_stat_button" icon="fa-bars" type="object" string="Ver Movimientos por Cobrar" invisible = "state != 'send'"/>
+
+                            
+                            <button name="button_view_aml_payable_ids" class="oe_stat_button" icon="fa-bars" type="object" string="Ver Movimientos por Pagar" invisible = "state != 'send'"/>
+
+                            
+                            <button name="button_view_move_id" class="oe_stat_button" icon="fa-file" type="object" string="Asiento Contable Compensación" invisible = "state != 'send'"/>
+
+                        </div>-->
+
+
+                            <group string="Parámetros de Compensación" readonly = "state == 'send'">
+                                <group>
+                                    
+                                    <field name="partner_id" readonly = "state == 'send'" options="{'no_create': True, 'no_create_edit':True}"/>
+
+                                    <field name="compensation_date" readonly = "state == 'send'"/>
+
+                                    <field name="compensation_type" readonly = "state == 'send'"/>
+
+                                    <field name="compensation_dif_account_id" readonly = "state == 'send'" invisible = "compensation_type != '1'" options= "{'no_create': True, 'no_create_edit':True}"/>
+
+                                </group>
+                            </group>
+
+
+                            <group>
+
+                                <group string="Montos de Compensación">
+                        
+                                    <field name="amount_compensation_receivable_company_currency" readonly = "True"/>
+                                    <field name="amount_compensation_payable_company_currency" readonly = "True"/>
+                                    <field name="amount_receivable_payable_diferencial_company_currency" readonly = "True"/>
+
+                                </group>
+
+
+                                <group  string="Parámetros de Asiento de Compensación">
+                                    
+                                    <field name="journal_id" readonly = "state == 'send'" options="{'no_create': True, 'no_create_edit':True}"/>
+
+                                    <field name="ref" readonly = "state == 'send'"/>
+                                    
+                                    <field name="compensation_move_id" options="{'no_create': True, 'no_create_edit':True}" readonly = "True" invisible = "state != 'send'"/>
+
+                                </group>
+
+                            </group>
+
+
+                            <notebook>
+                                <page string="Movimientos Cuentas por Cobrar a Compensar"  readonly = "state == 'send'">
+
+                                        <field name="account_receivable_line_ids" readonly = "state == 'send'">
+
+                                            <tree editable="1">
+
+                                                <field name="invoice_aml_id" options="{'no_create': True, 'no_create_edit':True}" domain="[('partner_id','=',parent.partner_id),('account_id.account_type','=','asset_receivable'),('move_id.state','in',['posted']),'|',('amount_residual','>',0.00),('amount_residual_currency','>',0.00)]"/>
+                                                <field name="tipo_doc_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                                <field name="prefix_code"/>
+                                                <field name="invoice_number"/>
+                                                <field name="date_emision"/>
+                                                <field name="invoice_currency_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                                <field name="amount_total"/>
+                                                <field name="amount_residual_company_currency" sum="suma_amount_residual_company_currency"/>
+                                                <field name="amount_residual_currency"/>
+                                                <field name="amount_compensation"/>
+                                                <field name="amount_compensation_company_currency" sum="sum_amount_compensation_company_currency"/>
+                                            </tree>
+                                        </field>
+                                </page>
+
+                                <page string="Movimientos Cuentas por Pagar a Compensar"  readonly = "state == 'send'">
+
+                                        <field name="account_payable_line_ids" readonly = "state == 'send'">
+
+                                            <tree editable="1">
+
+                                                <field name="invoice_aml_id" options="{'no_create': True, 'no_create_edit':True}" domain="[('partner_id','=',parent.partner_id),('account_id.account_type','=','liability_payable'),('move_id.state','in',['posted']),'|',('amount_residual','&lt;',0.00),('amount_residual_currency','&lt;',0.00)]"/>
+                                                <field name="tipo_doc_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                                <field name="prefix_code"/>
+                                                <field name="invoice_number"/>
+                                                <field name="date_emision"/>
+                                                <field name="invoice_currency_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                                                <field name="amount_total"/>
+                                                <field name="amount_residual_company_currency" sum="suma_amount_residual_company_currency"/>
+                                                <field name="amount_residual_currency"/>
+                                                <field name="amount_compensation"/>
+                                                <field name="amount_compensation_company_currency" sum="sum_amount_compensation_company_currency"/>
+                                            </tree>
+                                        </field>
+                                </page>
+                            </notebook>
+
+                    </sheet>
+
+                </form>             
+
+            </field>
+
+        </record>
+
+        <!--###########################################################-->
+        <record id="account_move_compensation_view_tree" model="ir.ui.view">
+            <field name="name">Registros de Compensación Cuentas por Cobrar y Pagar</field>
+            <field name="model">account.move.compensation</field>
+            <field name="arch" type="xml">
+                <tree>
+
+                    <field name="company_id"/>
+                    <field name="partner_id"/>
+                    <field name="compensation_type"/>
+                    <field name="compensation_date"/>
+
+                    <field name="amount_compensation_receivable_company_currency"/>
+                    <field name="amount_compensation_payable_company_currency"/>
+                    <field name="amount_receivable_payable_diferencial_company_currency"/>
+                    
+                    <field name="compensation_dif_account_id"/>
+                    
+                    <field name="compensation_move_id"/>
+
+                    <field name="state"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_account_move_compensation" model="ir.actions.act_window">
+            <field name="name">Compensación de Cuentas por Cobrar y Pagar</field>
+   		    <field name="res_model">account.move.compensation</field>
+            <field name="view_mode">tree,form</field>
+            <field eval="False" name="view_id"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Crear Compensación de Cuentas por Cobrar y Pagar
+              </p><p>
+                Permite Crear Formularios de Compensación de Cuentas por Cobrar y Pagar.
+               :)
+              </p>
+            </field>
+        </record>
+
+        <record id="action_account_move_compensation_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="account_move_compensation_view_tree"/>
+            <field name="act_window_id" ref="action_account_move_compensation"/>
+        </record>
+
+       <record id="action_account_move_compensation_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account_move_compensation_view_form"/>
+            <field name="act_window_id" ref="action_account_move_compensation"/>
+        </record>
+
+        <menuitem id="menu_account_move_compensation" name="Compensación de Cuentas por Cobrar y Pagar" parent="account.menu_finance_entries_actions"  groups="account.group_account_invoice" action="action_account_move_compensation"/>
+             
+	</data>
+</odoo>

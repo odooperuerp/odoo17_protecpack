@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="frontend_layout" inherit_id="web.frontend_layout">
+        <xpath expr="//div[@id='wrapwrap']" position="inside">
+       
+            <div t-if="website.has_social_chat_support_button" 
+                    id="social_chat_support_button" 
+                    t-att-data-website_id="website.id" 
+                    t-att-data-social_chat_support_button_id="website.social_chat_support_button_id.id" />
+                   
+        </xpath>
+    </template>
+
+</odoo>

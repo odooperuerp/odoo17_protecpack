@@ -1,0 +1,815 @@
+"associated_table_id/id","code","description","reference"
+"1","001","DEPÓSITO EN CUENTA",
+"1","002","GIRO",
+"1","003","TRANSFERENCIA DE FONDOS",
+"1","004","ORDEN DE PAGO",
+"1","005","TARJETA DE DÉBITO",
+"1","006","TARJETA DE CRÉDITO EMITIDA EN EL PAÍS POR UNA EMPRESA DEL SISTEMA FINANCIERO",
+"1","007","CHEQUES CON LA CLÁUSULA DE 'NO NEGOCIABLE', 'INTRANSFERIBLES', 'NO A LA ORDEN' U OTRA EQUIVALENTE, A QUE SE REFIERE EL INCISO G) DEL ARTICULO 5° DE LA LEY",
+"1","008","EFECTIVO, POR OPERACIONES EN LAS QUE NO EXISTE OBLIGACIÓN DE UTILIZAR MEDIO DE PAGO",
+"1","009","EFECTIVO, EN LOS DEMÁS CASOS",
+"1","010","MEDIOS DE PAGO USADOS EN COMERCIO EXTERIOR",
+"1","011","DOCUMENTOS EMITIDOS POR LAS EDPYMES Y LAS COOPERATIVAS DE AHORRO Y CRÉDITO NO AUTORIZADAS A CAPTAR DEPÓSITOS DEL PÚBLICO",
+"1","012","TARJETA DE CRÉDITO EMITIDA EN EL PAÍS O EN EL EXTERIOR POR UNA EMPRESA NO PERTENECIENTE AL SISTEMA FINANCIERO, CUYO OBJETO PRINCIPAL SEA LA EMISIÓN Y ADMINISTRACIÓN DE TARJETAS DE CRÉDITO",
+"1","013","TARJETAS DE CRÉDITO EMITIDAS EN EL EXTERIOR POR EMPRESAS BANCARIAS O FINANCIERAS NO DOMICILIADAS",
+"1","101","TRANSFERENCIAS - COMERCIO EXTERIOR",
+"1","102","CHEQUES BANCARIOS  - COMERCIO EXTERIOR",
+"1","103","ORDEN DE PAGO SIMPLE  - COMERCIO EXTERIOR",
+"1","104","ORDEN DE PAGO DOCUMENTARIO  - COMERCIO EXTERIOR",
+"1","105","REMESA SIMPLE  - COMERCIO EXTERIOR",
+"1","106","REMESA DOCUMENTARIA  - COMERCIO EXTERIOR",
+"1","107","CARTA DE CRÉDITO SIMPLE  - COMERCIO EXTERIOR",
+"1","108","CARTA DE CRÉDITO DOCUMENTARIO  - COMERCIO EXTERIOR",
+"1","999","OTROS MEDIOS DE PAGO",
+"2","0","OTROS TIPOS DE DOCUMENTOS",
+"2","1","DOCUMENTO NACIONAL DE IDENTIDAD (DNI)",
+"2",4,"CARNET DE EXTRANJERIA",
+"2",6,"REGISTRO ÚNICO DE CONTRIBUYENTES",
+"2",7,"PASAPORTE",
+"2","A","CÉDULA DIPLOMÁTICA DE IDENTIDAD",
+"3",01,"CENTRAL RESERVA DEL PERU ",
+"3",02,"DE CREDITO DEL PERU      ",
+"3",03,"INTERNACIONAL DEL PERU   ",
+"3",05,"LATINO                   ",
+"3",07,"CITIBANK DEL PERU S.A.",
+"3",08,"STANDARD CHARTERED",
+"3",09,"SCOTIABANK PERU",
+"3",11,"CONTINENTAL              ",
+"3",12,"DE LIMA                  ",
+"3",16,"MERCANTIL                ",
+"3",18,"NACION                   ",
+"3",22,"SANTANDER CENTRAL HISPANO",
+"3",23,"DE COMERCIO              ",
+"3",25,"REPUBLICA                ",
+"3",26,"NBK BANK                 ",
+"3",29,"BANCOSUR",
+"3",35,"FINANCIERO DEL PERU      ",
+"3",37,"DEL PROGRESO             ",
+"3",38,"INTERAMERICANO FINANZAS  ",
+"3",39,"BANEX                    ",
+"3",40,"NUEVO MUNDO              ",
+"3",41,"SUDAMERICANO             ",
+"3",42,"DEL LIBERTADOR",
+"3",43,"DEL TRABAJO",
+"3",44,"SOLVENTA                 ",
+"3",45,"SERBANCO SA.             ",
+"3",46,"BANK OF BOSTON           ",
+"3",47,"ORION                    ",
+"3",48,"DEL PAIS                 ",
+"3",49,"MI BANCO                 ",
+"3",50,"BNP PARIBAS",
+"3",51,"AGROBANCO",
+"3",53,"HSBC BANK PERU S.A.      ",
+"3",54,"BANCO FALABELLA S.A.",
+"3",55,"BANCO RIPLEY",
+"3",56,"BANCO SANTANDER PERU S.A.",
+"3",58,"BANCO AZTECA DEL PERU",
+"3",99,"OTROS",
+"4","AED","UAE Dirham","Emiratos Árabes Unidos"
+"4","AFN","Afghani","Afganistán"
+"4","ALL","Lek","Albania"
+"4","AMD","Armenian Dram","Armenia"
+"4","ANG","Netherlands Antillian Guilder","Antillas Holandesas"
+"4","AOA","Kwanza","Angola"
+"4","ARS","Argentine Peso","Argentina"
+"4","AUD","Australian Dollar","Australia"
+"4","AWG","Aruban Guilder","Aruba"
+"4","AZN","Azerbaijanian Manat","Azerbaiyán"
+"4","BAM","Convertible Marks","Bosnia y Herzegovina"
+"4","BBD","Barbados Dollar","Barbados"
+"4","BDT","Taka","Bangladesh"
+"4","BGN","Bulgarian Lev","Bulgaria"
+"4","BHD","Bahraini Dinar","Bahréin"
+"4","BIF","Burundi Franc","Burundi"
+"4","BMD","Bermudian Dollar (customarily known as Bermuda Dollar)","Bermudas"
+"4","BND","Brunei Dollar","Brunéi Darussalam"
+"4","BOB","Boliviano","Bolivia"
+"4","BOV","Mvdol","Bolivia"
+"4","BRL","Brazilian Real","Brasil"
+"4","BSD","Bahamian Dollar","Bahamas"
+"4","BTN","Ngultrum","Bután"
+"4","BWP","Pula","Botsuana"
+"4","BYR","Belarussian Ruble","Bielorrusia"
+"4","BZD","Belize Dollar","Belice"
+"4","CAD","Canadian Dollar","Canadá"
+"4","CDF","Congolese Franc","República Democrática del Congo"
+"4","CHE","WIR Euro","Suiza"
+"4","CHF","Swiss Franc","Suiza"
+"4","CHW","WIR Franc","Suiza"
+"4","CLF","Unidades de fomento","Chile"
+"4","CLP","Chilean Peso","Chile"
+"4","CNY","Yuan Renminbi","China (República Popular)"
+"4","COP","Colombian Peso","Colombia"
+"4","COU","Unidad de Valor Real","Colombia"
+"4","CRC","Costa Rican Colon","Costa Rica"
+"4","CUC","Peso Convertible","Cuba"
+"4","CUP","Cuban Peso","Cuba"
+"4","CVE","Cape Verde Escudo","Cabo Verde"
+"4","CZK","Czech Koruna","República Checa"
+"4","DJF","Djibouti Franc","Yibuti"
+"4","DKK","Danish Krone","Dinamarca"
+"4","DOP","Dominican Peso","República Dominicana"
+"4","DZD","Algerian Dinar","Argelia"
+"4","EEK","Kroon","Estonia"
+"4","EGP","Egyptian Pound","Egipto"
+"4","ERN","Nakfa","Eritrea"
+"4","ETB","Ethiopian Birr","Etiopía"
+"4","EUR","Euro","Unión Europea"
+"4","FJD","Fiji Dollar","Fiyi"
+"4","FKP","Falkland Islands Pound","Islas Malvinas"
+"4","GBP","Pound Sterling","Reino Unido"
+"4","GEL","Lari","Georgia"
+"4","GHS","Cedi","Ghana"
+"4","GIP","Gibraltar Pound","Gibraltar"
+"4","GMD","Dalasi","Gambia"
+"4","GNF","Guinea Franc","Guinea"
+"4","GTQ","Quetzal","Guatemala"
+"4","GYD","Guyana Dollar","Guyana"
+"4","HKD","Hong Kong Dollar","Hong Kong"
+"4","HNL","Lempira","Honduras"
+"4","HRK","Croatian Kuna","Croacia"
+"4","HTG","Gourde","Haití"
+"4","HUF","Forint","Hungría"
+"4","IDR","Rupiah","Indonesia"
+"4","ILS","New Israeli Sheqel","Israel"
+"4","INR","Indian Rupee","India"
+"4","IQD","Iraqi Dinar","Iraq"
+"4","IRR","Iranian Rial","Irán"
+"4","ISK","Iceland Krona","Islandia"
+"4","JMD","Jamaican Dollar","Jamaica"
+"4","JOD","Jordanian Dinar","Jordania"
+"4","JPY","Yen","Japón"
+"4","KES","Kenyan Shilling","Kenia"
+"4","KGS","Som","Kirguistán"
+"4","KHR","Riel","Camboya"
+"4","KMF","Comoro Franc","Comoras"
+"4","KPW","North Korean Won","Corea (del Norte)"
+"4","KRW","Won","Corea (del Sur)"
+"4","KWD","Kuwaiti Dinar","Kuwait"
+"4","KYD","Cayman Islands Dollar","Islas Caimán"
+"4","KZT","Tenge","Kazajistán"
+"4","LAK","Kip","Laos"
+"4","LBP","Lebanese Pound","Líbano"
+"4","LKR","Sri Lanka Rupee","Sri Lanka"
+"4","LRD","Liberian Dollar","Liberia"
+"4","LSL","Loti","Lesoto"
+"4","LTL","Lithuanian Litas","Lituania"
+"4","LVL","Latvian Lats","Letonia"
+"4","LYD","Libyan Dinar","Libia"
+"4","MAD","Moroccan Dirham","Marruecos"
+"4","MDL","Moldovan Leu","Moldavia"
+"4","MGA","Malagasy Ariary","Madagascar"
+"4","MKD","Denar","Macedonia"
+"4","MMK","Kyat","Myanmar (Birmania)"
+"4","MNT","Tugrik","Mongolia"
+"4","MOP","Pataca","Macao"
+"4","MRO","Ouguiya","Mauritania"
+"4","MUR","Mauritius Rupee","Mauricio"
+"4","MVR","Rufiyaa","Maldivas"
+"4","MWK","Kwacha","Malaui"
+"4","MXN","Mexican Peso","México"
+"4","MXV","Mexican Unidad de Inversion (UDI)","México"
+"4","MYR","Malaysian Ringgit","Malasia"
+"4","MZN","Metical","Mozambique"
+"4","NAD","Namibia Dollar","Namibia"
+"4","NGN","Naira","Nigeria"
+"4","NIO","Cordoba Oro","Nicaragua"
+"4","NOK","Norwegian Krone","Noruega"
+"4","NPR","Nepalese Rupee","Nepal"
+"4","NZD","New Zealand Dollar","Nueva Zelanda"
+"4","OMR","Rial Omani","Omán"
+"4","PAB","Balboa","Panamá"
+"4","PEN","Nuevo Sol o Sol","Perú"
+"4","PGK","Kina","Papúa Nueva Guinea"
+"4","PHP","Philippine Peso","Filipinas"
+"4","PKR","Pakistan Rupee","Pakistán"
+"4","PLN","Zloty","Polonia"
+"4","PYG","Guarani","Paraguay"
+"4","QAR","Qatari Rial","Qatar"
+"4","RON","New Leu","Rumania"
+"4","RSD","Serbian Dinar","Serbia"
+"4","RUB","Russian Ruble","Rusia"
+"4","RWF","Rwanda Franc","Ruanda"
+"4","SAR","Saudi Riyal","Arabia Saudita"
+"4","SBD","Solomon Islands Dollar","Islas Salomón"
+"4","SCR","Seychelles Rupee","Seychelles"
+"4","SDG","Sudanese Pound","Sudán"
+"4","SEK","Swedish Krona","Suecia"
+"4","SGD","Singapore Dollar","Singapur"
+"4","SHP","Saint Helena Pound","Santa Helena"
+"4","SLL","Leone","Sierra Leona"
+"4","SOS","Somali Shilling","Somalia"
+"4","SRD","Surinam Dollar","Surinam"
+"4","STD","Dobra","Santo Tomé y Príncipe"
+"4","SVC","El Salvador Colon","El Salvador"
+"4","SYP","Syrian Pound","Siria"
+"4","SZL","Lilangeni","Suazilandia"
+"4","THB","Baht","Tailandia"
+"4","TJS","Somoni","Tayikistán"
+"4","TMT","Manat","Turkmenistán"
+"4","TND","Tunisian Dinar","Túnez"
+"4","TOP","Pa'anga","Tonga"
+"4","TRY","Turkish Lira","Turquía"
+"4","TTD","Trinidad and Tobago Dollar","Trinidad y Tobago"
+"4","TWD","New Taiwan Dollar","Taiwán"
+"4","TZS","Tanzanian Shilling","Tanzania"
+"4","UAH","Hryvnia","Ucrania"
+"4","UGX","Uganda Shilling","Uganda"
+"4","USD","US Dollar","Estados Unidos (EEUU)"
+"4","USN","US Dollar (Next day)","Estados Unidos (EEUU)"
+"4","USS","US Dollar (Same day)","Estados Unidos (EEUU)"
+"4","UYI","Uruguay Peso en Unidades Indexadas","Uruguay"
+"4","UYU","Peso Uruguayo","Uruguay"
+"4","UZS","Uzbekistan Sum","Uzbekistán"
+"4","VEF","Bolivar Fuerte","Venezuela"
+"4","VND","Dong","Vietnam"
+"4","VUV","Vatu","Vanuatu"
+"4","WST","Tala","Samoa del Oeste"
+"4","XAF","CFA Franc BEAC ‡","-"
+"4","XAG","Silver","-"
+"4","XAU","Gold","-"
+"4","XBA","Bond Markets Units European Composite Unit (EURCO)","-"
+"4","XBB","European Monetary Unit (E.M.U.-6)","-"
+"4","XBC","European Unit of Account 9(E.U.A.-9)","-"
+"4","XBD","European Unit of Account 17(E.U.A.-17)","-"
+"4","XCD","East Caribbean Dollar","-"
+"4","XDR","SDR","-"
+"4","XFU","UIC-Franc","-"
+"4","XOF","CFA Franc BCEAO †","-"
+"4","XPD","Palladium","-"
+"4","XPF","CFP Franc","-"
+"4","XPT","Platinum","-"
+"4","YER","Yemeni Rial","Yemen"
+"4","ZAR","Rand","Sudáfrica"
+"4","ZMK","Zambian Kwacha","Zambia"
+"4","ZWL","Zimbabwe Dollar","Zimbabue"
+"5","01","MERCADERÍAS",
+"5","02","PRODUCTOS TERMINADOS",
+"5","03","MATERIAS PRIMAS",
+"5","04","ENVASES",
+"5","05","MATERIALES AUXILIARES",
+"5","06","SUMINISTROS ",
+"5","07","REPUESTOS",
+"5","08","EMBALAJES",
+"5","09","SUBPRODUCTOS ",
+"5","10","DESECHOS Y DESPERDICIOS",
+"5","91","OTROS 1",
+"5","92","OTROS 2",
+"5","93","OTROS 3",
+"5","94","OTROS 4",
+"5","95","OTROS 5",
+"5","96","OTROS 6",
+"5","97","OTROS 7",
+"5","98","OTROS 8",
+"5","99","OTROS",
+"6","4A","BOBINAS                                               ",
+"6","BJ","BALDE                                                 ",
+"6","BLL","BARRILES                                              ",
+"6","BG","BOLSA                                                 ",
+"6","BO","BOTELLAS                                              ",
+"6","BX","CAJA                                                  ",
+"6","CT","CARTONES                                              ",
+"6","CMK","CENTIMETRO CUADRADO                                   ",
+"6","CMQ","CENTIMETRO CUBICO                                     ",
+"6","CMT","CENTIMETRO LINEAL                                     ",
+"6","CEN","CIENTO DE UNIDADES                                    ",
+"6","CY","CILINDRO                                              ",
+"6","CJ","CONOS                                                 ",
+"6","DZN","DOCENA                                                ",
+"6","DZP","DOCENA POR 10**6                                      ",
+"6","BE","FARDO                                                 ",
+"6","GLI","GALON INGLES (4,545956L)",
+"6","GRM","GRAMO                                                 ",
+"6","GRO","GRUESA                                                ",
+"6","HLT","HECTOLITRO                                            ",
+"6","LEF","HOJA                                                  ",
+"6","SET","JUEGO                                                 ",
+"6","KGM","KILOGRAMO                                             ",
+"6","KTM","KILOMETRO                                             ",
+"6","KWH","KILOVATIO HORA                                        ",
+"6","KT","KIT                                                   ",
+"6","CA","LATAS                                                 ",
+"6","LBR","LIBRAS                                                ",
+"6","LTR","LITRO                                                 ",
+"6","MWH","MEGAWATT HORA                                         ",
+"6","MTR","METRO                                                 ",
+"6","MTK","METRO CUADRADO                                        ",
+"6","MTQ","METRO CUBICO                                          ",
+"6","MGM","MILIGRAMOS                                            ",
+"6","MLT","MILILITRO                                             ",
+"6","MMT","MILIMETRO                                             ",
+"6","MMK","MILIMETRO CUADRADO                                    ",
+"6","MMQ","MILIMETRO CUBICO                                      ",
+"6","MLL","MILLARES                                              ",
+"6","UM","MILLON DE UNIDADES                                    ",
+"6","ONZ","ONZAS                                                 ",
+"6","PF","PALETAS                                               ",
+"6","PK","PAQUETE                                               ",
+"6","PR","PAR                                                   ",
+"6","FOT","PIES                                                  ",
+"6","FTK","PIES CUADRADOS                                        ",
+"6","FTQ","PIES CUBICOS                                          ",
+"6","C62","PIEZAS                                                ",
+"6","PG","PLACAS                                                ",
+"6","ST","PLIEGO                                                ",
+"6","INH","PULGADAS                                              ",
+"6","RM","RESMA                                                 ",
+"6","DR","TAMBOR                                                ",
+"6","STN","TONELADA CORTA                                        ",
+"6","LTN","TONELADA LARGA                                        ",
+"6","TNE","TONELADAS                                             ",
+"6","TU","TUBOS                                                 ",
+"6","NIU","UNIDAD (BIENES)                                      ",
+"6","ZZ","UNIDAD (SERVICIOS) ",
+"6","GLL","US GALON (3,7843 L)",
+"6","YRD","YARDA                                                 ",
+"6","YDK","YARDA CUADRADA                                        ",
+"7","00","Otros",
+"7","01","Factura",
+"7","02","Recibo por Honorarios",
+"7","03","Boleta de Venta",
+"7","04","Liquidación de compra",
+"7","05","Boletos de Transporte Aéreo que emiten las Compañías de Aviación Comercial por el servicio de transporte aéreo regular de pasajeros, emitido de manera manual, mecanizada o por medios electrónicos (BME)",
+"7","06","Carta de porte aéreo por el servicio de transporte de carga aérea",
+"7","07","Nota de crédito",
+"7","08","Nota de débito",
+"7","09","Guía de remisión - Remitente",
+"7","10","Recibo por Arrendamiento",
+"7","11","Póliza emitida por las Bolsas de Valores, Bolsas de Productos o Agentes de Intermediación por operaciones realizadas en las Bolsas de Valores o Productos o fuera de las mismas, autorizadas por SMV",
+"7","12","Ticket o cinta emitido por máquina registradora",
+"7","13","Documentos emitidos por las empresas del sistema financiero y de seguros, y por las cooperativas de ahorro y crédito no autorizadas a captar recursos del público, que se encuentren bajo el control de la Superintendencia de Banca, Seguros y AFP.",
+"7","14","Recibo por servicios públicos de suministro de energía eléctrica, agua, teléfono, telex y telegráficos y otros servicios complementarios que se incluyan en el recibo de servicio público",
+"7","15","Boletos emitidos por el servicio de transporte terrestre regular urbano de pasajeros y el ferroviario público de pasajeros prestado en vía férrea local.",
+"7","16","Boletos de viaje emitidos por las empresas de transporte nacional de pasajeros, siempre que cuenten con la autorización de la autoridad competente, en las rutas autorizadas. Vía terrestre o ferroviario público no emitido por medios electrónicos (BVME)",
+"7","17","Documento emitido por la Iglesia Católica por el arrendamiento de bienes inmuebles",
+"7","18","Documento emitido por las Administradoras Privadas de Fondo de Pensiones que se encuentran bajo la supervisión de la Superintendencia de Banca, Seguros y AFP",
+"7","19","Boleto o entrada por atracciones y espectáculos públicos",
+"7","20","Comprobante de Retención",
+"7","21","Conocimiento de embarque por el servicio de transporte de carga marítima",
+"7","22","Comprobante por Operaciones No Habituales",
+"7","23","Pólizas de Adjudicación emitidas con ocasión del remate o adjudicación de bienes por venta forzada, por los martilleros o las entidades que rematen o subasten bienes por cuenta de terceros",
+"7","24","Certificado de pago de regalías emitidas por PERUPETRO S.A",
+"7","25","Documento de Atribución (Ley del Impuesto General a las Ventas e Impuesto Selectivo al Consumo, Art. 19º, último párrafo, R.S. N° 022-98-SUNAT).",
+"7","26","Recibo por el Pago de la Tarifa por Uso de Agua Superficial con fines agrarios y por el pago de la Cuota para la ejecución de una determinada obra o actividad acordada por la Asamblea General de la Comisión de Regantes o Resolución expedida por el Jefe de la Unidad de Aguas y de Riego (Decreto Supremo N° 003-90-AG, Arts. 28 y 48)",
+"7","27","Seguro Complementario de Trabajo de Riesgo",
+"7","28","Documentos emitidos por los servicios aeroportuarios prestados a favor de los pasajeros, mediante mecanismo de etiquetas autoadhesivas.  ",
+"7","29","Documentos emitidos por la COFOPRI en calidad de oferta de venta de terrenos, los correspondientes a las subastas públicas y a la retribución de los servicios que presta",
+"7","30","Documentos emitidos por las empresas que desempeñan el rol adquirente en los sistemas de pago mediante tarjetas de crédito y débito, emitidas por bancos e instituciones financieras o crediticias, domiciliados o no en el país.",
+"7","31","Guía de Remisión - Transportista",
+"7","32","Documentos emitidos por las empresas recaudadoras de la denominada Garantía de Red Principal a la que hace referencia el numeral 7.6 del artículo 7° de la Ley N° 27133 – Ley de Promoción del Desarrollo de la Industria del Gas Natural",
+"7","33","Manifiesto de Pasajeros",
+"7","34","Documento del Operador",
+"7","35","Documento del Partícipe",
+"7","36","Recibo de Distribución de Gas Natural",
+"7","37","Documentos que emitan los concesionarios del servicio de revisiones técnicas vehiculares, por la prestación de dicho servicio",
+"7","40","Comprobante de Percepción",
+"7","41","Comprobante de Percepción - Venta interna",
+"7","42","Documentos emitidos por las empresas que desempeñan el rol adquiriente en los sistemas de pago mediante tarjetas de crédito emitidas por ellas mismas",
+"7","43","Boletos emitidos por las Compañías de Aviación Comercial que prestan servicios de transporte aéreo no regular de pasajeros y transporte aéreo especial de pasajeros.",
+"7","44","Billetes de lotería, rifas y apuestas. ",
+"7","45","Documentos emitidos por centros educativos y culturales, universidades, asociaciones y fundaciones, en lo referente a actividades no gravadas con tributos administrados por la SUNAT.",
+"7","46","Formulario de Declaración - pago o Boleta de pago de tributos Internos",
+"7","48","Comprobante de Operaciones - Ley N° 29972",
+"7","49","Constancia de Depósito - IVAP (Ley 28211)",
+"7","50","Declaración Única de Aduanas - Importación definitiva                 ",
+"7","51","Póliza o DUI Fraccionada",
+"7","52","Despacho Simplificado - Importación Simplificada                        ",
+"7","53","Declaración de Mensajería o Courier                                         ",
+"7","54","Liquidación de Cobranza                                                     ",
+"7","55","BVME para transporte ferroviario de pasajeros",
+"7","56","Comprobante de pago SEAE",
+"7","87","Nota de Crédito Especial",
+"7","88","Nota de Débito Especial",
+"7","89","Nota de Ajuste de Operaciones - Ley N° 29972",
+"7","91","Comprobante de No Domiciliado                                                 ",
+"7","96","Exceso de crédito fiscal por retiro de bienes                           ",
+"7","97","Nota de Crédito - No Domiciliado",
+"7","98","Nota de Débito - No Domiciliado",
+"8","019","TUMBES",
+"8","028","TALARA",
+"8","046","PAITA",
+"8","055","CHICLAYO",
+"8","082","SALAVERRY",
+"8","091","CHIMBOTE",
+"8","118","MARÍTIMA DEL CALLAO",
+"8","127","PISCO",
+"8","145","MOLLENDO MATARANI",
+"8","154","AREQUIPA",
+"8","163","ILO",
+"8","172","TACNA",
+"8","181","PUNO",
+"8","190","CUZCO",
+"8","217","PUCALLPA",
+"8","226","IQUITOS",
+"8","235","AÉREA DEL CALLAO",
+"8","244","POSTAL DE LIMA",
+"8","262","DESAGUADERO",
+"8","271","TARAPOTO",
+"8","280","PUERTO MALDONADO",
+"8","299","LA TINA",
+"8","884","DEPENDENCIA FERROVIARIA TACNA",
+"8","893","DEPENDENCIA POSTAL TACNA",
+"8","910","DEPENDENCIA POSTAL AREQUIPA",
+"8","929","COMPLEJO FRONTERIZO STA ROSA TACNA",
+"8","938","TERMINAL TERRESTRE TACNA",
+"8","947","AEROPUERTO TACNA",
+"8","956","CETICOS TACNA",
+"8","965","DEPENDENCIA POSTAL DE SALAVERRY",
+"9","01","VENTA NACIONAL",
+"9","02","COMPRA NACIONAL",
+"9","03","CONSIGNACIÓN RECIBIDA",
+"9","04","CONSIGNACIÓN ENTREGADA",
+"9","05","DEVOLUCIÓN RECIBIDA",
+"9","06","DEVOLUCIÓN ENTREGADA",
+"9","07","BONIFICACIÓN",
+"9","08","PREMIO",
+"9","09","DONACIÓN",
+"9","10","SALIDA A PRODUCCIÓN",
+"9","11","SALIDA POR TRANSFERENCIA ENTRE ALMACENES ",
+"9","12","RETIRO",
+"9","13","MERMAS",
+"9","14","DESMEDROS",
+"9","15","DESTRUCCIÓN",
+"9","16","SALDO INICIAL",
+"9","17","EXPORTACIÓN",
+"9","18","IMPORTACIÓN",
+"9","19","ENTRADA DE PRODUCCIÓN",
+"9","20","ENTRADA POR DEVOLUCIÓN DE PRODUCCIÓN",
+"9","21","ENTRADA POR TRANSFERENCIA ENTRE ALMACENES ",
+"9","22","ENTRADA POR IDENTIFICACIÓN ERRONEA",
+"9","23","SALIDA POR IDENTIFICACIÓN ERRONEA",
+"9","24","ENTRADA POR DEVOLUCIÓN DEL CLIENTE",
+"9","25","SALIDA POR DEVOLUCIÓN AL PROVEEDOR",
+"9","26","ENTRADA PARA SERVICIO DE PRODUCCIÓN",
+"9","27","SALIDA POR SERVICIO DE PRODUCCIÓN",
+"9","28","AJUSTE POR DIFERENCIA DE INVENTARIO",
+"9","29","ENTRADA DE BIENES EN PRÉSTAMO",
+"9","30","SALIDA DE BIENES EN PRÉSTAMO",
+"9","31","ENTRADA DE BIENES EN CUSTODIA",
+"9","32","SALIDA DE BIENES EN CUSTODIA",
+"9","33","MUESTRAS MÉDICAS",
+"9","34","PUBLICIDAD",
+"9","35","GASTOS DE REPRESENTACIÓN",
+"9","36","RETIRO PARA ENTREGA A TRABAJADORES",
+"9","37","RETIRO POR CONVENIO COLECTIVO",
+"9","38","RETIRO POR SUSTITUCIÓN DE BIEN SINIESTRADO",
+"9","91","OTROS 1",
+"9","92","OTROS 2",
+"9","93","OTROS 3",
+"9","94","OTROS 4",
+"9","95","OTROS 5",
+"9","96","OTROS 6",
+"9","97","OTROS 7",
+"9","98","OTROS 8",
+"9","99","OTROS ",
+"10","1","NACIONES UNIDAS",
+"10","3","GS1 (EAN-UCC)",
+"10","9","OTROS",
+"11","1","PROMEDIO PONDERADO",
+"11","2","PRIMERAS ENTRADAS, PRIMERAS SALIDAS",
+"11","3","EXISTENCIAS BÁSICAS",
+"11","4","DETALLISTA",
+"11","5","IDENTIFICACIÓN ESPECÍFICA",
+"11","9","OTROS",
+"12","01","VALORES EMITIDOS O GARANTIZADOS POR EL ESTADO",
+"12","02","VALORES EMITIDOS O GARANTIZADOS POR EL SISTEMA FINANCIERO",
+"12","03","VALORES EMITIDOS POR LA EMPRESA",
+"12","04","OTROS INSTRUMENTOS FINANCIEROS REPRESENTATIVOS DE DEUDA",
+"12","05","CERTIFICADOS DE SUSCRIPCIÓN PREFERENTE",
+"12","06","ACCIONES REPRESENTATIVAS DE CAPITAL SOCIAL",
+"12","07","ACCIONES DE INVERSIÓN",
+"12","08","CERTIFICADO DE PARTICIPACIÓN DE FONDOS",
+"12","09","ASOCIACIONES EN PARTICIPACIÓN Y CONSORCIOS",
+"12","10","OTROS INSTRUMENTOS FINANCIEROS REPRESENTATIVOS DE DERECHO PATRIMONIAL",
+"12","99","OTROS TÍTULOS",
+"13","01","ACCIONES CON DERECHO A VOTO",
+"13","02","ACCIONES SIN DERECHO A VOTO",
+"13","03","PARTICIPACIONES",
+"13","04","OTROS",
+"14","01","PLAN CONTABLE GENERAL EMPRESARIAL",
+"14","02","PLAN CONTABLE GENERAL REVISADO",
+"14","03","PLAN DE CUENTAS PARA EMPRESAS DEL SISTEMA FINANCIERO, SUPERVISADAS POR SBS",
+"14","04","PLAN DE CUENTAS PARA ENTIDADES PRESTADORAS DE SALUD, SUPERVISADAS POR SBS",
+"14","05","PLAN DE CUENTAS PARA EMPRESAS DEL SISTEMA ASEGURADOR, SUPERVISADAS POR SBS",
+"14","06","PLAN DE CUENTAS DE LAS ADMINISTRADORAS PRIVADAS DE FONDOS DE PENSIONES, SUPERVISADAS POR SBS",
+"14","07","PLAN CONTABLE GUBERNAMENTAL",
+"14","99","OTROS",
+"15","1","NO REVALUADO O REVALUADO SIN EFECTO TRIBUTARIO",
+"15","2","REVALUADO CON EFECTO TRIBUTARIO",
+"16","1","ACTIVOS EN DESUSO",
+"16","2","ACTIVOS OBSOLETOS",
+"16","9","RESTO DE ACTIVOS",
+"17","1","LINEA RECTA",
+"17","2","UNIDADES PRODUCIDAS",
+"17","9","OTROS",
+"18","1","PROCESO PRODUCTIVO",
+"18","2","LÍNEA DE PRODUCCIÓN",
+"18","3","PRODUCTO",
+"18","4","PROYECTO",
+"18","9","OTROS",
+"19","01","SUPERINTENDENCIA DEL MERCADO DE VALORES - SECTOR DIVERSAS - INDIVIDUAL",
+"19","02","SUPERINTENDENCIA DEL MERCADO DE VALORES - SECTOR SEGUROS - INDIVIDUAL",
+"19","03","SUPERINTENDENCIA DEL MERCADO DE VALORES - SECTOR BANCOS Y FINANCIERAS - INDIVIDUAL",
+"19","04","SUPERINTENDENCIA DEL MERCADO DE VALORES - ADMINISTRADORAS DE FONDOS DE PENSIONES (AFP)",
+"19","05","SUPERINTENDENCIA DEL MERCADO DE VALORES - AGENTES DE INTERMEDIACIÓN",
+"19","06","SUPERINTENDENCIA DEL MERCADO DE VALORES - FONDOS DE INVERSIÓN",
+"19","07","SUPERINTENDENCIA DEL MERCADO DE VALORES - PATRIMONIO EN FIDEICOMISOS",
+"19","08","SUPERINTENDENCIA DEL MERCADO DE VALORES - ICLV",
+"19","09","OTROS NO CONSIDERADOS EN LOS ANTERIORES",
+"20","00","NINGUNO",
+"20","01","CANADA",
+"20","02","CHILE",
+"20","03","COMUNIDAD ANDINA DE NACIONES (CAN)",
+"20","04","BRASIL",
+"20","05","ESTADOS UNIDOS MEXICANOS",
+"20","06","REPUBLICA DE COREA",
+"20","07","CONFEDERACIÓN SUIZA",
+"20","08","PORTUGAL",
+"20","09","OTROS",
+"21",1,"MERCADERIA, MATERIA PRIMA, SUMINISTRO, ENVASES Y EMBALAJES",
+"21",2,"ACTIVO FIJO",
+"21",3,"OTROS ACTIVOS NO CONSIDERADOS EN LOS NUMERALES 1 Y 2",
+"21",4,"GASTOS DE EDUCACIÓN, RECREACIÓN, SALUD, CULTURALES. REPRESENTACIÓN, CAPACITACIÓN, DE VIAJE, MANTENIMIENTO DE VEHICULO Y  DE PREMIOS",
+"21",5,"OTROS GASTOS NO INCLUIDOS EN EL NUMERAL 4",
+"22",1,"SERVICIO PRESTADO INTEGRAMENTE EN EL PERÚ",
+"22",2,"SERVICIO PRESTADO PARTE EN EL PERÚ Y PARTE EN EL EXTRANJERO",
+"22",3,"SERVICIO PRESTADO EXCLUSIVAMENTE EN EL EXTRANJERO",
+"23",1,"Los intereses provenientes de créditos de fomento otorgados directamente o mediante proveedores o intermediarios financieros por organismos internacionales o instituciones gubernamentales extranjeras.",
+"23",2,"Las rentas de los inmuebles de propiedad de organismos internacionales que les sirvan de sede. ",
+"23",3,"Las remuneraciones que perciban, por el ejercicio de su cargo en el país, los funcionarios y empleados considerados como tales dentro de la estructura organizacional de los gobiernos extranjeros, instituciones oficiales extranjeras y organismos internacionales, siempre que los convenios constitutivos así lo establezcan. ",
+"23",4,"Los ingresos brutos que perciben las representaciones deportivas nacionales de países extranjeros por sus actuaciones en el país.",
+"23",5,"Las regalías por asesoramiento técnico, económico, financiero, o de otra índole, prestados desde el exterior por entidades estatales u organismos internacionales.",
+"23",6,"Los ingresos extranjeros por los espectáculos en vivo de teatro, zarzuela, conciertos de música clásica, ópera, opereta, ballet y folclor, calificados como espectáculos públicos culturales por el Instituto Nacional de Cultura, realizados en el país. brutos que perciben las representaciones de países. ",
+"24",9001,"BOUVET ISLAND",
+"24",9002,"COTE D'IVOIRE",
+"24",9003,"FALKLAND ISLANDS (MALVINAS)",
+"24",9004,"FRANCE, METROPOLITAN",
+"24",9005,"FRENCH SOUTHERN TERRITORIES",
+"24",9006,"HEARD AND MC DONALD ISLANDS",
+"24",9007,"MAYOTTE",
+"24",9008,"SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS",
+"24",9009,"SVALBARD AND JAN MAYEN ISLANDS",
+"24",9010,"UNITED STATES MINOR OUTLYING ISLANDS",
+"24",9011,"OTROS PAISES O LUGARES",
+"24",9013,"AFGANISTAN",
+"24",9017,"ALBANIA",
+"24",9019,"ALDERNEY",
+"24",9023,"ALEMANIA",
+"24",9026,"ARMENIA",
+"24",9027,"ARUBA",
+"24",9028,"ASCENCI?N",
+"24",9029,"BOSNIA-HERZEGOVINA",
+"24",9031,"BURKINA FASO",
+"24",9037,"ANDORRA",
+"24",9040,"ANGOLA",
+"24",9041,"ANGUILLA",
+"24",9043,"ANTIGUA Y BARBUDA",
+"24",9047,"ANTILLAS HOLANDESAS",
+"24",9053,"ARABIA SAUDITA",
+"24",9059,"ARGELIA",
+"24",9063,"ARGENTINA",
+"24",9069,"AUSTRALIA",
+"24",9072,"AUSTRIA",
+"24",9074,"AZERBAIJAN",
+"24",9077,"BAHAMAS",
+"24",9080,"BAHREIN",
+"24",9081,"BANGLADESH",
+"24",9083,"BARBADOS",
+"24",9087,"BELGICA",
+"24",9088,"BELICE",
+"24",9090,"BERMUDAS",
+"24",9091,"BELARUS",
+"24",9093,"MYANMAR",
+"24",9097,"BOLIVIA",
+"24",9101,"BOTSWANA",
+"24",9105,"BRASIL",
+"24",9108,"BRUNEI DARUSSALAM",
+"24",9111,"BULGARIA",
+"24",9115,"BURUNDI",
+"24",9119,"BUTAN",
+"24",9127,"CABO VERDE",
+"24",9137,"CAIMAN,ISLAS",
+"24",9141,"CAMBOYA",
+"24",9145,"CAMERUN,REPUBLICA UNIDA DEL",
+"24",9147,"CAMPIONE D?TALIA",
+"24",9149,"CANADA",
+"24",9155,"CANAL (NORMANDAS), ISLAS",
+"24",9157,"CANTON Y ENDERBURRY",
+"24",9159,"SANTA SEDE",
+"24",9165,"COCOS (KEELING),ISLAS",
+"24",9169,"COLOMBIA",
+"24",9173,"COMORAS",
+"24",9177,"CONGO",
+"24",9183,"COOK, ISLAS",
+"24",9187,"COREA (NORTE), REPUBLICA POPULAR DEMOCRATICA DE",
+"24",9190,"COREA (SUR), REPUBLICA DE",
+"24",9193,"COSTA DE MARFIL",
+"24",9196,"COSTA RICA",
+"24",9198,"CROACIA",
+"24",9199,"CUBA",
+"24",9203,"CHAD",
+"24",9207,"CHECOSLOVAQUIA",
+"24",9211,"CHILE",
+"24",9215,"CHINA",
+"24",9218,"TAIWAN (FORMOSA)",
+"24",9221,"CHIPRE",
+"24",9229,"BENIN",
+"24",9232,"DINAMARCA",
+"24",9235,"DOMINICA",
+"24",9239,"ECUADOR",
+"24",9240,"EGIPTO",
+"24",9242,"EL SALVADOR",
+"24",9243,"ERITREA",
+"24",9244,"EMIRATOS ARABES UNIDOS",
+"24",9245,"ESPA?A",
+"24",9246,"ESLOVAQUIA",
+"24",9247,"ESLOVENIA",
+"24",9249,"ESTADOS UNIDOS",
+"24",9251,"ESTONIA",
+"24",9253,"ETIOPIA",
+"24",9259,"FEROE, ISLAS",
+"24",9267,"FILIPINAS",
+"24",9271,"FINLANDIA",
+"24",9275,"FRANCIA",
+"24",9281,"GABON",
+"24",9285,"GAMBIA",
+"24",9286,"GAZA Y JERICO",
+"24",9287,"GEORGIA",
+"24",9289,"GHANA",
+"24",9293,"GIBRALTAR",
+"24",9297,"GRANADA",
+"24",9301,"GRECIA",
+"24",9305,"GROENLANDIA",
+"24",9309,"GUADALUPE",
+"24",9313,"GUAM",
+"24",9317,"GUATEMALA",
+"24",9325,"GUAYANA FRANCESA",
+"24",9327,"GUERNSEY",
+"24",9329,"GUINEA",
+"24",9331,"GUINEA ECUATORIAL",
+"24",9334,"GUINEA-BISSAU",
+"24",9337,"GUYANA",
+"24",9341,"HAITI",
+"24",9345,"HONDURAS",
+"24",9348,"HONDURAS BRITANICAS",
+"24",9351,"HONG KONG",
+"24",9355,"HUNGRIA",
+"24",9361,"INDIA",
+"24",9365,"INDONESIA",
+"24",9369,"IRAK",
+"24",9372,"IRAN, REPUBLICA ISLAMICA DEL",
+"24",9375,"IRLANDA (EIRE)",
+"24",9377,"ISLA AZORES",
+"24",9378,"ISLA DEL MAN",
+"24",9379,"ISLANDIA",
+"24",9380,"ISLAS CANARIAS",
+"24",9381,"ISLAS DE CHRISTMAS",
+"24",9382,"ISLAS QESHM",
+"24",9383,"ISRAEL",
+"24",9386,"ITALIA",
+"24",9391,"JAMAICA",
+"24",9395,"JONSTON, ISLAS",
+"24",9399,"JAPON",
+"24",9401,"JERSEY",
+"24",9403,"JORDANIA",
+"24",9406,"KAZAJSTAN",
+"24",9410,"KENIA",
+"24",9411,"KIRIBATI",
+"24",9412,"KIRGUIZISTAN",
+"24",9413,"KUWAIT",
+"24",9418,"LABUN",
+"24",9420,"LAOS, REPUBLICA POPULAR DEMOCRATICA DE",
+"24",9426,"LESOTHO",
+"24",9429,"LETONIA",
+"24",9431,"LIBANO",
+"24",9434,"LIBERIA",
+"24",9438,"LIBIA",
+"24",9440,"LIECHTENSTEIN",
+"24",9443,"LITUANIA",
+"24",9445,"LUXEMBURGO",
+"24",9447,"MACAO",
+"24",9448,"MACEDONIA",
+"24",9450,"MADAGASCAR",
+"24",9453,"MADEIRA",
+"24",9455,"MALAYSIA",
+"24",9458,"MALAWI",
+"24",9461,"MALDIVAS",
+"24",9464,"MALI",
+"24",9467,"MALTA",
+"24",9469,"MARIANAS DEL NORTE, ISLAS",
+"24",9472,"MARSHALL, ISLAS",
+"24",9474,"MARRUECOS",
+"24",9477,"MARTINICA",
+"24",9485,"MAURICIO",
+"24",9488,"MAURITANIA",
+"24",9493,"MEXICO",
+"24",9494,"MICRONESIA, ESTADOS FEDERADOS DE",
+"24",9495,"MIDWAY ISLAS",
+"24",9496,"MOLDAVIA",
+"24",9497,"MONGOLIA",
+"24",9498,"MONACO",
+"24",9501,"MONTSERRAT, ISLA",
+"24",9505,"MOZAMBIQUE",
+"24",9507,"NAMIBIA",
+"24",9508,"NAURU",
+"24",9511,"NAVIDAD (CHRISTMAS), ISLA",
+"24",9517,"NEPAL",
+"24",9521,"NICARAGUA",
+"24",9525,"NIGER",
+"24",9528,"NIGERIA",
+"24",9531,"NIUE, ISLA",
+"24",9535,"NORFOLK, ISLA",
+"24",9538,"NORUEGA",
+"24",9542,"NUEVA CALEDONIA",
+"24",9545,"PAPUASIA NUEVA GUINEA",
+"24",9548,"NUEVA ZELANDA",
+"24",9551,"VANUATU",
+"24",9556,"OMAN",
+"24",9566,"PACIFICO, ISLAS DEL",
+"24",9573,"PAISES BAJOS",
+"24",9576,"PAKISTAN",
+"24",9578,"PALAU, ISLAS",
+"24",9579,"TERRITORIO AUTONOMO DE PALESTINA.",
+"24",9580,"PANAMA",
+"24",9586,"PARAGUAY",
+"24",9589,"PERU",
+"24",9593,"PITCAIRN, ISLA",
+"24",9599,"POLINESIA FRANCESA",
+"24",9603,"POLONIA",
+"24",9607,"PORTUGAL",
+"24",9611,"PUERTO RICO",
+"24",9618,"QATAR",
+"24",9628,"REINO UNIDO",
+"24",9629,"ESCOCIA",
+"24",9633,"REPUBLICA ARABE UNIDA",
+"24",9640,"REPUBLICA CENTROAFRICANA",
+"24",9644,"REPUBLICA CHECA",
+"24",9645,"REPUBLICA DE SWAZILANDIA",
+"24",9646,"REPUBLICA DE TUNEZ",
+"24",9647,"REPUBLICA DOMINICANA",
+"24",9660,"REUNION",
+"24",9665,"ZIMBABWE",
+"24",9670,"RUMANIA",
+"24",9675,"RUANDA",
+"24",9676,"RUSIA",
+"24",9677,"SALOMON, ISLAS",
+"24",9685,"SAHARA OCCIDENTAL",
+"24",9687,"SAMOA OCCIDENTAL",
+"24",9690,"SAMOA NORTEAMERICANA",
+"24",9695,"SAN CRISTOBAL Y NIEVES",
+"24",9697,"SAN MARINO",
+"24",9700,"SAN PEDRO Y MIQUELON",
+"24",9705,"SAN VICENTE Y LAS GRANADINAS",
+"24",9710,"SANTA ELENA",
+"24",9715,"SANTA LUCIA",
+"24",9720,"SANTO TOME Y PRINCIPE",
+"24",9728,"SENEGAL",
+"24",9731,"SEYCHELLES",
+"24",9735,"SIERRA LEONA",
+"24",9741,"SINGAPUR",
+"24",9744,"SIRIA, REPUBLICA ARABE DE",
+"24",9748,"SOMALIA",
+"24",9750,"SRI LANKA",
+"24",9756,"SUDAFRICA, REPUBLICA DE",
+"24",9759,"SUDAN",
+"24",9764,"SUECIA",
+"24",9767,"SUIZA",
+"24",9770,"SURINAM",
+"24",9773,"SAWSILANDIA",
+"24",9774,"TADJIKISTAN",
+"24",9776,"TAILANDIA",
+"24",9780,"TANZANIA, REPUBLICA UNIDA DE",
+"24",9783,"DJIBOUTI",
+"24",9786,"TERRITORIO ANTARTICO BRITANICO",
+"24",9787,"TERRITORIO BRITANICO DEL OCEANO INDICO",
+"24",9788,"TIMOR DEL ESTE",
+"24",9800,"TOGO",
+"24",9805,"TOKELAU",
+"24",9810,"TONGA",
+"24",9815,"TRINIDAD Y TOBAGO",
+"24",9816,"TRISTAN DA CUNHA",
+"24",9820,"TUNICIA",
+"24",9823,"TURCAS Y CAICOS, ISLAS",
+"24",9825,"TURKMENISTAN",
+"24",9827,"TURQUIA",
+"24",9828,"TUVALU",
+"24",9830,"UCRANIA",
+"24",9833,"UGANDA",
+"24",9840,"URSS",
+"24",9845,"URUGUAY",
+"24",9847,"UZBEKISTAN",
+"24",9850,"VENEZUELA",
+"24",9855,"VIET NAM",
+"24",9858,"VIETNAM (DEL NORTE)",
+"24",9863,"VIRGENES, ISLAS (BRITANICAS)",
+"24",9866,"VIRGENES, ISLAS (NORTEAMERICANAS)",
+"24",9870,"FIJI",
+"24",9873,"WAKE, ISLA",
+"24",9875,"WALLIS Y FORTUNA, ISLAS",
+"24",9880,"YEMEN",
+"24",9885,"YUGOSLAVIA",
+"24",9888,"ZAIRE",
+"24",9890,"ZAMBIA",
+"24",9895,"ZONA DEL CANAL DE PANAMA",
+"24",9896,"ZONA LIBRE OSTRAVA",
+"24",9897,"ZONA NEUTRAL (PALESTINA)",

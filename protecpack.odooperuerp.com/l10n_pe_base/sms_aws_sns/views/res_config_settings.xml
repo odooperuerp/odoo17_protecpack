@@ -1,0 +1,15 @@
+<odoo>
+    <record id="res_config_settings_view_form_inherit_aws_sns" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.aws.sns</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="aws_base.res_config_settings_view_form_inherit_aws"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='aws_iam_ids']" position="after">
+                <div class="text-muted">
+                    Seleccione el ARN de AWS SNS que desea utilizar en Odoo para el envio de mensajes.
+                </div>
+                <field name="aws_sns_arn_id" domain="[('aws_iam_id','in',aws_iam_ids)]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

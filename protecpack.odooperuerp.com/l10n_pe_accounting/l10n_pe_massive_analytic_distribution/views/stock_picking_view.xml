@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_picking_analytic_form" model="ir.ui.view">
+            <field name="name">view_picking_analytic_form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+
+
+                <field name="picking_type_id" position="after">
+
+                    <field name="has_analytic_distribution" invisible="1"/>
+
+                </field>
+
+                <!-- ################################################ -->
+
+                <xpath expr="//form/sheet/notebook" position="before">
+
+                    <group>
+
+                        <group>
+
+                            <label for="massive_analytic_distribution" invisible="has_analytic_distribution == False" widget="analytic_distribution"/>
+                            <div name="massive_analytic_distribution_div" class="d-flex" invisible="has_analytic_distribution == False">
+
+                                <field name="massive_analytic_distribution" widget="analytic_distribution"
+                                    groups="analytic.group_analytic_accounting" invisible="has_analytic_distribution == False" readonly="state == 'done'"/>
+
+                                <button name="aplication_massive_analytic_distribution" class="oe_stat_button" icon="fa-refresh" type="object" invisible="has_analytic_distribution == False or state == 'done'"/>
+                            </div>
+                        </group>
+
+                    </group>
+                
+                </xpath>
+
+                <!-- ################################################# -->
+
+                <xpath expr="//form/sheet/notebook/page[@name='operations']/field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="after">
+
+                    <field name="analytic_distribution" optional="show" column_invisible="parent.has_analytic_distribution == False" widget="analytic_distribution" groups="analytic.group_analytic_accounting"/>
+                
+                </xpath>
+
+
+            </field>
+
+        </record>
+
+
+        <record id="view_picking_type_analytic_form" model="ir.ui.view">
+            <field name="name">view_picking_type_analytic_form</field>
+            <field name="model">stock.picking.type</field>
+            <field name="inherit_id" ref="stock.view_picking_type_form"/>
+            <field name="arch" type="xml">
+                
+                <field name="create_backorder" position="after">
+
+                    <field name="has_analytic_distribution"/>
+
+                </field>
+
+
+            </field>
+
+        </record>
+
+
+    </data>
+</odoo>

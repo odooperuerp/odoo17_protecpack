@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+
+        <record id="account_move_form_fields_me" model="ir.ui.view">
+            <field name="name">account.move.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form" />
+            <field name="arch" type="xml">
+
+                <xpath expr="//sheet/group/group[@id='header_right_group']/field[@name='currency_id']" position="after">
+
+                    <field name="second_currency_id" readonly="True"/>
+
+                </xpath>
+
+                <xpath expr="//field[@name='line_ids']/tree/field[@name='credit']" position="after">
+
+                    <field name="second_currency_id" readonly="1"/>
+
+                    <field name="second_currency_rate" readonly="1"/>
+                    
+                    <field name="debit_currency" sum="debit_currency" readonly="1"/>
+                    
+                    <field name="credit_currency" sum="credit_currency" readonly="1"/>
+
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="view_move_line_tree_fields_me" model="ir.ui.view">
+            <field name="name">account.move.line.tree</field>
+            <field name="model">account.move.line</field>
+            <field name="inherit_id" ref="account.view_move_line_tree"/>
+            <field name="arch" type="xml">
+
+                <field name="credit" position="after">
+
+                    <field name="second_currency_id" readonly="1" optional="show"/>
+                    <field name="second_currency_rate" readonly="1" optional="show"/>
+                    <field name="debit_currency" sum="debit_currency" readonly="1" optional="show"/>
+                    <field name="credit_currency" sum="credit_currency" readonly="1" optional="show"/>
+
+                </field>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

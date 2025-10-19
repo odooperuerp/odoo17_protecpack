@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_journal_form_prefix_code_invoice_number" model="ir.ui.view">
+            <field name="name">view.account.journal.form.prefix.code.invoice.number</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+
+                
+                <!--<xpath expr="//form/sheet/div[@class='oe_button_box']" position="inside">
+                  
+                  <button name="action_account_move_line_views" class="oe_stat_button" icon="fa-list-ol" type="object" string="Apuntes Contables" invisible ="state not in ['posted']"/>
+
+                </xpath>-->
+
+                <field name="edi_format_ids" position="after">
+                    
+                    <field name="allow_edit_prefix_code_invoice_number" invisible="type != 'sale'"/>
+
+                </field>
+
+            </field>
+        </record>
+
+        <!-- ################################################################################# -->
+
+        <record id="view_account_journal_tree_prefix_code_invoice_number" model="ir.ui.view">
+            <field name="name">view.account.journal.tree.prefix.code.invoice.number</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_tree"/>
+            <field name="arch" type="xml">
+
+
+                <field name="type" position="after">
+
+                    <field name="allow_edit_prefix_code_invoice_number"/>
+
+                </field>
+
+            </field>
+
+        </record>
+
+    </data>
+</odoo>

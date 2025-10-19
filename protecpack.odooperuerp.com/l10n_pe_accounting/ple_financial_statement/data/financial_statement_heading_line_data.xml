@@ -1,0 +1,2959 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<odoo>
+	
+	<data noupdate="1">
+
+		<record id="financial_statement_heading_line_01_1" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">1</field>
+			<field name="name">ACTIVO</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0000</field>
+			<field name="is_title">True</field>
+			<field name="title">ACTIVO</field>
+		</record>
+
+		<record id="financial_statement_heading_line_01_2" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">2</field>
+			<field name="name">ACTIVO CORRIENTE</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0000</field>
+			<field name="is_title">True</field>
+			<field name="title">ACTIVO CORRIENTE</field>
+		</record>
+
+		<record id="financial_statement_heading_line_01_3" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">3</field>
+			<field name="name">Efectivo y Equivalentes al Efectivo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0109</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_4" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">4</field>
+			<field name="name">Efectivo y Equivalentes al Efectivo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0109</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_5" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">5</field>
+			<field name="name">Otros Activos Financieros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0114</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_6" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">6</field>
+			<field name="name">Cuentas por cobrar comerciales y otras cuentas por cobrar</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0121</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_7" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">7</field>
+			<field name="name">Cuentas por Cobrar Comerciales (neto)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0103</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_8" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">8</field>
+			<field name="name">Otras Cuentas por Cobrar (neto)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0105</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_9" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">9</field>
+			<field name="name">Cuentas por Cobrar a Entidades Relacionadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0104</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_10" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">10</field>
+			<field name="name">Anticipos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0107</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_11" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">11</field>
+			<field name="name">Inventarios</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0106</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_12" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">12</field>
+			<field name="name">Activos Biológicos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0112</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_13" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">13</field>
+			<field name="name">Activos por Impuestos a las Ganancias </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0117</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_14" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">14</field>
+			<field name="name">Otros Activos no financieros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0113</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_15" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">15</field>
+			<field name="name">Total Activos Corrientes Distintos de los Activos o Grupos de Activos para su Disposición Clasificados como Mantenidos para la Venta o para Distribuir a los Propietarios</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0118</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_16" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">16</field>
+			<field name="name">Activos no Corrientes o Grupos de Activos para su Disposición Clasificados como Mantenidos para la Venta</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0119</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_17" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">17</field>
+			<field name="name">Activos no Corrientes o Grupos de Activos para su Disposición Clasificados como Mantenidos para Distribuir a los Propietarios</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0120</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_18" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">18</field>
+			<field name="name">Activos no Corrientes o Grupos de Activos para su Disposición Clasificados como Mantenidos para la Venta o como Mantenidos para Distribuir a los Propietarios</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0115</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_19" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">19</field>
+			<field name="name">Total Activos Corrientes</field>
+			<field name="is_total">True</field>
+			<field name="code_sunat">1D01ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_20" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">20</field>
+			<field name="name">ACTIVO NO CORRIENTE</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0000</field>
+			<field name="is_title">True</field>
+			<field name="title">ACTIVO NO CORRIENTE</field>
+		</record>
+
+		<record id="financial_statement_heading_line_01_21" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">21</field>
+			<field name="name">Otros Activos Financieros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0217</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_22" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">22</field>
+			<field name="name">Inversiones en subsidiarias, negocios conjuntos y asociadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0221</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_23" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">23</field>
+			<field name="name">Cuentas por cobrar comerciales y otras cuentas por cobrar</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0219</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_24" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">24</field>
+			<field name="name">Cuentas por Cobrar Comerciales</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0201</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_25" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">25</field>
+			<field name="name">Otras Cuentas por Cobrar</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0203</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_26" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">26</field>
+			<field name="name">Cuentas por Cobrar a Entidades Relacionadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0202</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_27" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">27</field>
+			<field name="name">Anticipos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0220</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_28" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">28</field>
+			<field name="name">Activos Biológicos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0216</field>
+			<field name="is_title">is_title</field>
+			<field name="title">title</field>
+		</record>
+
+		<record id="financial_statement_heading_line_01_29" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">29</field>
+			<field name="name">Propiedades de Inversión</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0211</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_30" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">30</field>
+			<field name="name">Propiedades, Planta y Equipo (neto)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0205</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_31" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">31</field>
+			<field name="name">Activos  intangibles distintos  de la plusvalia</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0206</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_32" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">32</field>
+			<field name="name">Activos por impuestos diferidos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0207</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_33" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">33</field>
+			<field name="name">Plusvalía</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0212</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_34" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">34</field>
+			<field name="name">Otros Activos no financieros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0208</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_35" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">35</field>
+			<field name="name">Total Activos No Corrientes</field>
+			<field name="is_total">True</field>
+			<field name="code_sunat">1D02ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_36" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">36</field>
+			<field name="name">TOTAL DE ACTIVOS</field>
+			<field name="is_total">True</field>
+			<field name="code_sunat">1D020T</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_37" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">37</field>
+			<field name="name">PASIVO Y PATRIMONIO</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0000</field>
+			<field name="is_title">True</field>
+			<field name="title">PASIVO Y PATRIMONIO</field>
+		</record>
+
+		<record id="financial_statement_heading_line_01_38" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">38</field>
+			<field name="name">PASIVO CORRIENTE</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0000</field>
+			<field name="is_title">True</field>
+			<field name="title">PASIVO CORRIENTE</field>
+		</record>
+
+		<record id="financial_statement_heading_line_01_39" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">39</field>
+			<field name="name">Otros Pasivos Financieros </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0309</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_40" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">40</field>
+			<field name="name">Cuentas por pagar comerciales y otras cuentas por pagar </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0316</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_41" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">41</field>
+			<field name="name">Cuentas por Pagar Comerciales </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0302</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_42" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">42</field>
+			<field name="name">Otras Cuentas por Pagar</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0304</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_43" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">43</field>
+			<field name="name">Cuentas por Pagar a Entidades Relacionadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0303</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_44" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">44</field>
+			<field name="name">Ingresos diferidos </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0317</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_45" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">45</field>
+			<field name="name">Provisión por Beneficios a los Empleados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0313</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_46" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">46</field>
+			<field name="name">Otras provisiones </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0310</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_47" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">47</field>
+			<field name="name">Pasivos por Impuestos a las Ganancias </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0311</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_48" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">48</field>
+			<field name="name">Otros Pasivos no financieros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0314</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_49" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">49</field>
+			<field name="name">Total de Pasivos Corrientes distintos de Pasivos incluidos en Grupos de Activos para su Disposición Clasificados como Mantenidos para la Venta</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0315</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_50" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">50</field>
+			<field name="name">Pasivos incluidos en Grupos de Activos para su Disposición Clasificados como Mantenidos para la Venta</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0312</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_51" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">51</field>
+			<field name="name">Total Pasivos Corrientes</field>
+			<field name="is_total">True</field>
+			<field name="code_sunat">1D03ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_52" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">52</field>
+			<field name="name">PASIVO NO CORRIENTE</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0000</field>
+			<field name="is_title">True</field>
+			<field name="title">PASIVO NO CORRIENTE</field>
+		</record>
+
+		<record id="financial_statement_heading_line_01_53" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">53</field>
+			<field name="name">Otros Pasivos Financieros </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0401</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_54" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">54</field>
+			<field name="name">Cuentas por pagar comerciales y otras cuentas por pagar </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0411</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_55" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">55</field>
+			<field name="name">Cuentas por Pagar Comerciales </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0407</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_56" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">56</field>
+			<field name="name">Otras Cuentas por Pagar</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0408</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_57" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">57</field>
+			<field name="name">Cuentas por Pagar a Entidades Relacionadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0402</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_58" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">58</field>
+			<field name="name">Ingresos Diferidos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0403</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_59" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">59</field>
+			<field name="name">Provisión por Beneficios a los Empleados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0409</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_60" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">60</field>
+			<field name="name">Otras provisiones </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0406</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_61" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">61</field>
+			<field name="name">Pasivos por impuestos diferidos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0404</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_62" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">62</field>
+			<field name="name">Otros pasivos no financieros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0410</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_63" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">63</field>
+			<field name="name">Total Pasivos No Corrientes</field>
+			<field name="is_total">True</field>
+			<field name="code_sunat">1D04ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_64" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">64</field>
+			<field name="name">Total Pasivos </field>
+			<field name="is_total">True</field>
+			<field name="code_sunat">1D040T</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_65" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">65</field>
+			<field name="name">Contingencias</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat" />
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_66" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">66</field>
+			<field name="name">Interes minoritario</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat" />
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_67" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">67</field>
+			<field name="name">PATRIMONIO NETO</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0000</field>
+			<field name="is_title">True</field>
+			<field name="title">PATRIMONIO NETO</field>
+		</record>
+
+		<record id="financial_statement_heading_line_01_68" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">68</field>
+			<field name="name">Capital Emitido</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0701</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_69" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">69</field>
+			<field name="name">Primas de Emisión</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0702</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_70" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">70</field>
+			<field name="name">Acciones de Inversión</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0703</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_71" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">71</field>
+			<field name="name">Acciones Propias en Cartera</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0711</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_72" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">72</field>
+			<field name="name">Otras Reservas de Capital</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0712</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_73" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">73</field>
+			<field name="name">Resultado del Ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0713</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_74" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">74</field>
+			<field name="name">Resultados Acumulados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0707</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_75" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">75</field>
+			<field name="name">Otras Reservas de Patrimonio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">1D0708</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_76" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">76</field>
+			<field name="name">Total Patrimonio </field>
+			<field name="is_total">True</field>
+			<field name="code_sunat">1D07ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_01_77" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_01" />
+			<field name="nro_rubro">77</field>
+			<field name="name">TOTAL PASIVO Y PATRIMONIO</field>
+			<field name="is_total">True</field>
+			<field name="code_sunat">1D070T</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_1" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">1</field>
+			<field name="name">Venta de Bienes y Prestación de Servicios </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0101</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_2" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">2</field>
+			<field name="name">Regalías, cuotas,  comisiones, otros ingresos de actividades ordinarias </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0112</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_3" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">3</field>
+			<field name="name">Contratos mantenidos con propósito de intermediación o para negociar</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0110</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_4" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">4</field>
+			<field name="name">Arredamiento y posterior venta de esos activos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0117</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_5" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">5</field>
+			<field name="name">Otros cobros de efectivo relativos a la actividad de operación</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0104</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_6" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">6</field>
+			<field name="name">Proveedores de Bienes y Servicios</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0109</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_7" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">7</field>
+			<field name="name">Contratos mantenidos con propósito de intermediación o para negociar</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0118</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_8" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">8</field>
+			<field name="name">Pagos a y por cuenta de los empleados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0105</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_9" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">9</field>
+			<field name="name">Elaboración o adquisición de activos para arrendar y otros mantenidos para la venta</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0119</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_10" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">10</field>
+			<field name="name">Otros Pagos de Efectivo Relativos a la Actividad  de Operación</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0108</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_11" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">11</field>
+			<field name="name">Flujos de efectivo y equivalente al efectivo procedente de (utilizados en) operaciones</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0121</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_12" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">12</field>
+			<field name="name">Intereses recibidos (no incluidos en la Actividad de Inversión)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0103</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_13" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">13</field>
+			<field name="name">Intereses pagados (no incluidos en la Actividad de Financiación)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0107</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_14" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">14</field>
+			<field name="name">Dividendos Recibidos (no incluidos en la Actividad de Inversión)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0111</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_15" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">15</field>
+			<field name="name">Dividendos pagados(no incluidos en la Actividad de Financiación)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0116</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_16" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">16</field>
+			<field name="name">Impuestos a las ganancias (pagados) reembolsados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0120</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_17" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">17</field>
+			<field name="name">Otros cobros (pagos) de efectivo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0122</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_18" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">18</field>
+			<field name="name">Flujos de Efectivo y Equivalente al Efectivo Procedente de (Utilizados en) Actividades de Operación</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D01ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_19" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">19</field>
+			<field name="name">Reembolso de Adelantos de Prestamos y Préstamos Concedidos a Terceros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0220</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_20" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">20</field>
+			<field name="name">Pérdida de control de subsidiarias u otros negocios</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0218</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_21" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">21</field>
+			<field name="name">Reembolsos recibidos de préstamos a entidades relacionadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0209</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_22" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">22</field>
+			<field name="name">Venta de  Instrumentos Financieros de Patrimonio o Deuda de Otras Entidades</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0201</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_23" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">23</field>
+			<field name="name">Contratos Derivados (futuro, a término, opciones)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0221</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_24" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">24</field>
+			<field name="name">Venta  de Participaciones en Negocios Conjuntos, Neto del Efectivo Desapropiado</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0222</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_25" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">25</field>
+			<field name="name">Venta de Propiedades, Planta y Equipo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0202</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_26" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">26</field>
+			<field name="name">Venta de Activos Intangibles</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0203</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_27" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">27</field>
+			<field name="name">Venta de Otros Activos de largo plazo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0223</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_28" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">28</field>
+			<field name="name">Subvenciones del gobierno</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0231</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_29" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">29</field>
+			<field name="name">Intereses Recibidos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0210</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_30" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">30</field>
+			<field name="name">Dividendos Recibidos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0211</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_31" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">31</field>
+			<field name="name">Anticipos y Prestamos Concedidos a Terceros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0225</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_32" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">32</field>
+			<field name="name">Obtener el control de subsidiarias u otros negocios</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0232</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_33" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">33</field>
+			<field name="name">Prestamos concedidos a entidades relacionadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0212</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_34" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">34</field>
+			<field name="name">Compra de Instrumentos Financieros de Patrimonio o Deuda de Otras Entidades</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0205</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_35" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">35</field>
+			<field name="name">Contratos Derivados (futuro, a término, opciones)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0226</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_36" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">36</field>
+			<field name="name">Compra de Subsidiarias, Neto del Efectivo Adquirido</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0219</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_37" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">37</field>
+			<field name="name">Compra de Participaciones en Negocios Conjuntos,  Neto del Efectivo Adquirido</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0227</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_38" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">38</field>
+			<field name="name">Compra de Propiedades, Planta  y Equipo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0206</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_39" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">39</field>
+			<field name="name">Compra de Activos Intangibles </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0207</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_40" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">40</field>
+			<field name="name">Compra de Otros Activos de largo plazo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0229</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_41" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">41</field>
+			<field name="name">Impuestos a las ganancias (pagados) reembolsados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0233</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_42" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">42</field>
+			<field name="name">Otros cobros (pagos) de efectivo relativos a la actividad de inversión    </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0234</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_43" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">43</field>
+			<field name="name">Flujos de Efectivo y Equivalente al Efectivo Procedente de (Utilizados en) Actividades de Inversión</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D02ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_44" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">44</field>
+			<field name="name">Obtención de Préstamos </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0325</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_45" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">45</field>
+			<field name="name">Préstamos de entidades relacionadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0319</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_46" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">46</field>
+			<field name="name">Cambios en las participaciones en la propiedad de subsidiarias que no resultan en pérdida de control</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0326</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_47" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">47</field>
+			<field name="name">Emisión de Acciones </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0327</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_48" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">48</field>
+			<field name="name">Emisión de  Otros Instrumentos de Patrimonio </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0328</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_49" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">49</field>
+			<field name="name">Subvenciones del gobierno</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0329</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_50" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">50</field>
+			<field name="name">Amortización o pago de Préstamos </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0330</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_51" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">51</field>
+			<field name="name">Pasivos por Arrendamiento Financiero</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0322</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_52" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">52</field>
+			<field name="name">Préstamos de entidades relacionadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0321</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_53" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">53</field>
+			<field name="name">Cambios en las participaciones en la propiedad de subsidiarias que no resultan en pérdida de control</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0331</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_54" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">54</field>
+			<field name="name">Recompra o Rescate de Acciones de la Entidad (Acciones en Cartera)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0310</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_55" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">55</field>
+			<field name="name">Adquisición de Otras Participaciones en el Patrimonio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0323</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_56" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">56</field>
+			<field name="name">Intereses pagados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0311</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_57" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">57</field>
+			<field name="name">Dividendos pagados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0305</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_58" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">58</field>
+			<field name="name">Impuestos a las ganancias (pagados) reembolsados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0332</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_59" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">59</field>
+			<field name="name">Otros cobros (pagos) de efectivo relativos a la actividad de financiación  </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0333</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_60" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">60</field>
+			<field name="name">Flujos de Efectivo y Equivalente al Efectivo Procedente de (Utilizados en) Actividades de Financiación</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D03ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_61" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">61</field>
+			<field name="name">Aumento (Disminución) Neto de Efectivo y Equivalente al Efectivo, antes de las Variaciones en las Tasas de Cambio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0401</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_62" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">62</field>
+			<field name="name">Efectos de las Variaciones en las Tasas de Cambio sobre el Efectivo y Equivalentes al Efectivo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0404</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_63" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">63</field>
+			<field name="name">Aumento (Disminución) Neto de Efectivo y Equivalente al Efectivo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0405</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_64" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">64</field>
+			<field name="name">Efectivo y Equivalente al Efectivo al Inicio del Ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0402</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_02_65" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_02" />
+			<field name="nro_rubro">65</field>
+			<field name="name">Efectivo y Equivalente al Efectivo al Finalizar el Ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D04ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_1" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">1</field>
+			<field name="name">Saldos al 1ero. de enero de</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0101</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_2" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">2</field>
+			<field name="name">      Cambios en Políticas Contables </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0126</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_3" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">3</field>
+			<field name="name">      Corrección de Errores</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0127</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_4" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">4</field>
+			<field name="name">Saldo Inicial Reexpresado</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0128</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_5" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">5</field>
+			<field name="name">      Ganancia (Pérdida) Neta del Ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0129</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_6" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">6</field>
+			<field name="name">      Otro Resultado Integral</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0130</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_7" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">7</field>
+			<field name="name">Resultado Integral Total del Ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0131</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_8" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">8</field>
+			<field name="name">Dividendos en Efectivo Declarados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0104</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_9" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">9</field>
+			<field name="name">Emisión (reducción) de patrimonio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0105</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_10" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">10</field>
+			<field name="name">Reducción o Amortización de Acciones de Inversión</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0132</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_11" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">11</field>
+			<field name="name">Incremento (Disminución) por otras Aportaciones de los Propietarios </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0133</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_12" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">12</field>
+			<field name="name">Disminución (Incremento) por otras Distribuciones a los Propietarios </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0134</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_13" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">13</field>
+			<field name="name">Incremento (Disminución) por Cambios en la Participación de Subsidiarias que no impliquen Pérdidas de Control</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0135</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_14" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">14</field>
+			<field name="name">Incremento (disminución) por transacciones con acciones propias en cartera</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0114</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_15" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">15</field>
+			<field name="name">Incremento (Disminución) por Transferencia y Otros Cambios de patrimonio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0112</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_16" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">16</field>
+			<field name="name">Total incremento (disminución) en el patrimonio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0136</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_17" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">17</field>
+			<field name="name">Saldos al 31 de diciembre de </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D01ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_18" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">18</field>
+			<field name="name">Saldos al 1ero. de enero de </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0201</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_19" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">19</field>
+			<field name="name">      Cambios en Políticas Contables </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0226</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_20" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">20</field>
+			<field name="name">      Corrección de Errores</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0227</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_21" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">21</field>
+			<field name="name">Saldo Inicial Reexpresado</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0228</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_22" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">22</field>
+			<field name="name">      Ganancia (Pérdida) Neta del Ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0229</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_23" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">23</field>
+			<field name="name">      Otro Resultado Integral</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0230</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_24" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">24</field>
+			<field name="name">Resultado Integral Total del Ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0231</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_25" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">25</field>
+			<field name="name">Dividendos en Efectivo Declarados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0204</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_26" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">26</field>
+			<field name="name">Emisión (reducción) de patrimonio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0205</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_27" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">27</field>
+			<field name="name">Reducción o Amortización de Acciones de Inversión</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0232</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_28" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">28</field>
+			<field name="name">Incremento (Disminución) por otras Aportaciones de los Propietarios </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0233</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_29" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">29</field>
+			<field name="name">Disminución (Incremento) por otras Distribuciones a los Propietarios </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0234</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_30" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">30</field>
+			<field name="name">Incremento (Disminución) por Cambios en la Participación de Subsidiarias que no impliquen Pérdidas de Control</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0235</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_31" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">31</field>
+			<field name="name">Incremento (disminución) por transacciones con acciones propias en cartera</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0214</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_32" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">32</field>
+			<field name="name">Incremento (Disminución) por Transferencia y Otros Cambios de patrimonio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0212</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_33" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">33</field>
+			<field name="name">Total incremento (disminución) en el patrimonio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D0236</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_03_34" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_03" />
+			<field name="nro_rubro">34</field>
+			<field name="name">Saldos al 31 de diciembre de</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">4D02ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_1" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">1</field>
+			<field name="name">Ingresos de actividades ordinarias</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D01ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_2" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">2</field>
+			<field name="name">Costo de Ventas </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0201</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_3" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">3</field>
+			<field name="name">Ganancia (Pérdida) Bruta</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D02ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_4" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">4</field>
+			<field name="name">Gastos de Ventas y Distribución</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0302</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_5" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">5</field>
+			<field name="name">Gastos de Administración</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0301</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_6" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">6</field>
+			<field name="name">Ganancia (Pérdida) de la baja en Activos Financieros medidos al Costo Amortizado</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0407</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_7" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">7</field>
+			<field name="name">Otros Ingresos Operativos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0403</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_8" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">8</field>
+			<field name="name">Otros Gastos Operativos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0404</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_9" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">9</field>
+			<field name="name">Otras ganancias (pérdidas)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0412</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_10" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">10</field>
+			<field name="name">Ganancia (Pérdida) por actividades de operación</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D03ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_11" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">11</field>
+			<field name="name">Ingresos Financieros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0401</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_12" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">12</field>
+			<field name="name">Gastos Financieros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0402</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_13" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">13</field>
+			<field name="name">Diferencias de Cambio neto</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0410</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_14" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">14</field>
+			<field name="name">Otros ingresos (gastos) de las subsidiarias,negocios conjuntos y asociadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0414</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_15" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">15</field>
+			<field name="name">Ganancias (Pérdidas) que surgen de la Diferencia entre el Valor Libro Anterior y el Valor Justo de Activos Financieros Reclasificados Medidos a Valor Razonable</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0411</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_16" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">16</field>
+			<field name="name">Diferencia entre el importe en libros de los activos distribuidos y el importe en libros del dividendo a pagar</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0413</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_17" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">17</field>
+			<field name="name">Resultado antes de Impuesto a las Ganancias</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D04ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_18" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">18</field>
+			<field name="name">Gasto por Impuesto a las Ganancias</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0502</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_19" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">19</field>
+			<field name="name">Ganancia (Pérdida) Neta de Operaciones  Continuadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0503</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_20" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">20</field>
+			<field name="name">Ganancia (pérdida)  procedente de operaciones discontinuadas, neta del impuesto a las ganancias </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D0504</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_04_21" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_04" />
+			<field name="nro_rubro">21</field>
+			<field name="name">Ganancia (Pérdida) Neta del Ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">2D07ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_1" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">1</field>
+			<field name="name">Ganancia (Pérdida)  Neta del Ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0101</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_2" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">2</field>
+			<field name="name">Variación Neta por Coberturas del Flujo de Efectivo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0103</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_3" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">3</field>
+			<field name="name">Coberturas de inversión neta de negocios en el extranjero</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0109</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_4" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">4</field>
+			<field name="name">Ganancias (Pérdidas) de Inversiones en Instrumentos de Patrimonio al valor razonable</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0104</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_5" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">5</field>
+			<field name="name">Diferencia de Cambio  por Conversión de Operaciones en el Extranjero</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0105</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_6" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">6</field>
+			<field name="name">Variación neta de activos no corrientes o grupos de activos mantenidos para la venta </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0110</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_7" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">7</field>
+			<field name="name">Superávit de Revaluación </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0107</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_8" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">8</field>
+			<field name="name">Ganancia (pérdida) actuariales en plan de beneficios definidos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0111</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_9" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">9</field>
+			<field name="name">Cambios en el valor razonable de pasivos financieros atribuibles a cambios en el riesgo de crédito del pasivo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0112</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_10" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">10</field>
+			<field name="name">Otro Resultado Integral antes de Impuestos </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D01ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_11" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">11</field>
+			<field name="name">Variación Neta por Coberturas del Flujo de Efectivo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0202</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_12" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">12</field>
+			<field name="name">Coberturas de inversión neta de negocios en el extranjero</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0208</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_13" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">13</field>
+			<field name="name">Ganancias (Pérdidas) de Inversiones en Instrumentos de Patrimonio al valor razonable</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0203</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_14" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">14</field>
+			<field name="name">Diferencia de Cambio  por Conversión de Operaciones en el Extranjero</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0204</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_15" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">15</field>
+			<field name="name">Variación neta de activos no corrientes o grupos de activos mantenidos para la venta </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0209</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_16" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">16</field>
+			<field name="name">Superávit de Revaluación </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0206</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_17" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">17</field>
+			<field name="name">Ganancia (pérdida) actuariales en plan de beneficios definidos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0210</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_18" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">18</field>
+			<field name="name">Cambios en el valor razonable de pasivos financieros atribuibles a cambios en el riesgo de crédito del pasivo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D0211</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_19" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">19</field>
+			<field name="name">Suma de Impuestos a las Ganancias Relacionados con Componentes de Otro Resultado Integral</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D02ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_20" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">20</field>
+			<field name="name">Otros Resultado Integral</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D03ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_05_21" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_05" />
+			<field name="nro_rubro">21</field>
+			<field name="name">Resultado  Integral Total del Ejercicio, neto del Impuesto a las Ganancias</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">5D04ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_1" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">1</field>
+			<field name="name">Ganancia (Pérdida) Neta del Ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D05ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_2" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">2</field>
+			<field name="name">Gasto por Intereses</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0611</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_3" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">3</field>
+			<field name="name">Ingreso por Intereses</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0627</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_4" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">4</field>
+			<field name="name">Ingreso por Dividendos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0628</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_5" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">5</field>
+			<field name="name">Pérdida (Ganancia) por Diferencias de Cambio no realizadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0629</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_6" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">6</field>
+			<field name="name">Gasto por Impuestos a las Ganancias</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0620</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_7" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">7</field>
+			<field name="name">Pérdidas por Deterioro de Valor (Reversiones de Pérdidas por Deterioro de Valor) reconocidas en el Resultado del Ejercicio  </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0610</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_8" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">8</field>
+			<field name="name">Depreciación,  Amortización y Agotamiento</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0602</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_9" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">9</field>
+			<field name="name">Pérdidas  (Ganancias) por Valor Razonable</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0631</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_10" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">10</field>
+			<field name="name">Pérdida (Ganancias) por la Disposición de Activos no Corrientes Mantenidas para la Venta</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0632</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_11" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">11</field>
+			<field name="name">Diferencia entre el importe en libros de los activos distribuidos y el importe en libros del dividendo a pagar</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0634</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_12" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">12</field>
+			<field name="name">Pérdida (ganancia) en venta de propiedades de inversión</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0635</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_13" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">13</field>
+			<field name="name">Pérdida (Ganancia) en Venta de Propiedades, Planta y Equipo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0605</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_14" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">14</field>
+			<field name="name">Pérdida (Ganancia) en Venta de Activos Intangibles</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0618</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_15" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">15</field>
+			<field name="name">Otros ajustes para conciliar la ganancia (pérdida) del ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0608</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_16" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">16</field>
+			<field name="name">(Aumento) disminución de cuentas por cobrar comerciales y otras cuentas por cobrar</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0835</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_17" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">17</field>
+			<field name="name">(Aumento) Disminución en Inventarios</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0804</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_18" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">18</field>
+			<field name="name">(Aumento) Disminución en Activos Biológicos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0813</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_19" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">19</field>
+			<field name="name">(Aumento) Disminución de otros activos no financieros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0818</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_20" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">20</field>
+			<field name="name">Aumento (disminución) de cuentas por pagar comerciales y otras cuentas por pagar</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0833</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_21" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">21</field>
+			<field name="name">Aumento (Disminución) de Provisión por Beneficios a los Empleados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0829</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_22" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">22</field>
+			<field name="name">Aumento (Disminución) de Otras Provisiones</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0815</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_23" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">23</field>
+			<field name="name">Total de ajustes por conciliación de ganancias (pérdidas)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0830</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_24" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">24</field>
+			<field name="name">Flujos de efectivo y equivalente al efectivo procedente de (utilizados en) operaciones</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0121</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_25" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">25</field>
+			<field name="name">Intereses recibidos (no incluidos en la Actividad de Inversión)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0103</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_26" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">26</field>
+			<field name="name">Intereses pagados (no incluidos en la Actividad de Financiación)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0107</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_27" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">27</field>
+			<field name="name">Dividendos Recibidos (no incluidos en la Actividad de Inversión)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0111</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_28" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">28</field>
+			<field name="name">Dividendos pagados (no incluidos en la Actividad de Financiación)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0116</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_29" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">29</field>
+			<field name="name">Impuestos a las ganancias (pagados) reembolsados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0120</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_30" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">30</field>
+			<field name="name">Flujos de Efectivo y Equivalente al Efectivo Procedente de (Utilizados en) Actividades de Operación</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D01ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_31" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">31</field>
+			<field name="name">Reembolso de Adelantos de Prestamos y Préstamos Concedidos a Terceros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0220</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_32" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">32</field>
+			<field name="name">Pérdida de control de subsidiarias u otros negocios</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0218</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_33" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">33</field>
+			<field name="name">Reembolsos recibidos de préstamos a entidades relacionadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0209</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_34" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">34</field>
+			<field name="name">Venta de  Instrumentos Financieros de Patrimonio o Deuda de Otras Entidades</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0201</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_35" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">35</field>
+			<field name="name">Contratos Derivados (futuro, a término, opciones)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0221</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_36" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">36</field>
+			<field name="name">Venta  de Participaciones en Negocios Conjuntos, Neto del Efectivo Desapropiado</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0222</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_37" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">37</field>
+			<field name="name">Venta de Propiedades, Planta y Equipo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0202</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_38" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">38</field>
+			<field name="name">Venta de Activos Intangibles</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0203</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_39" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">39</field>
+			<field name="name">Venta de Otros Activos de largo plazo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0223</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_40" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">40</field>
+			<field name="name">Subvenciones del gobierno</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0231</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_41" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">41</field>
+			<field name="name">Intereses Recibidos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0210</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_42" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">42</field>
+			<field name="name">Dividendos Recibidos</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0211</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_43" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">43</field>
+			<field name="name">Anticipos y Prestamos Concedidos a Terceros</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0225</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_44" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">44</field>
+			<field name="name">Obtener el control de subsidiarias u otros negocios</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0232</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_45" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">45</field>
+			<field name="name">Prestamos concedidos a entidades relacionadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0212</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_46" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">46</field>
+			<field name="name">Compra de Instrumentos Financieros de Patrimonio o Deuda de Otras Entidades</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0205</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_47" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">47</field>
+			<field name="name">Contratos Derivados (futuro, a término, opciones)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0226</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_48" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">48</field>
+			<field name="name">Compra de Subsidiarias, Neto del Efectivo Adquirido</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0219</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_49" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">49</field>
+			<field name="name">Compra de Participaciones en Negocios Conjuntos,  Neto del Efectivo Adquirido</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0227</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_50" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">50</field>
+			<field name="name">Compra de Propiedades, Planta  y Equipo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0206</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_51" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">51</field>
+			<field name="name">Compra de Activos Intangibles </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0207</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_52" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">52</field>
+			<field name="name">Compra de Otros Activos de largo plazo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0229</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_53" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">53</field>
+			<field name="name">Impuestos a las ganancias (pagados) reembolsados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0233</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_54" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">54</field>
+			<field name="name">Otros cobros (pagos) de efectivo relativos a la actividad de inversión    </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0234</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_55" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">55</field>
+			<field name="name">Flujos de Efectivo y Equivalente al Efectivo Procedente de (Utilizados en) Actividades de Inversión</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D02ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_56" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">56</field>
+			<field name="name">Obtención de Préstamos </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0325</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_57" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">57</field>
+			<field name="name">Préstamos de entidades relacionadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0319</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_58" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">58</field>
+			<field name="name">Cambios en las participaciones en la propiedad de subsidiarias que no resultan en pérdida de control</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0326</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_59" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">59</field>
+			<field name="name">Emisión de Acciones </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0327</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_60" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">60</field>
+			<field name="name">Emisión de  Otros Instrumentos de Patrimonio </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0328</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_61" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">61</field>
+			<field name="name">Subvenciones del gobierno</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0329</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_62" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">62</field>
+			<field name="name">Amortización o pago de Préstamos </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0330</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_63" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">63</field>
+			<field name="name">Pasivos por Arrendamiento Financiero</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0322</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_64" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">64</field>
+			<field name="name">Préstamos de entidades relacionadas</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0321</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_65" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">65</field>
+			<field name="name">Cambios en las participaciones en la propiedad de subsidiarias que no resultan en pérdida de control</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0331</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_66" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">66</field>
+			<field name="name">Recompra o Rescate de Acciones de la Entidad (Acciones en Cartera)</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0310</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_67" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">67</field>
+			<field name="name">Adquisición de Otras Participaciones en el Patrimonio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0323</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_68" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">68</field>
+			<field name="name">Intereses pagados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0311</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_69" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">69</field>
+			<field name="name">Dividendos pagados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0305</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_70" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">70</field>
+			<field name="name">Impuestos a las ganancias (pagados) reembolsados</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0332</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_71" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">71</field>
+			<field name="name">Otros cobros (pagos) de efectivo relativos a la actividad de financiación  </field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0333</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_72" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">72</field>
+			<field name="name">Flujos de Efectivo y Equivalente al Efectivo Procedente de (Utilizados en) Actividades de Financiación</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D03ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_73" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">73</field>
+			<field name="name">Aumento (Disminución) Neto de Efectivo y Equivalente al Efectivo, antes de las Variaciones en las Tasas de Cambio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0401</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_74" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">74</field>
+			<field name="name">Efectos de las Variaciones en las Tasas de Cambio sobre el Efectivo y Equivalentes al Efectivo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0404</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_75" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">75</field>
+			<field name="name">Aumento (Disminución) Neto de Efectivo y Equivalente al Efectivo</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0405</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_76" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">76</field>
+			<field name="name">Efectivo y Equivalente al Efectivo al Inicio del Ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D0402</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+		<record id="financial_statement_heading_line_06_77" model="financial.statement.heading.line">
+			<field name="financial_statement_heading_id" ref="financial_statement_heading_06" />
+			<field name="nro_rubro">77</field>
+			<field name="name">Efectivo y Equivalente al Efectivo al Finalizar el Ejercicio</field>
+			<field name="is_total">False</field>
+			<field name="code_sunat">3D04ST</field>
+			<field name="is_title">False</field>
+			<field name="title" />
+		</record>
+
+
+	</data>
+</odoo>

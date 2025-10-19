@@ -1,0 +1,93 @@
+<odoo>
+    <template id="l10n_pe_edi_guiaremision_report_delivery_document" inherit_id="l10n_pe_edi_stock.l10n_pe_edi_guiaremision_report_delivery_document">
+        <xpath expr="//div[@t-if='o.l10n_pe_edi_vehicle_id.license_plate']/strong" position="replace">
+            <strong>Placa</strong>
+        </xpath>
+        <xpath expr="//div[@t-if='o.l10n_pe_edi_operator_id']/strong" position="replace">
+            <strong t-if="o.l10n_pe_edi_transport_type == '01'">Transportista</strong>
+            <strong t-if="o.l10n_pe_edi_transport_type == '02'">Conductor</strong>
+        </xpath>
+        <xpath expr="//div[@t-if='o.l10n_pe_edi_operator_id']/p" position="inside">
+            <br/>
+            <strong>Licencia </strong><span t-out="o.l10n_pe_edi_operator_id.l10n_pe_edi_operator_license"/>
+        </xpath>
+        <xpath expr="//div[@id='delivery_guide_details']" position="attributes">
+            <attribute name="class">row border-top  pt8 pb8</attribute>
+        </xpath>
+         <xpath expr="//div[@id='delivery_guide_details2']" position="attributes">
+            <attribute name="class">row border-top  pt8 pb8</attribute>
+        </xpath>
+    </template>
+
+    <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
+        <xpath expr="//h2" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//div[@t-if='o.origin']" position="attributes">
+            <attribute name="class">col-auto col-2 mw-100 mb-2</attribute>
+        </xpath>
+        <xpath expr="//div[@t-if='o.origin']" position="before">
+            <div class="col-auto col-3 mb-2" name="div_origin">
+                <strong>Referencia:</strong>
+                <p t-field="o.name" class="m-0">WH/OUT/00999</p>
+            </div>
+        </xpath>
+        <xpath expr="//div[@class='page']//div[hasclass('row')]" position="attributes">
+            <attribute name="class">row mt8 mb8 border-bottom</attribute>
+        </xpath>
+        <xpath expr="//div[@class='page']//div[hasclass('row')]" position="before">
+            <div class="row border-top border-bottom pt8 pb8" >
+                <div class="col-auto col-3" name="customer_address">
+                    <span><strong>Destinatario :</strong></span>
+                    <t t-if="o.picking_type_id.code=='outgoing'">
+                        <span t-if="o.partner_id.parent_id"><p t-esc="'{} - {}'.format(o.partner_id.parent_id.name,o.partner_id.parent_id.vat)">0</p></span>
+                        <span t-elif="o.partner_id"><p t-esc="'{} - {}'.format(o.partner_id.name,o.partner_id.vat)">0</p></span>
+                    </t>
+                    <t t-if="o.picking_type_id.code=='internal'">
+                        <span t-if="o.company_id.partner_id"><p t-esc="'{} - {}'.format(o.company_id.partner_id.name,o.company_id.partner_id.vat)">0</p></span>
+                        <span t-elif="o.partner_id"><p t-esc="'{} - {}'.format(o.partner_id.name,o.partner_id.vat)">0</p></span>
+                    </t>
+                    <t t-if="o.picking_type_id.code=='incoming'">
+                        <span t-if="o.company_id.partner_id"><p t-esc="'{} - {}'.format(o.company_id.partner_id.name,o.company_id.partner_id.vat)">0</p></span>
+                        <span t-elif="o.partner_id"><p t-esc="'{} - {}'.format(o.partner_id.name,o.partner_id.vat)">0</p></span>
+                    </t>
+                </div>
+                <t t-if="o.picking_type_id.code=='outgoing'">
+                    <div class="col-auto col-4" >
+                        <span><strong>Dirección de Partida</strong></span>
+                        <p t-field="o.picking_type_id.warehouse_id.partner_id.street">0</p>
+                    </div>
+                    <div class="col-auto col-5" >
+                        <span><strong>Dirección de Llegada</strong></span>
+                        <span t-if="o.partner_id" t-field="o.partner_id.street"/><br/>
+                        <!--Nota: Se agrego el ubigeo por solicitud de Cliente Argos, si otros clientes no lo requieren se moverá este cambio a la personalización del cliente-->
+                        <span t-if="o.partner_id" t-esc="'{} {} {}'.format(o.partner_id.city,o.partner_id.state_id.name,o.partner_id.l10n_pe_district_name)"/>
+                    </div>
+                </t>
+                <t t-if="o.picking_type_id.code=='internal'">
+                    <div class="col-auto col-4" >
+                        <span><strong>Dirección de Partida</strong></span>
+                        <p t-field="o.location_id.warehouse_id.partner_id.street">0</p>
+                    </div>
+                    <div class="col-auto col-5" >
+                        <span><strong>Dirección de Llegada</strong></span>
+                        <p t-field="o.location_dest_id.warehouse_id.partner_id.street">0</p>
+                    </div>
+                </t>
+                <t t-if="o.picking_type_id.code=='incoming'">
+                    <div class="col-auto col-4" >
+                        <span><strong>Dirección de Partida</strong></span><br/>
+                        <span t-field="o.partner_id.street"/><br/>
+                        <span t-esc="'{} {} {}'.format(o.partner_id.city,o.partner_id.state_id.name,o.partner_id.l10n_pe_district_name)"/>
+                    </div>
+                    <div class="col-auto col-5" >
+                        <span><strong>Dirección de Llegada</strong></span>
+                        <p t-field="o.location_dest_id.warehouse_id.partner_id.street">0</p>
+                    </div>
+                </t>
+            </div>
+        </xpath>
+
+    </template>
+
+</odoo>

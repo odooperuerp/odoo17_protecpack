@@ -1,0 +1,23 @@
+<odoo>
+
+    <record id="account_move_form_guides_inherit_form" model="ir.ui.view">
+        <field name="name">account.move.form.guides.inherit.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//form/header" position="inside">
+
+                <button name="search_and_set_stock_picking" string="Calcular Guias" class="oe_highlight" type="object" groups="account.group_account_invoice" invisible="auto_post == True or move_type not in ['out_invoice','out_refund']"/>
+
+            </xpath>
+
+            <field name="l10n_pe_edi_operation_type" position="after">
+                <field name="remission_guide_ids" widget="many2many_tags" options="{'no_create': True}" invisible="auto_post == True or move_type not in ['out_invoice','out_refund']"/>
+                <field name="correlative_remission_guides" invisible="auto_post == True or move_type not in ['out_invoice','out_refund']"/>
+            </field>
+
+        </field>
+    </record>
+
+</odoo>

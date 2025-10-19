@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_payment_inherit_sunat_table_01" model="ir.ui.view">
+            <field name="name">view_account_payment_inherit_sunat_table_01</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                
+                <field name="ref" position="after">
+                    <field name="sunat_table_01_id" options="{'no_create': True}" readonly="state != 'draft'"/>
+                </field>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>
