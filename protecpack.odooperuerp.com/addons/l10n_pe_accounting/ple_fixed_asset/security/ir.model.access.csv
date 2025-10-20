@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_wizard_printer_ple_fixed_asset,modelo wizard_printer_ple_fixed_asset,model_wizard_printer_ple_fixed_asset,ple_base.group_ple_base_manager,1,1,1,1
-access_asset_asset_brand,modelo asset_asset_brand,model_asset_asset_brand,,1,1,1,1
-access_ple_fixed_asset,modelo ple_fixed_asset,model_ple_fixed_asset,,1,1,1,1
-access_ple_fixed_asset_line,modelo ple_fixed_asset_line,model_ple_fixed_asset_line,,1,1,1,1

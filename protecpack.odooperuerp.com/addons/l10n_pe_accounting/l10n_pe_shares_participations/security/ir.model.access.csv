@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_shares_participations,modelo shares_participations,model_shares_participations,,1,1,1,1
-access_shares_participations_line,modelo shares_participations_line,model_shares_participations_line,,1,1,1,1
