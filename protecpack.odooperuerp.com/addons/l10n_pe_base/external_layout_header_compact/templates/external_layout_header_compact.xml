@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="styles_company_report" inherit_id="web.styles_company_report">
+        <xpath expr="//t[@t-foreach='company_ids']" position="inside">
+            .o_company_<t t-esc='company.id'/>_layout {
+                            font-family: <t t-esc="font" />;
+                <t t-if="layout == 'external_layout_header_compact.external_layout_header_compact'">
+                    &amp;.o_external_layout_header_compact_1 {
+                        .page{
+                            #total strong {
+                                color: <t t-esc='primary'/>;
+                            }
+                            .totals_taxes_company_currency strong{
+                                color: <t t-esc='primary'/>;
+                            }
+                            #informations strong {
+                                color: <t t-esc='secondary'/>;
+                            }
+                            h2 span {
+                                color: <t t-esc='primary'/>;
+                            }
+                            table {
+                                thead {
+                                    tr:first{
+                                        background-color: <t t-esc='primary'/>;
+                                        border:solid 1px gray;
+                                    }
+                                    tr th{
+                                        color: <t t-esc='secondary'/>;
+                                        border:solid 1px gray;
+                                        background-color: <t t-esc='primary'/>;
+                                        color:white !important;
+                                    }
+                                }
+                                tbody tr td {
+                                    border:solid 1px gray;
+                                    &amp;.o_line_section td {
+                                            background-color: rgba(<t t-esc='primary'/>, 0.7);
+                                        }
+                                    &amp;.is-subtotal,
+                                        td.o_price_total {
+                                            background-color: rgba(<t t-esc='secondary'/>, 0.1);
+                                        }
+                                }
+                            }
+                        }
+
+                        .row > div > table,
+                        div#total table, .totals_taxes_company_currency table {
+                            tr {
+                                &amp;.o_total td {
+                                    background-color: rgba(<t t-esc='primary'/>, 0.9);
+                                    strong, span{
+                                        color: white !important;
+                                        font-weight: bold
+                                    }
+                                }
+                            }
+                        }
+
+                        div[name="purchase_order_address"],
+                        div[name="invoice_address"],
+                        div[name="sale_order_address"] {
+                            border: solid 1px black;
+                            font-size: 12px;
+                            border-radius: 12px;
+                            padding: 5px 0px;
+                            table,tbody,thead{
+                                border: none;
+                                tr,th,td{
+                                    border: none;
+                                }
+                                th {
+                                    text-align: start;
+                                    width: 12%;
+                                    padding-left: 12px;
+                                }
+                                th,
+                                td {
+                                    border: none;
+                                    word-break: break-word;
+                                    padding-top: 3px;
+                                }
+                            }
+                            label {
+                                color: black;
+                                white-space: pre-wrap;
+                                margin: auto;
+                            }
+                        }
+                    }
+                    
+                    .o_report_header_pe_v1 {
+                        padding-bottom: 10px;
+                        div[name="company_address"] {
+                            color: black !important;
+                            font-size: 12px !important;
+                        }
+                        div[name="company_document"] {
+                            border-radius: 14px;
+                            border: solid 1px black !important;
+                            color: black !important;
+                        }
+                        .logo {
+                            justify-content: center;
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .font-weight-bold{
+                            font-weight: bold;
+                        }
+                    }
+                </t>
+            }
+        </xpath>
+    </template>
+
+    <template id="external_layout_header_compact">
+        <div t-attf-class="header o_company_#{company.id}_layout" t-att-style="report_header_style">
+            <div class="o_report_header_pe_v1 mt-3">
+                <div class="row align-items-center">
+                    <div class="col-3 text-center" name="company_logo" style="padding: 0px;" >
+                        <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"  style="max-height:100px;max-width:100%"  />
+                    </div>
+                    <div class="col-5" name="company_address">
+                        <div class="mx-4 my-3">
+                            <div>
+                                <span t-field="company.name"/>
+                            </div>
+                            <div>
+                                <span t-esc="company_id"/>
+                                <span t-field="company.street"/>
+                            </div>
+                            <div t-if="company.email">
+                                <b> Email: </b>
+                                <span t-field="company.email"/>
+                            </div>
+                            <div t-if="company.phone">
+                                <b> Teléfono: </b>
+                                <span t-field="company.phone"/>
+                            </div>
+                            <div t-if="company.website">
+                                <b> Website: </b>
+                                <span t-field="company.website"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4" name="company_document" >
+                        <div class="pt-2 mt-1 pb-2">
+                            <div class="text-center" name="document_type">
+                                <t t-if="o">
+                                    <span class="font-weight-bold p-2" t-if="'display_document_type' in o" t-esc="o.display_document_type"/>
+                                </t>
+                                <t t-else="">
+                                    <b>Asiento contable</b>
+                                </t>
+                            </div>
+                            <div class="text-center" name="company_vat">
+                                <span t-esc="'{} {}'.format(company.partner_id.l10n_latam_identification_type_id.name ,company.vat or '')"/>
+                            </div>
+                            <div class="text-center" name="document_name">
+                                <t t-if="o">
+                                    <span t-esc="(o.display_name or '')"/>
+                                </t>
+                                <t t-else="">
+                                    <span>F001-000323</span>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div t-attf-class="article o_external_layout_header_compact_1 o_company_#{company.id}_layout " t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <t t-raw="0"/>
+        </div>
+        <div t-attf-class="footer o_boxed_footer o_company_#{company.id}_layout">
+            <div class="text-center">
+                <div t-field="company.report_footer">Company Report Footer</div>
+                <div t-if="report_type == 'pdf'">
+                    Página: <span class="page"/> / <span class="topage"/>
+                </div>
+                <div t-if="report_type == 'pdf' and display_name_in_footer" class="text-muted">
+                    <span t-out="o.name">(document name)</span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+    <record id="report_layout_format_1" model="report.layout">
+        <field name="name">Compacto</field>
+        <field name="sequence">10</field>
+        <field name="view_id" ref="external_layout_header_compact.external_layout_header_compact"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_move_vat" model="ir.ui.view">
+        <field name="name">view.partner.form.move.vat</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <label for="l10n_latam_identification_type_id" position="attributes">
+                <attribute name="string">Tipo de Identificación</attribute>
+            </label>
+            <xpath expr="//div[contains(@class,'oe_title')]" position="after">
+                <xpath expr="//label[@for='l10n_latam_identification_type_id']" position="move" />
+                <xpath expr="//field[@name='l10n_latam_identification_type_id']" position="move" />
+                <xpath expr="//field[@name='vat']" position="move" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

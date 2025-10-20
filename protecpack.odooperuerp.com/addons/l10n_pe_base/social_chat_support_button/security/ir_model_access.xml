@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+    <record id="access_model_social_chat_support_button" model="ir.model.access">
+        <field name="name">access.model.social.chat.support.button</field>
+        <field name="model_id" ref="social_chat_support_button.model_social_chat_support_button"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="True" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_unlink" eval="True" />
+    </record>
+    
+    <record id="access_model_social_chat_support_button_agent" model="ir.model.access">
+        <field name="name">access.model.social.chat.support.button_agent</field>
+        <field name="model_id" ref="social_chat_support_button.model_social_chat_support_button_agent"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="True" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_unlink" eval="True" />
+    </record>
+
+
+    <record id="access_model_social_chat_support_button_public" model="ir.model.access">
+        <field name="name">access.model.social.chat.support.button.public</field>
+        <field name="model_id" ref="social_chat_support_button.model_social_chat_support_button"/>
+        <field name="group_id" ref="base.group_public"/>
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="0" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+    
+    <record id="access_model_social_chat_support_button_agent_public" model="ir.model.access">
+        <field name="name">access.model.social.chat.support.button_agent.public</field>
+        <field name="model_id" ref="social_chat_support_button.model_social_chat_support_button_agent"/>
+        <field name="group_id" ref="base.group_public"/>
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="0" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+</odoo>

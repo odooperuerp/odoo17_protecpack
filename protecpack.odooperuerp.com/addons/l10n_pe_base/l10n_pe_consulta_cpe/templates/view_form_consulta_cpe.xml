@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="web_view_form_consulta_cpe" name="Consulta CPE">
+        <t t-call="web.frontend_layout">
+            <div id="wrap">
+                <t t-set="body_classname" t-value="'bg-100'"/>
+                <t t-set="no_header" t-value="False"/>
+                <t t-set="no_footer" t-value="False"/>
+                <div class="container">
+                    <div class="justify-content-center">
+                        <div class="card" style="margin-top: 20px;">
+                            <div class="card-header" style="background: #6daddd; color: white;">
+                                <h3>Buscar Facturas / Boletas / Notas de crédito y Débito</h3>
+                            </div>
+                            <div class="card-body">
+                                <form name="form_buscar_documento" >
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <label for="serie">Serie</label>
+                                            <input type="text" class="form-control" id="serie" placeholder="F001"  required="true"/>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="correlativo">Número</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="label_correlativo">N°</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="correlativo" placeholder="########"  required="true"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 mb-3">
+                                            <label for="invoice_date">Fecha</label>
+                                            <input type="date" class="form-control" id="invoice_date" required="true"/>
+                                            <div class="invalid-tooltip">
+                                            Ingresar fecha
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="vat">RUC/DNI de Receptor</label>
+                                            <input type="text" class="form-control" id="vat" placeholder="RUC o DNI" required="true"/>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="total">Total</label>
+                                            <input type="text" class="form-control" id="total" placeholder="0.00" required="true"/>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary">Buscar</button>
+
+                                </form>
+                            </div>
+                        </div>
+                        <div id="documento"></div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+        <template id="web_view_form_consulta_cpe_resultados" name="Resultado de consulta CPE">
+                <div class="container">
+                    <div class="row justify-content-center pt-3" t-if="move.exists()">
+                        <table class="table table-sm " >
+                            <thead>
+                                <tr>
+
+                                    <th>FECHA EMISION</th>
+                                    <th>NÚMERO</th>
+                                    <th>CLIENTE</th>
+                                    <th>IMPORTE TOTAL</th>
+                                    <!--<th t-if="move.edi_document_ids">ZIP</th>-->
+                                    <th>PDF</th>
+                                    <th>Consulta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <t t-foreach="move" t-as="doc"> -->
+                                    <tr>
+                                        <td><span t-esc="move.invoice_date"/></td>
+                                        <td><span t-esc="move.name"/></td>
+                                        <td><span t-esc="move.partner_id.vat"/></td>
+                                        <td><span t-esc="move.amount_total"/></td>
+                                        <td t-if="">
+                                            <a t-att-href=""  target="_blank"  >
+                                                <img src="/l10n_pe_consulta_cpe/static/src/img/icon_xml.png" class="img img-responsive" style="height:50px"/>
+                                            </a>
+                                        </td>
+                                        <!--
+                                        <td t-if="move.edi_document_ids">
+                                            <a t-att-href="'/web/content/{}'.format(move.edi_document_ids[0].attachment_id.id)"  target="_blank" >
+                                                <img src="/l10n_pe_consulta_cpe/static/src/img/icon_zip.png" class="img img-responsive" style="height:50px"/>
+                                            </a>
+                                        </td>-->
+                                        <td>
+                                            <a t-att-href="move.get_portal_url(report_type='pdf', download=True)"  target="_blank">
+                                                <img src="/l10n_pe_consulta_cpe/static/src/img/icon_pdf.png" class="img img-responsive" style="height:50px"/>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a t-att-href="'{}#discussion'.format(move.get_portal_url())"  target="_blank">
+                                                <img src="/l10n_pe_consulta_cpe/static/src/img/icon_consulta.png" class="img img-responsive" style="height:50px"/>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                <!-- </t> -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div t-else="" class="pt-3">
+                        <div class="alert alert-warning" role="alert">
+                        Este comprobante no ha sido encontrado.
+                        </div>
+                    </div>
+                </div>
+        </template>
+</odoo>

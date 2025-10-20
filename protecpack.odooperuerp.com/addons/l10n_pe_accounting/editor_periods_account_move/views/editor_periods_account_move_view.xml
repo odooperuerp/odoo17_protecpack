@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+        <record id="editor_periods_account_move_view_form" model="ir.ui.view">
+            <field name="name">Editor de Periodos en Asientos Contables</field>
+            <field name="model">editor.periods.account.move</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <div class="alert alert-info" role="alert" style="margin-bottom:0px">
+                        <bold>Tenga mucho cuidado al editar los periodos de los movimientos contables, podrían producirse inconsistencias y descuadres al relizar una incorrecta actualización !</bold>
+                    </div>
+
+                    <header>
+                         <button 
+                            name="update_account_move_massive" 
+                            class="oe_highlight" 
+                            string="Ejecutar Actualización" 
+                            icon="fa-play" 
+                            type="object"
+                            confirm="Una vez confirmado este proceso no hay marcha atras !"
+                            invisible="state != 'draft'"
+                        />
+
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+
+                    </header>
+               
+                    <sheet>
+
+                        <header>
+
+                            <button name="add_lines" 
+                                string="Agregar a Tabla"
+                                class="oe_highlight"
+                                type="object"
+                                icon="fa-plus"
+                                invisible="state != 'draft'"
+                            />
+
+                            <button name="limpiar_buffer" 
+                                string="Limpiar Selección"
+                                type="object"
+                                icon="fa-plus"
+                                invisible="state != 'draft'"
+                            />
+
+                        </header>
+
+
+                        <group>
+                            <group>
+                                <field name="company_id" readonly="1" options="{'no_create': True}" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+
+
+                        <group>
+                            <field name="buffer_account_move_ids" widget="many2many_tags" options="{'no_create': True}" readonly="state == 'done'"/>
+                        </group>
+
+
+                        <group string="Operaciones Masivas">
+                            <group>
+                                <field name="massive_periodo" options="{'no_create': True}" readonly="state == 'done'"/>
+                            </group>
+
+                            <div>
+                                <button name="aplication_massive"
+                                    string="Aplicar"
+                                    class="oe_highlight"
+                                    type="object"
+                                    icon="fa-plus"
+                                    invisible="state != 'draft'"
+                                />
+                            </div>
+
+
+                        </group>
+
+
+                        <notebook>
+                            <page name="editor_periods_account_move_page" string="ASIENTOS CONTABLES A EDITAR">
+                            
+                                    <field name='editor_periods_account_move_line_ids' readonly="state == 'done'">
+                                        
+                                        <tree editable="1"> 
+
+                                            <field name="move_id" readonly="1"/>
+                                            <field name="date" readonly="1"/>
+                                            <field name="ref" readonly="1"/>
+                                            <field name="original_period_id" readonly="1"/>
+                                            <field name="period_id" options="{'no_create': True}"/>
+
+                                        </tree> 
+
+                                  </field>
+                            </page>
+                        </notebook>
+                     </sheet>
+                </form>             
+            </field>
+        </record>
+
+        <!-- ############################################################################# -->
+
+        <record id="editor_periods_account_move_view_tree" model="ir.ui.view">
+            <field name="name">Editor de Periodos en Asientos Contables</field>
+            <field name="model">editor.periods.account.move</field>
+            <field name="arch" type="xml">
+
+                <tree>
+                    <field name="company_id"/>
+                    <field name="editor_periods_account_move_line_ids"/>
+                    <field name="create_uid" string="Creado por"/>
+                    <field name="create_date" string="Fecha y Hora de Creación"/>
+                </tree>
+
+            </field>
+        </record>
+
+        <!-- ############################################################################## -->
+
+        <record id="action_editor_periods_account_move" model="ir.actions.act_window">
+            <field name="name">Editor de Periodos en Asientos Contables</field>
+   		    <field name="res_model">editor.periods.account.move</field>
+            <field name="view_mode">tree,form</field>
+            <field eval="False" name="view_id"/>
+            <field name="view_id" ref="editor_periods_account_move_view_tree"/>
+            <!--<field name="target">new</field>-->
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Editor de Periodos en Asientos Contables
+              </p>
+
+            </field>
+        </record>
+
+
+        <menuitem id="menu_editor_periods_account_move" name="Editor de Periodos en Asientos Contables" groups="account.group_account_invoice" parent="editor_account_in_aml.menu_tools_account_codlan" sequence="4" action="action_editor_periods_account_move"/>
+             
+	</data>
+</odoo>

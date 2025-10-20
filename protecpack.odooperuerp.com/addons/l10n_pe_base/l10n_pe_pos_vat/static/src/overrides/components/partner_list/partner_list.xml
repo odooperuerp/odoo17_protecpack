@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="PartnerListScreen" t-inherit="point_of_sale.PartnerListScreen" t-inherit-mode="extension">
+        <xpath expr="//PartnerDetailsEdit" position="replace">
+            <PartnerDetailsEdit 
+                    t-props="state.editModeProps" 
+                    saveChanges.bind="saveChanges" 
+                    imperativeHandle="partnerEditor" 
+                    onClickBack.bind="back"
+                    onClickPartner.bind="clickPartner"/>
+        </xpath>
+        <xpath expr="//table[hasclass('partner-list')]/thead/tr/th[hasclass('partner-line-email')]" position="before">
+            <th class="py-2">Nro. de documento</th>
+        </xpath>
+    </t>
+
+</templates>

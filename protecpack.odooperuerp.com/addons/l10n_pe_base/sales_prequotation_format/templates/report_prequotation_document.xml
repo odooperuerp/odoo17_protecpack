@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_prequotation_document" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@name='so_total_summary']" position="attributes">
+            <attribute name="t-attf-class">#{'d-none' if prequotation_ssub or prequotation_csub else ''}</attribute>
+        </xpath>
+        <xpath expr="//t[@t-foreach='lines_to_report']/t[2]/tr" position="attributes">
+            <attribute name="t-attf-class">is-subtotal text-end #{'d-none' if prequotation_ssub else ''}</attribute>
+        </xpath>
+    </template>
+
+    <template id="report_prequotation">
+        <t t-call="web.html_container">
+            <t t-set="prequotation_ssub" t-value="True"/>
+            <t t-set="docs" t-value="docs.with_context(prequotation=True)"/>
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="sale.report_saleorder_document" t-lang="doc.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_prequotation" model="ir.actions.report">
+        <field name="name">Pre cotización (s/subtotal)</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sales_prequotation_format.report_prequotation</field>
+        <field name="report_file">sales_prequotation_format.report_prequotation</field>
+        <field name="print_report_name">('Pre cotización (sin subtotal) - %s' % (object.name))</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

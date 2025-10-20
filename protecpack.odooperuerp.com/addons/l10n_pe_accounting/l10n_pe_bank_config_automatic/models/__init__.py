@@ -1,0 +1,1 @@
+from . import account_setup_bank_manual_config

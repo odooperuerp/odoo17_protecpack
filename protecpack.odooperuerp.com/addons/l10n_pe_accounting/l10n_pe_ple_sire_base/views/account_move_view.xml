@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_account_invoice_form_campos_sire" model="ir.ui.view">
+        <field name="name">Campos SIRE</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+
+
+            <xpath expr="//form/sheet/notebook/page[@id='aml_tab']" position="after">
+                <page id="campos_sire" string="Información Adicional PLE-SIRE" invisible="move_type not in ['in_invoice','in_refund']">
+
+                    <group>
+                        <group>
+
+                            <field name="sunat_table_25_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                            <field name="sunat_table_32_id" options="{'no_create': True, 'no_create_edit':True}"/>                            
+                        </group>
+                    </group>
+
+                </page>
+
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

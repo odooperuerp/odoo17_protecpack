@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_bank_statement_line_wizard_form" model="ir.ui.view">
+            <field name="name">account.bank.statement.line.wizard.form</field>
+            <field name="model">account.bank.statement.line.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <field name="company_id" readonly="1"/>
+                    <field name="move_line_ids" invisible="1"/>
+                    <div class="alert alert-info text-center" role="status">
+                        Se generarán lineas de extracto bancario para los apuntes contables seleccionados tomando en cuenta campos como el diario, socio, referencia y etiqueta. 
+                    </div>
+                  
+                    <group>
+                        <group>
+
+                            <field name="journal_id"/>
+
+                            <field name="only_diary_cash_bank"/>
+
+                            <field name="move_line_ids" widget="many2many_tags" options="{'no_create': True}" domain="[('move_id.state','=','posted'),('account_id.reconcile','=',True),('account_id.account_type','=','asset_current'),('journal_id', '=', journal_id)]" invisible="only_diary_cash_bank != True"/>
+
+                            <field name="move_line_ids" widget="many2many_tags" options="{'no_create': True}" domain="[('move_id.state','=','posted'),('account_id.reconcile','=',True)]" invisible="only_diary_cash_bank == True"/>
+
+                            <field name="total_account_move_line_ids"/>
+
+                            <field name="statement_id" options="{'no_create': True}"/>
+
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button string="Crear transacciones de Extracto" name="do_action_generate_account_bank_statement_line" type="object" class="oe_highlight" data-hotkey="q"/>
+
+                        <button string="Cancel" class="btn btn-secondary" special="cancel" data-hotkey="x"/>
+                    </footer>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="account_bank_statement_line_wizard_action" model="ir.actions.act_window">
+            <field name="name">Generar transacciones de Extractos Bancarios</field>
+            <field name="res_model">account.bank.statement.line.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

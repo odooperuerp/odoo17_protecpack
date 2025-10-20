@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="l10n_pe_pos.PaymentScreenButtons" t-inherit="point_of_sale.PaymentScreenButtons" t-inherit-mode="extension">
+        <xpath expr="//button[hasclass('js_invoice')]" position="replace">
+            <t t-if="pos.config.pos_l10n_pe_invoice">
+                <button t-if="currentOrder.get_total_with_tax() >= 0" class="button js_invoice btn btn-light py-3 text-start rounded-0 border-bottom" t-att-class="{ 'highlight text-bg-primary': currentOrder.document_invoice_type==1}" 
+                    t-on-click="() => this.toggleIsToInvoiceCPE(1)">
+                    <i class="fa fa-file-text-o me-2" />Invoice 
+                </button>
+                <button t-if="currentOrder.get_total_with_tax() >= 0" class="button js_boleta btn btn-light py-3 text-start rounded-0 border-bottom" t-att-class="{ 'highlight text-bg-primary': currentOrder.document_invoice_type==3}" 
+                t-on-click="() => this.toggleIsToInvoiceCPE(3)">
+                    <i class="fa fa-file-text-o me-2" />Boleta 
+                </button>
+                <button t-if="currentOrder.get_total_with_tax() >= 0" class="button js_nota btn btn-light py-3 text-start rounded-0 border-bottom" t-att-class="{ 'highlight text-bg-primary': !currentOrder.document_invoice_type}" 
+                t-on-click="() => this.toggleIsToInvoiceCPE(false)">
+                    <i class="fa fa-file-text-o me-2" />Nota de Venta 
+                </button>
+            </t>
+        </xpath>
+    </t>
+</templates>

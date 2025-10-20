@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="payment_confirmation_status_info" name="payment_confirmation_status_info">
+		<t t-set="niubiz_response_auth_json" t-value="tx_sudo.get_niubiz_response_auth_json()" />
+		<span t-if="title_status" t-out="title_status" t-attf-class="#{is_error and 'pay-error'} pay-title"/>
+		<span t-elif="niubiz_response_auth_json" t-esc="tx_sudo.get_description_eci_or_action(niubiz_response_auth_json)" t-attf-class="#{is_error and 'pay-error'} pay-title" />
+		<span t-else="" t-attf-class="#{is_error and 'pay-error'} pay-title">
+			Operación Denegada. Contactar con el comercio.
+		</span>
+		<div t-attf-class="#{is_error and 'pay-error'} form-group mt-2">
+			<label class="col-sm-4 control-label">
+				Nombre completo
+			</label>
+			:
+			<span class="col-sm-8" t-out="tx_sudo.partner_id.name" />
+		</div>
+		<!-- <div t-attf-class="#{is_error and 'pay-error'} form-group mt-2" t-if="niubiz_response_auth_json">
+			<label class="col-sm-4 control-label">
+				Descripción operación
+			</label>
+			:
+			<span class="col-sm-8" t-out="tx_sudo.get_description_eci_or_action(niubiz_response_auth_json)" />
+		</div> -->
+		<div t-attf-class="#{is_error and 'pay-error'} form-group mt-2">
+			<label class="col-sm-4 control-label">
+				Número de Operación
+			</label>
+			:
+			<span class="col-sm-8" t-out="tx_sudo.niubiz_reference" />
+		</div>
+		<div t-attf-class="#{is_error and 'pay-error'} form-group mt-2" t-if="niubiz_response_auth_json and 'BRAND' in niubiz_response_auth_json">
+			<label class="col-sm-4 control-label">
+				Marca
+			</label>
+			:
+			<span class="col-sm-8 text-uppercase" t-out="'BRAND' in niubiz_response_auth_json and niubiz_response_auth_json['BRAND']" />
+		</div>
+		<div t-attf-class="#{is_error and 'pay-error'} form-group mt-2" t-if="niubiz_response_auth_json and 'CARD' in niubiz_response_auth_json">
+			<label class="col-sm-4 control-label">
+				N° de Tarjeta
+			</label>
+			:
+			<span class="col-sm-8 text-uppercase" t-out="'CARD' in niubiz_response_auth_json and niubiz_response_auth_json['CARD']" />
+		</div>
+		<div t-attf-class="#{is_error and 'pay-error'} form-group mt-2" t-if="niubiz_response_auth_json and 'TRANSACTION_DATE' in niubiz_response_auth_json">
+			<label class="col-sm-4 control-label">
+				Fecha y Hora
+			</label>
+			:
+			<span class="col-sm-8 text-uppercase" t-out="tx_sudo.convert_txt_to_datetime(niubiz_response_auth_json['TRANSACTION_DATE'])" />
+		</div>
+		<div t-attf-class="#{is_error and 'pay-error'} form-group mt-2">
+			<label class="col-sm-4 control-label">
+				Moneda
+			</label>
+			:
+			<span class="col-sm-8 text-uppercase" t-out="tx_sudo.currency_id.name" />
+		</div>
+		<div t-attf-class="#{is_error and 'pay-error'} form-group mt-2 mb-2">
+			<label class="col-sm-4 control-label">
+				Total
+			</label>
+			:
+			<span class="col-sm-8 text-uppercase" t-out="'{:.2f}'.format(tx_sudo.amount)" />
+		</div>
+	</template>
+	<template id="payment_confirmation_status" name="Diseño de payment_confirmation_status" inherit_id="website_sale.payment_confirmation_status">
+		<!-- Vista de pago confirmado -->
+		<xpath expr="//span[@t-if='tx_sudo.provider_id.sudo().done_msg']" position="replace">
+			<t t-if="tx_sudo.niubiz_response_auth_json">
+				<t t-call="payment_niubiz.payment_confirmation_status_info">
+					<t t-set="is_error" t-value="False" />
+					<t t-set="title_status" t-value="tx_sudo.provider_id.sudo().done_msg" />
+				</t>
+			</t>
+			<t t-else="">
+				<span t-if="tx_sudo.provider_id.sudo().done_msg" t-out="tx_sudo.provider_id.sudo().done_msg" />
+			</t>
+		</xpath>
+		<!-- Vista de pago autorizado -->
+		<xpath expr="//t[@t-if='tx_sudo.provider_id.sudo().auth_msg']" position="replace">
+			<t t-if="tx_sudo.niubiz_response_auth_json">
+				<t t-call="payment_niubiz.payment_confirmation_status_info">
+					<t t-set="is_error" t-value="False" />
+					<t t-set="title_status" t-value="tx_sudo.provider_id.sudo().auth_msg" />
+				</t>
+			</t>
+			<t t-elif="tx_sudo.provider_id.sudo().auth_msg">
+				<t t-out="tx_sudo.provider_id.sudo().auth_msg" />
+			</t>
+		</xpath>
+		<!-- Vista de pago error -->
+		<xpath expr="//span[@t-esc='tx_sudo.state_message']" position="replace">
+			<t t-if="tx_sudo.niubiz_response_auth_json or tx_sudo.niubiz_response_error_json">
+				<t t-call="payment_niubiz.payment_confirmation_status_info">
+					<t t-set="is_error" t-value="True" />
+					<t t-set="title_status" t-value="False" />
+				</t>
+			</t>
+			<t t-else="">
+				<span t-esc="tx_sudo.state_message" />
+			</t>
+		</xpath>
+	</template>
+</odoo>

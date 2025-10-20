@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="shares_participations_view_form" model="ir.ui.view">
+            <field name="name">shares.participations.form</field>
+            <field name="model">shares.participations</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                            <group string="Empresa">
+                                <field name="company_id" readonly="1"/>
+                            </group>
+                            <br/>
+
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <br/>
+                            
+                            <group>
+                                <field name="valor_nominal_por_accion_participacion"/>
+                                <field name="total_capital"/>
+                            </group>
+                            <br/>
+                            
+                            <notebook>
+
+                                <page string="Registro de Acciones y Participaciones">
+                                    <field name="shares_participations_line_ids">
+                                        <tree editable="1">
+                                            <field name="periodo_incorporacion"/>
+                                            <field name="accionista" options="{'no_create': True, 'no_create_edit':True}"/>
+                                            <field name="tipo_documento_socio_accionista"/>
+                                            <field name="numero_documento_socio_accionista"/>
+                                            <field name="razon_social_socio_accionista"/>
+                                            <field name="tipo_accion" options="{'no_create': True, 'no_create_edit':True}"/>
+                                            <field name="codigo_tipo_accion"/>
+                                            <field name="numero_acciones" sum="Número Acciones"/>
+                                            <field name="porcentaje_acciones" sum="Porcentaje Total"/>
+                                        </tree>
+                                    </field>
+                                </page>
+
+                            </notebook>
+
+                    </sheet>
+                </form>
+                       
+            </field>
+        </record>
+
+
+        <record id="shares_participations_view_tree" model="ir.ui.view">
+            <field name="name">shares.participations.tree</field>
+            <field name="model">shares.participations</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="company_id"/>
+                    <field name="name"/>
+                    <field name="total_capital"/>
+                    <field name="valor_nominal_por_accion_participacion"/>
+                    <field name="shares_participations_line_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_shares_participations" model="ir.actions.act_window">
+            <field name="name">Participación Accionaria</field>
+            <field name="res_model">shares.participations</field>
+            <field name="view_mode">tree,form</field>
+            <field eval="False" name="view_id"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Crear Registro de Participación Accionaria
+              </p><p>
+              </p>
+            </field>
+        </record>
+
+        <record id="action_pe_shares_participations_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="shares_participations_view_tree"/>
+            <field name="act_window_id" ref="action_shares_participations"/>
+        </record>
+
+        <record id="action_pe_shares_participations_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="shares_participations_view_form"/>
+            <field name="act_window_id" ref="action_shares_participations"/>
+        </record>
+
+         <menuitem 
+            id="menu_main_shares_participations" 
+            name="Registro de Participación Accionaria" 
+            parent="ple_base.menu_inventario_balance" 
+            sequence="80"
+        />
+
+        <menuitem 
+            id="menu_shares_participations" 
+            action="action_shares_participations" 
+            parent="menu_main_shares_participations" 
+            sequence="1"
+        />
+
+    </data>
+</odoo>

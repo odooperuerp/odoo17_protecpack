@@ -1,0 +1,69 @@
+{
+    "dataMap": {
+        "ACTION_CODE": "000",
+        "ACTION_DESCRIPTION": "Aprobado y completado con exito",
+        "ADQUIRENTE": "570009",
+        "AMOUNT": "179.91",
+        "AUTHORIZATION_CODE": "142237",
+        "BRAND": "visa",
+        "BRAND_ACTION_CODE": "00",
+        "BRAND_HOST_DATE_TIME": "201222141839",
+        "BRAND_HOST_ID": "566998",
+        "BRAND_NAME": "VI",
+        "CARD": "455170******8059",
+        "CARD_TOKEN": "7000010039525187",
+        "CARD_TYPE": "C",
+        "CURRENCY": "0604",
+        "CVV2_VALIDATION_RESULT": "M",
+        "ECI": "07",
+        "ECI_DESCRIPTION": "Transaccion no autenticada pero enviada en canal seguro",
+        "ID_RESOLUTOR": "420201222142237",
+        "ID_UNICO": "993203570048588",
+        "INSTALLMENTS_INFO": "04000000000",
+        "MERCHANT": "456879852",
+        "PROCESS_CODE": "000000",
+        "QUOTA_AMOUNT": "0.00",
+        "QUOTA_DEFERRED": "0",
+        "QUOTA_NUMBER": "04",
+        "SIGNATURE": "46a09127-e29c-4ded-abff-6526c34bb615",
+        "STATUS": "Authorized",
+        "TERMINAL": "00000001",
+        "TRACE_NUMBER": "439890",
+        "TRANSACTION_DATE": "240507172818",
+        "TRANSACTION_ID": "993203570048588",
+        "VAULT_BLOCK": "5482490d-9dad-4dee-9254-67a66201cb5b"
+    },
+    "fulfillment": {
+        "captureType": "manual",
+        "channel": "paycard",
+        "countable": true,
+        "fastPayment": false,
+        "merchantId": "456879852",
+        "signature": "46a09127-e29c-4ded-abff-6526c34bb615",
+        "terminalId": "00000001"
+        },
+    "header": {
+        "ecoreTransactionDate": 1715120898828,
+        "ecoreTransactionUUID": "46a09127-e29c-4ded-abff-6526c34bb615",
+        "millis": 1113
+    },
+    "order": {
+        "actionCode": "000",
+        "amount": 179.91,
+        "authorizationCode": "142237",
+        "authorizedAmount": 179.91,
+        "currency": "PEN",
+        "externalTransactionId": "5482490d-9dad-4dee-9254-67a66201cb5b",
+        "installment": 4,
+        "purchaseNumber": "001194",
+        "tokenId": "D5EC81E23895471EAC81E23895171EE7",
+        "traceNumber": "439890",
+        "transactionDate": "240507172818",
+        "transactionId": "993203570048588"
+    },
+    "token": {
+        "expireOn": "280331235959",
+        "ownerId": "5482490d-9dad-4dee-9254-67a66201cb5b",
+        "tokenId": "7000010039525187"
+    }
+}

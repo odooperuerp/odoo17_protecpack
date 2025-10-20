@@ -1,0 +1,33 @@
+<odoo>
+    <template id="ubl_20_CommonType" inherit_id="account_edi_ubl_cii.ubl_20_CommonType">
+        <xpath expr="//*[local-name()='OrderReference']" position="attributes">
+            <attribute name="t-if">vals.get('order_reference')</attribute>
+        </xpath>
+        <xpath expr="//*[local-name()='AdditionalDocumentReference']" position="replace">
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cac:AdditionalDocumentReference t-foreach="vals.get('additional_document_reference_list',[])" t-as="document">
+                    <cbc:ID t-out="document.get('id')"/>
+                    <cbc:DocumentTypeCode 
+                        listAgencyName="PE:SUNAT" 
+                        listName="Tipo de Documento" 
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo12"
+                        t-out="document.get('document_type_code')"/>
+                </cac:AdditionalDocumentReference>
+            </t>
+        </xpath>
+        <xpath expr="//*[local-name()='BillingReference']" position="after">
+            <t xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+            xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cac:DespatchDocumentReference t-foreach="vals.get('despatch_document_reference_vals',[])" t-as="document">
+                    <cbc:ID t-out="document.get('id')"/>
+                    <cbc:DocumentTypeCode 
+                        listAgencyName="PE:SUNAT" 
+                        listName="Tipo de Documento" 
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01"
+                        t-out="document.get('document_type_code')"/>
+                </cac:DespatchDocumentReference>
+            </t>
+        </xpath>
+    </template>
+</odoo>

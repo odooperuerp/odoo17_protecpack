@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_l10n_pe_sunat_table_search" model="ir.ui.view">
+            <field name="name">l10n.pe.sunat.table.search</field>
+            <field name="model">l10n.pe.sunat.table</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Nombre" filter_domain="[('name', 'ilike', self)]"/>
+                    <field name="description" string="Descripción" filter_domain="[('description', 'ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_l10n_pe_catalogs_sunat_search" model="ir.ui.view">
+            <field name="name">l10n.pe.catalogs.sunat.search</field>
+            <field name="model">l10n.pe.catalogs.sunat</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="code" string="Codigo" filter_domain="[('code', 'ilike', self)]"/>
+                    <field name="associated_table_id" string="Tabla" filter_domain="[('associated_table_ids', 'ilike', self)]"/>
+                    <field name="description" string="Descripción" filter_domain="[('description', 'ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

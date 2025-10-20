@@ -1,0 +1,24 @@
+<odoo>
+    <record id="external_layout_header_compact.show_account_banks" model="res.groups">
+        <field name="name">Mostrar cuentas bancarias en Impresión de Ventas y Facturas</field>
+    </record>
+
+    <record id="show_sales_invoices_lines_with_taxes" model="res.groups">
+        <field name="name">Mostrar en impresión de ventas y facturación subtotal con impuestos en líneas</field>
+        <field name="users" eval="[(4, ref('base.default_user'))]"/>
+    </record>
+
+    <record id="show_image_in_sales_invoices" model="res.groups">
+        <field name="name">Mostrar imagen en impresión de ventas y facturación</field>
+    </record>
+
+    <record id="allow_create_products_from_lines" model="res.groups">
+        <field name="name">Permitir crear productos desde líneas de ventas, facturación y compras</field>
+    </record>
+
+    <record id="show_sequential_index_in_sales_invoices_lines" model="res.groups">
+        <field name="name">Mostrar índice secuencial en líneas de ventas y facturación</field>
+    </record>
+
+</odoo>
+

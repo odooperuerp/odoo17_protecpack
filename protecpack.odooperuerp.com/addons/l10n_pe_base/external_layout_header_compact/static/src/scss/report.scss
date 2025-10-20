@@ -1,0 +1,84 @@
+
+
+/*Detalle de cliente y de pedido en ventas, facturacion y compras*/
+/*Evitar salto de linea en labels - sección de detalle de compras */
+div[name='sale_order_address'],div[name='invoice_address'],div[name='purchase_order_address']{
+  tr{
+    th{
+      padding-right: 10px;
+      strong,label{
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.table[name='invoice_line_table']{
+  thead{
+        th{
+          text-align: center !important;
+        }
+  }
+  td[name='td_quantity']{
+    text-align: center !important;
+  }
+}
+
+/*
+.table[name='stock_move_line_table']{
+  tbody{
+        td{
+          text-align: center !important;
+        }
+  }
+}*/
+
+/*account.move - Alineamiento de celdas de forma vertical*/
+tbody.invoice_tbody{
+  td{
+    vertical-align: middle !important;
+  }
+ 
+}
+
+/*sale.order y account.move - Tabla de líneas de compras alineación vertical*/
+table.o_main_table{
+  th{
+      text-align: center !important;
+  }
+  /*
+  td:not([name='account_invoice_line_name']):not([name='td_name']):not([name='td_section_line']):not([name='td_note_line']):not([name='td_section_subtotal']){
+    text-align: center !important;
+  }*/
+
+}
+
+/*Estilos de tabla donde se muestra el QR*/
+div[name='qr_table']{
+  table,tr,td,th{
+    border-color:white !important;
+  }
+
+}
+
+.bank-table {
+  th {
+      /*background-color: $header-bg-color;
+      color: $header-text-color;*/
+      text-align: center;
+      font-weight: bold;
+  }
+  
+  td, th {
+      padding: 8px;
+      border: 1px solid black;
+      padding-top: 4px;
+      padding-bottom: 4px;
+  }
+  page-break-inside: avoid; 
+  font-size: 14px;
+}
+
+.no-break {
+  page-break-inside: avoid;
+}

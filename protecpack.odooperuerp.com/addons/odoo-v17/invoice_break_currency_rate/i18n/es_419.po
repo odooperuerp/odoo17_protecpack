@@ -1,0 +1,31 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* invoice_break_currency_rate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-05 15:32+0000\n"
+"PO-Revision-Date: 2024-10-05 15:32+0000\n"
+"Last-Translator: Leo Daniel Flores Sánchez, 2024\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: invoice_break_currency_rate
+#: model:ir.model,name:invoice_break_currency_rate.model_res_currency_rate
+msgid "Currency Rate"
+msgstr "Tasa de cambio"
+
+#. module: invoice_break_currency_rate
+#: model:ir.model.constraint,message:invoice_break_currency_rate.constraint_res_currency_rate_unique_name_per_day
+msgid "Only one currency rate per day allowed!"
+msgstr "¡Solo se permite un tipo de cambio al día!"
+
+#. module: invoice_break_currency_rate
+#: model:ir.model.constraint,message:invoice_break_currency_rate.constraint_res_currency_rate_currency_rate_check
+msgid "The currency rate must be strictly positive."
+msgstr "El tipo de cambio debe ser estrictamente positivo."

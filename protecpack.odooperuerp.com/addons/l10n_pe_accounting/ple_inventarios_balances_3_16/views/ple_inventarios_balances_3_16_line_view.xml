@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+      
+		<record id="ple_inventarios_balances_3_16_1_line_view_form" model="ir.ui.view">
+			<field name="name"> PLE Inventarios Balances-Detalle Saldo Cuenta 50</field>
+            <field name="model">ple.inventarios.balances.3.16.1.line</field>
+            <field name="arch" type="xml">
+            	<form>
+                    <sheet>
+                        <group>
+            		      <group>
+                                <field name="periodo"/>
+                                <field name="importe_capital_social_participaciones"/>
+                                <field name="valor_nominal_por_accion"/>
+                                <field name="numero_acciones_participaciones_sociales"/>
+                                <field name="numero_acciones_participaciones_sociales_pagadas"/>
+                                <field name="indicador_estado_operacion"/>
+            		      </group>
+                        </group>
+                     
+                </sheet>
+                </form>            	
+            </field>
+		</record>
+
+        <record id="ple_inventarios_balances_3_16_2_line_view_form" model="ir.ui.view">
+            <field name="name"> PLE Inventarios Balances-Estructura Participaciones/Acciones</field>
+            <field name="model">ple.inventarios.balances.3.16.2.line</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                          <group>
+                                <field name="periodo"/>
+                                <field name="tipo_documento_socio_accionista"/>
+                                <field name="numero_documento_socio_accionista"/>
+                                <field name="tipo_accion"/>
+                                <field name="codigo_tipo_accion"/>
+                                <field name="razon_social_socio_accionista"/>
+                                <field name="numero_acciones"/>
+                                <field name="porcentaje_total_participaciones"/>
+                                <field name="indicador_estado_operacion"/>
+                          </group>
+                        </group>
+                     
+                </sheet>
+                </form>             
+            </field>
+        </record>
+
+		
+	</data>
+</odoo>

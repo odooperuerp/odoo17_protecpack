@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="external_layout_account_move">
+        <t t-if="not o" t-set="o" t-value="doc" />
+        <div class="article o_report_layout_standard" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <t t-call="web.address_layout" />
+            <t t-raw="0" />
+        </div>
+    </template>
+
+
+    <template id="report_account_move_document">
+
+        <t t-call="l10n_pe_account_document_voucher_pdf.external_layout_account_move">
+
+        <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
+
+            <html>
+                <div class="page">
+
+                    <body>
+
+                        <div class="wrapper">
+
+
+                            <div style="display: flex; align-items: center;">
+    
+                                <img t-att-src="'data:image/png;base64,' + o.company_id.logo.decode('utf-8')"
+                                     style="max-width: 100px; max-height: 100px; margin-right: 15px;" />
+
+                                <div class="text-left">
+                                    <p>
+                                        <font size="7">
+                                            <strong>Empresa  <span t-esc="o.company_id.name"/></strong>
+                                        </font>
+                                    </p>
+
+                                    <p>
+                                        <font size="7">
+                                            <strong>RUC    <span t-esc="o.company_id.vat"/></strong>
+                                        </font>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <!--<div class="text-left">
+                                
+                                <p>
+                                    <font size="7">
+                                        <strong>Empresa  <span t-esc="o.company_id.name"/></strong>
+                                    </font>
+                                </p>
+                               
+                                <p>
+                                    <font size="7">
+                                        <strong>RUC    <span t-esc="o.company_id.vat"/></strong>
+                                    </font>
+                                </p>
+                            </div>-->
+
+
+                            <div style="width: 100%; display: flex; justify-content: space-between; font-size: 12px;">
+                                <div style="text-align: right;">
+                                    <p>
+                                        <t t-esc="time.strftime('%d/%m/%Y')"/>
+                                    </p>
+                                
+                                    <p>
+                                        <t t-esc="time.strftime('%H:%M:%S')"/>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- ##################################### -->
+                            
+                            <div class="text-center">
+                                <p>
+                                    <font size="7">
+                                        <strong>VOUCHER</strong>
+                                    </font>
+                                </p>
+                                <p>
+                                    <font size="6">
+                                        <strong>
+                                            <span t-esc="o.name"/>
+                                        </strong>
+                                    </font>
+                                </p>
+                            </div>
+
+                            <!--<div class="text-right" style="font-size: 12px;">-->
+                            <div style="width: 100%; display: flex; justify-content: space-between; font-size: 12px;">
+                                <div style="text-align: right;">
+                                    <p>Fec.Venc. <span t-esc="o.date.strftime('%d/%m/%Y')"/></p>
+                                    <p>Fec.Doc. <span t-esc="o.date.strftime('%d/%m/%Y')"/></p>
+                                    <p>Fec.Mov. <span t-esc="o.date.strftime('%d/%m/%Y')"/></p>
+                                </div>
+                            </div>
+                            <!--</div>-->
+
+                            <div class="text-left" style="font-size: 14px;">
+                                <p>
+                                    <strong>
+                                        DOCUMENTO DE ORIGEN : <t t-esc="o.origin_documents()"/>
+                                    </strong>
+                                </p>
+                            </div>
+
+                            <div class="text-left" style="font-size: 14px;">
+                                <p>
+                                    <strong>
+                                        GLOSA : <t t-esc="o.ref or o.l10n_latam_document_number or ''"/>
+                                    </strong>
+                                </p>
+
+                                <p>
+                                    <strong>
+                                        DIARIO : <t t-esc="o.journal_id and o.journal_id.name or ''"/>
+                                    </strong>
+                                </p>
+                            </div>
+                           
+                           
+                            <style>
+                                table, th, td {
+                                  border: 1px solid black;
+                            }
+                                    </style>
+
+                            <table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 14px;">
+
+                                <thead style="background-color: #ddd; border: 1px solid black;">
+                                    <tr>
+                                        <th style="text-align: center;vertical-align: middle;"><p style="text-align: center;vertical-align: middle;"><strong>Nro Cta.</strong></p></th>
+                                        <th style="text-align: center;vertical-align: middle;"><p><strong>Nombre Cta. </strong></p></th>
+                                        <th style="text-align: center;vertical-align: middle;"><p><strong>Auxiliar </strong></p></th>
+                                        <th style="text-align: center;vertical-align: middle;"><p><strong>TD</strong></p></th>
+                                        <th style="text-align: center;vertical-align: middle;"><p><strong>Nro Doc.</strong></p></th>
+                                        <th style="text-align: center;vertical-align: middle;"><p><strong>Glosa</strong></p></th>
+                                        <th style="text-align: center;vertical-align: middle;"><p><strong>Debe S/.</strong></p></th>
+                                        <th style="text-align: center;vertical-align: middle;"><p><strong>Haber S/.</strong></p></th>
+
+                                        <!-- #### columnaa dolares ####-->
+
+                                        <th style="text-align: center;vertical-align: middle; border-right:0px ;"><p><strong>T/C</strong></p></th>    
+                                        <th style="text-align: center;vertical-align: middle; border-right:0px ;"><p><strong>Monto ME</strong></p></th>
+
+                                        <!-- ##########################-->
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+                          
+                                    <t t-foreach="o.line_ids" t-as="i">
+
+                                        <tr>
+                                            <td style="text-align: center;">
+                                                <p>
+                                                    <t t-esc="i.account_id.code or ''"/>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    <t t-esc="(i.account_id.name or '')[:30] "/>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    <t t-esc="(i.partner_id.name or '')[:50]"/>
+                                                </p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>
+                                                     <t t-esc="i.l10n_latam_document_type_id and i.l10n_latam_document_type_id.code or ''" />
+                                                </p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>
+                                                    <t t-esc="(i.l10n_pe_prefix_code or '') + (len(i.l10n_pe_prefix_code or '')!=0)*('-') + (i.l10n_pe_invoice_number or '')"/>
+                                                </p>
+                                            </td>
+                                            
+                                            
+                                            <td>
+                                                <p>
+                                                    <t t-esc="(i.name or o.ref or '' )[:60]"/>
+                                                </p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>
+                                                    <t t-esc="'{:.2f}'.format(i.debit)"/>
+                                                </p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>
+                                                    <t t-esc="'{:.2f}'.format(i.credit)"/>
+                                                </p>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <p>
+                                                     <t t-esc="'{:.3f}'.format(i.second_currency_rate)"/>
+                                                </p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                                <p>
+                                                    <t t-esc="'{:.2f}'.format(i.balance_currency)"/>
+                                                </p>
+                                            </td>
+
+
+                                        </tr>
+
+                                    </t>
+                                </tbody>
+
+                                <tfoot style="background-color: #ddd;">
+                                    <tr>
+                                        <td colspan="6" style="border: 1px solid black; padding: 5px;"><strong>TOTAL GENERAL</strong></td>
+                                        
+                                        <td style="border: 1px solid black; padding: 5px;">
+                                            <p>
+                                                <t t-esc="'{:.2f}'.format(sum([i.debit for i in o.line_ids]))"/>
+                                            </p>
+                                        </td>
+
+                                        <td style="border: 1px solid black; padding: 5px;">
+                                            <p>
+                                                <t t-esc="'{:.2f}'.format(sum([i.credit for i in o.line_ids]))"/>
+                                            </p>
+                                        </td>
+
+                                        <td style="border: 1px solid black; padding: 5px;">
+                                            <p>
+                                            </p>
+                                        </td>
+                                        
+                                        <td style="border: 1px solid black; padding: 5px;">
+                                            <p>
+                                                <t t-esc="'{:.2f}'.format(sum([i.balance_currency for i in o.line_ids]))"/>
+                                            </p>
+                                        </td>
+                                    
+                                    </tr>
+
+                                </tfoot>
+                                       
+
+                            </table>
+                        </div>
+                        
+                        <!--<t t-set="longitud" t-value="len(o.line_ids)"/>
+                        <t t-if="o.is_menor(longitud-70,0)==1">
+                            <t t-foreach="range(64- longitud)" t-as="w">
+                                <br/>
+                            </t>
+                        </t>
+                        <t t-else="else">
+                            <t t-if="o.is_menor((longitud-70)%85,71)==1">
+                                <t t-foreach="range(81- (longitud-70)%85)" t-as="w">
+                                    <br/>
+                                </t>
+                            </t>
+                            <t t-else="else">
+                                <t t-foreach="range(81- (longitud-70)%85)" t-as="w">
+                                    <br/>
+                                </t>
+                            </t>
+                        </t> -->
+
+                        <!-- ###ENTRAN 85 REGISTROS EN UNA HOJA ENTERA A4 -->
+                        <!-- ## ENTRAN 73 REGISTROS N LA PRIMERA PAGINA !!! -->
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        
+                        <div>
+                            <div>
+                                <svg width="1000" height="112" viewBox="0 0 1000 112">
+                                    <line x1="5" y1="70" x2="200" y2="70" style="stroke:#000; stroke-width:2"/>
+                                    <text x="40" y="95" font-family="Verdana" font-size="14" fill="black">
+                                        Procesado por
+                                    </text>
+                                    <line x1="220" y1="0" x2="220" y2="80" stroke="black" stroke-width="1"/>
+                                    <line x1="240" y1="70" x2="435" y2="70" style="stroke:#000; stroke-width:2"/>
+                                    <text x="275" y="95" font-family="Verdana" font-size="14" fill="black">
+                                        Autorizado por
+                                    </text>
+                                    <line x1="455" y1="0" x2="455" y2="80" stroke="black" stroke-width="1"/>
+                                    <line x1="475" y1="70" x2="670" y2="70" style="stroke:#000; stroke-width:2"/>
+                                    <text x="510" y="95" font-family="Verdana" font-size="14" fill="black">
+                                        Revisado por
+                                    </text>
+                                    <line x1="690" y1="0" x2="690" y2="80" stroke="black" stroke-width="1"/>
+                                    <line x1="710" y1="70" x2="905" y2="70" style="stroke:#000; stroke-width:2"/>
+                                    <text x="745" y="95" font-family="Verdana" font-size="14" fill="black">
+                                        Recibí conforme
+                                    </text>
+                                    <text x="745" y="95" font-family="Verdana" font-size="14" fill="black">
+                                        Recibí conforme
+                                    </text>
+                                </svg>
+                            </div>
+
+                            <div class="text-right">
+                                <font size="5">
+                                    <strong>Usuario : </strong>
+                                    <t t-esc="env['res.users'].search([('id','=',user.id)]).partner_id.name"/>
+                                </font>
+                            </div>
+
+                        </div>
+                    </body>
+                </div>
+            </html>
+        
+        </t>
+    </template>
+
+    <template id="report_custom_template_a4">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="lang" t-value="o.create_uid.sudo().lang" />
+                <t t-call="l10n_pe_account_document_voucher_pdf.report_account_move_document" t-lang="lang" />
+            </t>
+        </t>
+    </template>
+
+</odoo>
